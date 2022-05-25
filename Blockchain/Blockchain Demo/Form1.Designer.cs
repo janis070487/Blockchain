@@ -345,6 +345,7 @@
             this.MultiTextBloc1HashPrev.MinimumSize = new System.Drawing.Size(300, 30);
             this.MultiTextBloc1HashPrev.MouseState = MaterialSkin.MouseState.HOVER;
             this.MultiTextBloc1HashPrev.Name = "MultiTextBloc1HashPrev";
+            this.MultiTextBloc1HashPrev.ReadOnly = true;
             this.MultiTextBloc1HashPrev.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.MultiTextBloc1HashPrev.Size = new System.Drawing.Size(300, 30);
             this.MultiTextBloc1HashPrev.TabIndex = 11;
@@ -364,6 +365,7 @@
             this.MultiLineBloc1Hash.MinimumSize = new System.Drawing.Size(300, 30);
             this.MultiLineBloc1Hash.MouseState = MaterialSkin.MouseState.HOVER;
             this.MultiLineBloc1Hash.Name = "MultiLineBloc1Hash";
+            this.MultiLineBloc1Hash.ReadOnly = true;
             this.MultiLineBloc1Hash.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.MultiLineBloc1Hash.Size = new System.Drawing.Size(300, 30);
             this.MultiLineBloc1Hash.TabIndex = 12;
@@ -574,6 +576,7 @@
             this.MultiLineBloc2Hash.MinimumSize = new System.Drawing.Size(300, 30);
             this.MultiLineBloc2Hash.MouseState = MaterialSkin.MouseState.HOVER;
             this.MultiLineBloc2Hash.Name = "MultiLineBloc2Hash";
+            this.MultiLineBloc2Hash.ReadOnly = true;
             this.MultiLineBloc2Hash.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.MultiLineBloc2Hash.Size = new System.Drawing.Size(300, 30);
             this.MultiLineBloc2Hash.TabIndex = 12;
@@ -593,6 +596,7 @@
             this.MultiTextBloc2HashPrev.MinimumSize = new System.Drawing.Size(300, 30);
             this.MultiTextBloc2HashPrev.MouseState = MaterialSkin.MouseState.HOVER;
             this.MultiTextBloc2HashPrev.Name = "MultiTextBloc2HashPrev";
+            this.MultiTextBloc2HashPrev.ReadOnly = true;
             this.MultiTextBloc2HashPrev.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.MultiTextBloc2HashPrev.Size = new System.Drawing.Size(300, 30);
             this.MultiTextBloc2HashPrev.TabIndex = 11;
@@ -859,6 +863,7 @@
             this.MultiLineBloc3Hash.MinimumSize = new System.Drawing.Size(300, 30);
             this.MultiLineBloc3Hash.MouseState = MaterialSkin.MouseState.HOVER;
             this.MultiLineBloc3Hash.Name = "MultiLineBloc3Hash";
+            this.MultiLineBloc3Hash.ReadOnly = true;
             this.MultiLineBloc3Hash.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.MultiLineBloc3Hash.Size = new System.Drawing.Size(300, 30);
             this.MultiLineBloc3Hash.TabIndex = 12;
@@ -878,6 +883,7 @@
             this.MultiTextBloc3HashPrev.MinimumSize = new System.Drawing.Size(300, 30);
             this.MultiTextBloc3HashPrev.MouseState = MaterialSkin.MouseState.HOVER;
             this.MultiTextBloc3HashPrev.Name = "MultiTextBloc3HashPrev";
+            this.MultiTextBloc3HashPrev.ReadOnly = true;
             this.MultiTextBloc3HashPrev.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.MultiTextBloc3HashPrev.Size = new System.Drawing.Size(300, 30);
             this.MultiTextBloc3HashPrev.TabIndex = 11;

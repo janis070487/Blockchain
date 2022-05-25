@@ -3,23 +3,43 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
 
 namespace Blockchain_Demo
 {
      class Bloc
     {
+        SHA256 sha256;// = new SHA256CryptoServiceProvider();
+        private byte[] result; // masīvs kurā glabājas atbilde hash summs
+        public string answer { get; set; }  // Pārvērst atbilde string formā
         public int number { get; set; }
         public int Nonce { get; set; }
         public string text { get; set; }
         private byte[] data;
         public string hashSum { get; }
-        public string previousHashSum { get; }
+        public string previousHashSum { get;}
         public Bloc()
         {
+            sha256 = new SHA256CryptoServiceProvider();
             maximumattempts = 1000000;
 
         }
-        private void FormatData()
+        //_________________________________ GetSha256() _____________________________________
+        private void GetSha256()
+        {
+            this.result = sha256.ComputeHash(data);
+            
+            for (int i = 0; i < result.Length; i++)
+            {
+                answer = answer + Convert.ToString(result[i], toBase: 16);
+            }
+        }
+        //_____________________________________________________________________________________
+        public void ResetData()
+        {
+
+        }
+        private void FormatData()   // sagatavo datus prikš hesh summas nemot no winformas bloka
         {
 
         }

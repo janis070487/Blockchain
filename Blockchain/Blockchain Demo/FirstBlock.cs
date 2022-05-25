@@ -13,5 +13,6 @@ namespace Blockchain_Demo
         {
             previousHashSum = "000000000";    // jaturpina
         }
+       
     }
 }
