@@ -15,7 +15,7 @@ namespace Blockchain_Demo
     public partial class Form1 : MaterialForm
     {
 
-        private Blockchain blockchain = new Blockchain(3);   // objekts blokcahain
+        private Blockchain blockchain = new Blockchain(6);   // objekts blokcahain
         public Form1()
         {
             InitializeComponent();
@@ -53,15 +53,7 @@ namespace Blockchain_Demo
             blockchain.ResetBlockData(1);
         }
 
-        private void MultiTextBloc1HashPrev_TextChanged(object sender, EventArgs e)
-        {
-            blockchain.ResetBlockData(1);
-        }
-
-        private void MultiLineBloc1Hash_TextChanged(object sender, EventArgs e)
-        {
-            blockchain.ResetBlockData(1);
-        }
+     
 
         private void btnBloc1Main_Click(object sender, EventArgs e)
         {
@@ -89,15 +81,7 @@ namespace Blockchain_Demo
             blockchain.ResetBlockData(2);
         }
 
-        private void MultiTextBloc2HashPrev_TextChanged(object sender, EventArgs e)
-        {
-            blockchain.ResetBlockData(2);
-        }
-
-        private void MultiLineBloc2Hash_TextChanged(object sender, EventArgs e)
-        {
-            blockchain.ResetBlockData(2);
-        }
+      
 
         private void btnBloc2Main_Click(object sender, EventArgs e)
         {
@@ -126,17 +110,93 @@ namespace Blockchain_Demo
             blockchain.ResetBlockData(3);
         }
 
-        private void MultiTextBloc3HashPrev_TextChanged(object sender, EventArgs e)
-        {
-            blockchain.ResetBlockData(3);
-        }
-
-        private void MultiLineBloc3Hash_TextChanged(object sender, EventArgs e)
-        {
-            blockchain.ResetBlockData(3);
-        }
+      
 
         private void btnBloc3Main_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void btnBloc3MainAll_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //___________________________________   Bloks 4 ________________________________________________
+
+
+        private void MultiTextBloc4BlocNumber_TextChanged(object sender, EventArgs e)
+        {
+            blockchain.ResetBlockData(4);
+        }
+
+        private void MultiTextBloc4Nonce_TextChanged(object sender, EventArgs e)
+        {
+            blockchain.ResetBlockData(4);
+        }
+
+        private void MultiLineBloc4Data_TextChanged(object sender, EventArgs e)
+        {
+            blockchain.ResetBlockData(4);
+        }
+
+        private void btnBloc4Main_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBloc4MainAll_Click(object sender, EventArgs e)
+        {
+
+        }
+        //___________________________________   Bloks 5 ________________________________________________
+
+        private void MultiTextBloc5BlocNumber_TextChanged(object sender, EventArgs e)
+        {
+            blockchain.ResetBlockData(5);
+        }
+
+        private void MultiTextBloc5Nonce_TextChanged(object sender, EventArgs e)
+        {
+            blockchain.ResetBlockData(5);
+        }
+
+        private void MultiLineBloc5Data_TextChanged(object sender, EventArgs e)
+        {
+            blockchain.ResetBlockData(5);
+        }
+
+        private void btnBloc5Main_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBloc5MainAll_Click(object sender, EventArgs e)
+        {
+
+        }
+        //___________________________________   Bloks 6 ________________________________________________
+        private void MultiTextBloc6BlocNumber_TextChanged(object sender, EventArgs e)
+        {
+            blockchain.ResetBlockData(6);
+        }
+
+        private void MultiTextBloc6Nonce_TextChanged(object sender, EventArgs e)
+        {
+            blockchain.ResetBlockData(6);
+        }
+
+        private void MultiLineBloc6Data_TextChanged(object sender, EventArgs e)
+        {
+            blockchain.ResetBlockData(6);
+        }
+
+       
+        private void btnBloc6Main_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBloc6MainAll_Click(object sender, EventArgs e)
         {
 
         }
