@@ -51,7 +51,6 @@
   <ItemGroup>
     <Compile Include="Bloc.cs" />
     <Compile Include="Blockchain.cs" />
-    <Compile Include="FirstBlock.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

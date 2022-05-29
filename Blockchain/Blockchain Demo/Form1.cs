@@ -40,17 +40,27 @@ namespace Blockchain_Demo
 
         private void MultiTextBloc1BlocNumber_TextChanged(object sender, EventArgs e)
         {
-            blockchain.ResetBlockData(1);
+            
+            //MultiTextBloc1BlocNumber.Text.Remove(MultiTextBloc1BlocNumber.Text.Length);
+            // MultiTextBloc1BlocNumber.Text = "";
+            //MultiTextBloc1BlocNumber.AppendText(PenaltyCharacters(MultiTextBloc1BlocNumber.Text, MultiTextBloc1BlocNumber.Text, "1"));
+            //MultiTextBloc1BlocNumber.Text = PenaltyCharacters(MultiTextBloc1BlocNumber.Text, MultiTextBloc1BlocNumber.Text, "1");
+            //  MultiTextBloc1BlocNumber.Text = MultiTextBloc1BlocNumber.Text;
+            // MultiLineBloc1Data.Text = MultiTextBloc1BlocNumber.Text;
+            //MultiLineBloc1Data.AppendText("9");
+            //  MultiTextBloc1BlocNumber.AppendText("");
+            //blockchain.ResetBlockData(1);
+
         }
 
         private void MultiTextBloc1Nonce_TextChanged(object sender, EventArgs e)
         {
-            blockchain.ResetBlockData(1);
+           // blockchain.ResetBlockData(1);
         }
 
         private void MultiLineBloc1Data_TextChanged(object sender, EventArgs e)
         {
-            blockchain.ResetBlockData(1);
+           // blockchain.ResetBlockData(1);
         }
 
      
@@ -68,17 +78,18 @@ namespace Blockchain_Demo
 
         private void MultiTextBloc2BlocNumber_TextChanged(object sender, EventArgs e)
         {
-            blockchain.ResetBlockData(2);
+            //blockchain.block[0].number = Convert.ToInt32(MultiTextBloc2BlocNumber.Text);
+            //blockchain.ResetBlockData(2);
         }
 
         private void MultiTextBloc2Nonce_TextChanged(object sender, EventArgs e)
         {
-            blockchain.ResetBlockData(2);
+           // blockchain.ResetBlockData(2);
         }
 
         private void MultiLineBloc2Data_TextChanged(object sender, EventArgs e)
         {
-            blockchain.ResetBlockData(2);
+           // blockchain.ResetBlockData(2);
         }
 
       
@@ -97,17 +108,18 @@ namespace Blockchain_Demo
 
         private void MultiTextBloc3BlocNumber_TextChanged(object sender, EventArgs e)
         {
-            blockchain.ResetBlockData(3);
+           // blockchain.block[1].number = Convert.ToInt32(MultiTextBloc3BlocNumber.Text);
+            // blockchain.ResetBlockData(3);
         }
 
         private void MultiTextBloc3Nonce_TextChanged(object sender, EventArgs e)
         {
-            blockchain.ResetBlockData(3);
+            //blockchain.ResetBlockData(3);
         }
 
         private void MultiLineBloc3Data_TextChanged(object sender, EventArgs e)
         {
-            blockchain.ResetBlockData(3);
+           // blockchain.ResetBlockData(3);
         }
 
       
@@ -126,17 +138,19 @@ namespace Blockchain_Demo
 
         private void MultiTextBloc4BlocNumber_TextChanged(object sender, EventArgs e)
         {
-            blockchain.ResetBlockData(4);
+           // blockchain.block[2].number = Convert.ToInt32(MultiTextBloc3BlocNumber.Text);
+            // blockchain.ResetBlockData(4);
+
         }
 
         private void MultiTextBloc4Nonce_TextChanged(object sender, EventArgs e)
         {
-            blockchain.ResetBlockData(4);
+          //  blockchain.ResetBlockData(4);
         }
 
         private void MultiLineBloc4Data_TextChanged(object sender, EventArgs e)
         {
-            blockchain.ResetBlockData(4);
+          //  blockchain.ResetBlockData(4);
         }
 
         private void btnBloc4Main_Click(object sender, EventArgs e)
@@ -152,17 +166,18 @@ namespace Blockchain_Demo
 
         private void MultiTextBloc5BlocNumber_TextChanged(object sender, EventArgs e)
         {
-            blockchain.ResetBlockData(5);
+           // blockchain.block[3].number = Convert.ToInt32(MultiTextBloc5BlocNumber.Text);
+           // blockchain.ResetBlockData(5);
         }
 
         private void MultiTextBloc5Nonce_TextChanged(object sender, EventArgs e)
         {
-            blockchain.ResetBlockData(5);
+           // blockchain.ResetBlockData(5);
         }
 
         private void MultiLineBloc5Data_TextChanged(object sender, EventArgs e)
         {
-            blockchain.ResetBlockData(5);
+           // blockchain.ResetBlockData(5);
         }
 
         private void btnBloc5Main_Click(object sender, EventArgs e)
@@ -177,17 +192,18 @@ namespace Blockchain_Demo
         //___________________________________   Bloks 6 ________________________________________________
         private void MultiTextBloc6BlocNumber_TextChanged(object sender, EventArgs e)
         {
-            blockchain.ResetBlockData(6);
+           // blockchain.block[4].number = Convert.ToInt32(MultiTextBloc6BlocNumber.Text);
+            //blockchain.ResetBlockData(6);
         }
 
         private void MultiTextBloc6Nonce_TextChanged(object sender, EventArgs e)
         {
-            blockchain.ResetBlockData(6);
+           // blockchain.ResetBlockData(6);
         }
 
         private void MultiLineBloc6Data_TextChanged(object sender, EventArgs e)
         {
-            blockchain.ResetBlockData(6);
+           // blockchain.ResetBlockData(6);
         }
 
        
@@ -199,6 +215,30 @@ namespace Blockchain_Demo
         private void btnBloc6MainAll_Click(object sender, EventArgs e)
         {
 
+        }
+        public bool PenaltyCharacters(string newSms)
+        {
+            if (newSms != "")
+            {
+               // int value;
+                // blockchain.firstBlock.number = int.TryParse(MultiTextBloc1BlocNumber.Text);
+                bool status = int.TryParse(newSms, out int value);
+                if (!status)
+                {
+                    MessageBox.Show("Neatļauts simbols!",
+                        "Brīdinājums",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning
+                        );
+                    return false;
+                }
+
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }

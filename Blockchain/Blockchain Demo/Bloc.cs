@@ -7,19 +7,20 @@ using System.Security.Cryptography;
 
 namespace Blockchain_Demo
 {
-     class Bloc
+    public class Bloc
     {
         SHA256 sha256;// = new SHA256CryptoServiceProvider();
         private byte[] result; // masīvs kurā glabājas atbilde hash summs
         public string answer { get; set; }  // Pārvērst atbilde string formā
-        public int number { get; set; }
+        public string number { get; set; }
         public int Nonce { get; set; }
-        public string text { get; set; }
+        public string textt { get; set; }
         private byte[] data;
         public string hashSum { get; }
         public string previousHashSum { get;}
-        public Bloc()
+        public Bloc(string number)
         {
+            this.number = number;                                 // pie izveidošanas iestata numuru kas atbilst kārtas numuram
             sha256 = new SHA256CryptoServiceProvider();
             maximumattempts = 1000000;
 

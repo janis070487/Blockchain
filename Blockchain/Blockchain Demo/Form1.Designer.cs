@@ -370,8 +370,10 @@
             this.MultiTextBloc6Nonce.Hint = "";
             this.MultiTextBloc6Nonce.Location = new System.Drawing.Point(112, 78);
             this.MultiTextBloc6Nonce.MaximumSize = new System.Drawing.Size(300, 30);
+            this.MultiTextBloc6Nonce.MaxLength = 20;
             this.MultiTextBloc6Nonce.MinimumSize = new System.Drawing.Size(300, 30);
             this.MultiTextBloc6Nonce.MouseState = MaterialSkin.MouseState.HOVER;
+            this.MultiTextBloc6Nonce.Multiline = false;
             this.MultiTextBloc6Nonce.Name = "MultiTextBloc6Nonce";
             this.MultiTextBloc6Nonce.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.MultiTextBloc6Nonce.Size = new System.Drawing.Size(300, 30);
@@ -431,8 +433,10 @@
             this.MultiTextBloc6BlocNumber.Hint = "";
             this.MultiTextBloc6BlocNumber.Location = new System.Drawing.Point(112, 33);
             this.MultiTextBloc6BlocNumber.MaximumSize = new System.Drawing.Size(300, 30);
+            this.MultiTextBloc6BlocNumber.MaxLength = 10;
             this.MultiTextBloc6BlocNumber.MinimumSize = new System.Drawing.Size(300, 30);
             this.MultiTextBloc6BlocNumber.MouseState = MaterialSkin.MouseState.HOVER;
+            this.MultiTextBloc6BlocNumber.Multiline = false;
             this.MultiTextBloc6BlocNumber.Name = "MultiTextBloc6BlocNumber";
             this.MultiTextBloc6BlocNumber.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.MultiTextBloc6BlocNumber.Size = new System.Drawing.Size(300, 30);
@@ -628,8 +632,10 @@
             this.MultiTextBloc5Nonce.Hint = "";
             this.MultiTextBloc5Nonce.Location = new System.Drawing.Point(112, 78);
             this.MultiTextBloc5Nonce.MaximumSize = new System.Drawing.Size(300, 30);
+            this.MultiTextBloc5Nonce.MaxLength = 20;
             this.MultiTextBloc5Nonce.MinimumSize = new System.Drawing.Size(300, 30);
             this.MultiTextBloc5Nonce.MouseState = MaterialSkin.MouseState.HOVER;
+            this.MultiTextBloc5Nonce.Multiline = false;
             this.MultiTextBloc5Nonce.Name = "MultiTextBloc5Nonce";
             this.MultiTextBloc5Nonce.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.MultiTextBloc5Nonce.Size = new System.Drawing.Size(300, 30);
@@ -689,8 +695,10 @@
             this.MultiTextBloc5BlocNumber.Hint = "";
             this.MultiTextBloc5BlocNumber.Location = new System.Drawing.Point(112, 33);
             this.MultiTextBloc5BlocNumber.MaximumSize = new System.Drawing.Size(300, 30);
+            this.MultiTextBloc5BlocNumber.MaxLength = 10;
             this.MultiTextBloc5BlocNumber.MinimumSize = new System.Drawing.Size(300, 30);
             this.MultiTextBloc5BlocNumber.MouseState = MaterialSkin.MouseState.HOVER;
+            this.MultiTextBloc5BlocNumber.Multiline = false;
             this.MultiTextBloc5BlocNumber.Name = "MultiTextBloc5BlocNumber";
             this.MultiTextBloc5BlocNumber.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.MultiTextBloc5BlocNumber.Size = new System.Drawing.Size(300, 30);
@@ -886,8 +894,10 @@
             this.MultiTextBloc4Nonce.Hint = "";
             this.MultiTextBloc4Nonce.Location = new System.Drawing.Point(112, 78);
             this.MultiTextBloc4Nonce.MaximumSize = new System.Drawing.Size(300, 30);
+            this.MultiTextBloc4Nonce.MaxLength = 20;
             this.MultiTextBloc4Nonce.MinimumSize = new System.Drawing.Size(300, 30);
             this.MultiTextBloc4Nonce.MouseState = MaterialSkin.MouseState.HOVER;
+            this.MultiTextBloc4Nonce.Multiline = false;
             this.MultiTextBloc4Nonce.Name = "MultiTextBloc4Nonce";
             this.MultiTextBloc4Nonce.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.MultiTextBloc4Nonce.Size = new System.Drawing.Size(300, 30);
@@ -947,8 +957,10 @@
             this.MultiTextBloc4BlocNumber.Hint = "";
             this.MultiTextBloc4BlocNumber.Location = new System.Drawing.Point(112, 33);
             this.MultiTextBloc4BlocNumber.MaximumSize = new System.Drawing.Size(300, 30);
+            this.MultiTextBloc4BlocNumber.MaxLength = 10;
             this.MultiTextBloc4BlocNumber.MinimumSize = new System.Drawing.Size(300, 30);
             this.MultiTextBloc4BlocNumber.MouseState = MaterialSkin.MouseState.HOVER;
+            this.MultiTextBloc4BlocNumber.Multiline = false;
             this.MultiTextBloc4BlocNumber.Name = "MultiTextBloc4BlocNumber";
             this.MultiTextBloc4BlocNumber.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.MultiTextBloc4BlocNumber.Size = new System.Drawing.Size(300, 30);
@@ -1144,8 +1156,10 @@
             this.MultiTextBloc3Nonce.Hint = "";
             this.MultiTextBloc3Nonce.Location = new System.Drawing.Point(112, 78);
             this.MultiTextBloc3Nonce.MaximumSize = new System.Drawing.Size(300, 30);
+            this.MultiTextBloc3Nonce.MaxLength = 10;
             this.MultiTextBloc3Nonce.MinimumSize = new System.Drawing.Size(300, 30);
             this.MultiTextBloc3Nonce.MouseState = MaterialSkin.MouseState.HOVER;
+            this.MultiTextBloc3Nonce.Multiline = false;
             this.MultiTextBloc3Nonce.Name = "MultiTextBloc3Nonce";
             this.MultiTextBloc3Nonce.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.MultiTextBloc3Nonce.Size = new System.Drawing.Size(300, 30);
@@ -1194,6 +1208,7 @@
             this.TextBloc3Data.Size = new System.Drawing.Size(35, 19);
             this.TextBloc3Data.TabIndex = 6;
             this.TextBloc3Data.Text = "Data";
+
             // 
             // MultiTextBloc3BlocNumber
             // 
@@ -1205,8 +1220,10 @@
             this.MultiTextBloc3BlocNumber.Hint = "";
             this.MultiTextBloc3BlocNumber.Location = new System.Drawing.Point(112, 33);
             this.MultiTextBloc3BlocNumber.MaximumSize = new System.Drawing.Size(300, 30);
+            this.MultiTextBloc3BlocNumber.MaxLength = 10;
             this.MultiTextBloc3BlocNumber.MinimumSize = new System.Drawing.Size(300, 30);
             this.MultiTextBloc3BlocNumber.MouseState = MaterialSkin.MouseState.HOVER;
+            this.MultiTextBloc3BlocNumber.Multiline = false;
             this.MultiTextBloc3BlocNumber.Name = "MultiTextBloc3BlocNumber";
             this.MultiTextBloc3BlocNumber.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.MultiTextBloc3BlocNumber.Size = new System.Drawing.Size(300, 30);
@@ -1230,6 +1247,9 @@
             // 
             // TextBloc3BlocNumber
             // 
+            
+
+
             this.TextBloc3BlocNumber.AutoSize = true;
             this.TextBloc3BlocNumber.Depth = 0;
             this.TextBloc3BlocNumber.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -1416,8 +1436,10 @@
             this.MultiTextBloc2Nonce.Hint = "";
             this.MultiTextBloc2Nonce.Location = new System.Drawing.Point(112, 78);
             this.MultiTextBloc2Nonce.MaximumSize = new System.Drawing.Size(300, 30);
+            this.MultiTextBloc2Nonce.MaxLength = 20;
             this.MultiTextBloc2Nonce.MinimumSize = new System.Drawing.Size(300, 30);
             this.MultiTextBloc2Nonce.MouseState = MaterialSkin.MouseState.HOVER;
+            this.MultiTextBloc2Nonce.Multiline = false;
             this.MultiTextBloc2Nonce.Name = "MultiTextBloc2Nonce";
             this.MultiTextBloc2Nonce.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.MultiTextBloc2Nonce.Size = new System.Drawing.Size(300, 30);
@@ -1477,8 +1499,10 @@
             this.MultiTextBloc2BlocNumber.Hint = "";
             this.MultiTextBloc2BlocNumber.Location = new System.Drawing.Point(112, 33);
             this.MultiTextBloc2BlocNumber.MaximumSize = new System.Drawing.Size(300, 30);
+            this.MultiTextBloc2BlocNumber.MaxLength = 10;
             this.MultiTextBloc2BlocNumber.MinimumSize = new System.Drawing.Size(300, 30);
             this.MultiTextBloc2BlocNumber.MouseState = MaterialSkin.MouseState.HOVER;
+            this.MultiTextBloc2BlocNumber.Multiline = false;
             this.MultiTextBloc2BlocNumber.Name = "MultiTextBloc2BlocNumber";
             this.MultiTextBloc2BlocNumber.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.MultiTextBloc2BlocNumber.Size = new System.Drawing.Size(300, 30);
@@ -1688,8 +1712,10 @@
             this.MultiTextBloc1Nonce.Hint = "";
             this.MultiTextBloc1Nonce.Location = new System.Drawing.Point(112, 78);
             this.MultiTextBloc1Nonce.MaximumSize = new System.Drawing.Size(300, 30);
+            this.MultiTextBloc1Nonce.MaxLength = 20;
             this.MultiTextBloc1Nonce.MinimumSize = new System.Drawing.Size(300, 30);
             this.MultiTextBloc1Nonce.MouseState = MaterialSkin.MouseState.HOVER;
+            this.MultiTextBloc1Nonce.Multiline = false;
             this.MultiTextBloc1Nonce.Name = "MultiTextBloc1Nonce";
             this.MultiTextBloc1Nonce.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.MultiTextBloc1Nonce.Size = new System.Drawing.Size(300, 30);
@@ -1749,8 +1775,10 @@
             this.MultiTextBloc1BlocNumber.Hint = "";
             this.MultiTextBloc1BlocNumber.Location = new System.Drawing.Point(112, 33);
             this.MultiTextBloc1BlocNumber.MaximumSize = new System.Drawing.Size(300, 30);
+            this.MultiTextBloc1BlocNumber.MaxLength = 10;
             this.MultiTextBloc1BlocNumber.MinimumSize = new System.Drawing.Size(300, 30);
             this.MultiTextBloc1BlocNumber.MouseState = MaterialSkin.MouseState.HOVER;
+            this.MultiTextBloc1BlocNumber.Multiline = false;
             this.MultiTextBloc1BlocNumber.Name = "MultiTextBloc1BlocNumber";
             this.MultiTextBloc1BlocNumber.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.MultiTextBloc1BlocNumber.Size = new System.Drawing.Size(300, 30);
