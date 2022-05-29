@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Cryptography;
 
 namespace Blockchain_Demo
 {
@@ -40,27 +41,21 @@ namespace Blockchain_Demo
 
         private void MultiTextBloc1BlocNumber_TextChanged(object sender, EventArgs e)
         {
-            
-            //MultiTextBloc1BlocNumber.Text.Remove(MultiTextBloc1BlocNumber.Text.Length);
-            // MultiTextBloc1BlocNumber.Text = "";
-            //MultiTextBloc1BlocNumber.AppendText(PenaltyCharacters(MultiTextBloc1BlocNumber.Text, MultiTextBloc1BlocNumber.Text, "1"));
-            //MultiTextBloc1BlocNumber.Text = PenaltyCharacters(MultiTextBloc1BlocNumber.Text, MultiTextBloc1BlocNumber.Text, "1");
-            //  MultiTextBloc1BlocNumber.Text = MultiTextBloc1BlocNumber.Text;
-            // MultiLineBloc1Data.Text = MultiTextBloc1BlocNumber.Text;
-            //MultiLineBloc1Data.AppendText("9");
-            //  MultiTextBloc1BlocNumber.AppendText("");
-            //blockchain.ResetBlockData(1);
-
+            if (!symbolCheck(MultiTextBloc1BlocNumber.Text))
+            {
+                MultiTextBloc1BlocNumber.Undo();
+            }
+            blockchain.block[0].number = MultiTextBloc1BlocNumber.Text;
         }
 
         private void MultiTextBloc1Nonce_TextChanged(object sender, EventArgs e)
         {
-           // blockchain.ResetBlockData(1);
+            blockchain.block[0].Nonce = MultiTextBloc1Nonce.Text;
         }
 
         private void MultiLineBloc1Data_TextChanged(object sender, EventArgs e)
         {
-           // blockchain.ResetBlockData(1);
+            blockchain.block[0].textt = MultiLineBloc1Data.Text;
         }
 
      
@@ -78,18 +73,21 @@ namespace Blockchain_Demo
 
         private void MultiTextBloc2BlocNumber_TextChanged(object sender, EventArgs e)
         {
-            //blockchain.block[0].number = Convert.ToInt32(MultiTextBloc2BlocNumber.Text);
-            //blockchain.ResetBlockData(2);
+            if (!symbolCheck(MultiTextBloc2BlocNumber.Text))
+            {
+                MultiTextBloc2BlocNumber.Undo();
+            }
+            blockchain.block[1].number = MultiTextBloc2BlocNumber.Text;
         }
 
         private void MultiTextBloc2Nonce_TextChanged(object sender, EventArgs e)
         {
-           // blockchain.ResetBlockData(2);
+            blockchain.block[2].Nonce = MultiTextBloc2Nonce.Text;
         }
 
         private void MultiLineBloc2Data_TextChanged(object sender, EventArgs e)
         {
-           // blockchain.ResetBlockData(2);
+            blockchain.block[2].textt = MultiLineBloc2Data.Text;
         }
 
       
@@ -108,18 +106,21 @@ namespace Blockchain_Demo
 
         private void MultiTextBloc3BlocNumber_TextChanged(object sender, EventArgs e)
         {
-           // blockchain.block[1].number = Convert.ToInt32(MultiTextBloc3BlocNumber.Text);
-            // blockchain.ResetBlockData(3);
+            if (!symbolCheck(MultiTextBloc3BlocNumber.Text))
+            {
+                MultiTextBloc3BlocNumber.Undo();
+            }
+            blockchain.block[2].number = MultiTextBloc3BlocNumber.Text;
         }
 
         private void MultiTextBloc3Nonce_TextChanged(object sender, EventArgs e)
         {
-            //blockchain.ResetBlockData(3);
+            blockchain.block[2].Nonce = MultiTextBloc3Nonce.Text;
         }
 
         private void MultiLineBloc3Data_TextChanged(object sender, EventArgs e)
         {
-           // blockchain.ResetBlockData(3);
+            blockchain.block[2].textt = MultiLineBloc3Data.Text;
         }
 
       
@@ -138,19 +139,21 @@ namespace Blockchain_Demo
 
         private void MultiTextBloc4BlocNumber_TextChanged(object sender, EventArgs e)
         {
-           // blockchain.block[2].number = Convert.ToInt32(MultiTextBloc3BlocNumber.Text);
-            // blockchain.ResetBlockData(4);
-
+            if (!symbolCheck(MultiTextBloc4BlocNumber.Text))
+            {
+                MultiTextBloc4BlocNumber.Undo();
+            }
+            blockchain.block[3].number = MultiTextBloc4BlocNumber.Text;
         }
 
         private void MultiTextBloc4Nonce_TextChanged(object sender, EventArgs e)
         {
-          //  blockchain.ResetBlockData(4);
+            blockchain.block[3].Nonce = MultiTextBloc4Nonce.Text;
         }
 
         private void MultiLineBloc4Data_TextChanged(object sender, EventArgs e)
         {
-          //  blockchain.ResetBlockData(4);
+            blockchain.block[3].textt = MultiLineBloc4Data.Text;
         }
 
         private void btnBloc4Main_Click(object sender, EventArgs e)
@@ -166,18 +169,21 @@ namespace Blockchain_Demo
 
         private void MultiTextBloc5BlocNumber_TextChanged(object sender, EventArgs e)
         {
-           // blockchain.block[3].number = Convert.ToInt32(MultiTextBloc5BlocNumber.Text);
-           // blockchain.ResetBlockData(5);
+            if (!symbolCheck(MultiTextBloc5BlocNumber.Text))
+            {
+                MultiTextBloc5BlocNumber.Undo();
+            }
+            blockchain.block[4].number = MultiTextBloc5BlocNumber.Text;
         }
 
         private void MultiTextBloc5Nonce_TextChanged(object sender, EventArgs e)
         {
-           // blockchain.ResetBlockData(5);
+            blockchain.block[4].Nonce = MultiTextBloc5Nonce.Text;
         }
 
         private void MultiLineBloc5Data_TextChanged(object sender, EventArgs e)
         {
-           // blockchain.ResetBlockData(5);
+            blockchain.block[4].textt = MultiLineBloc5Data.Text;
         }
 
         private void btnBloc5Main_Click(object sender, EventArgs e)
@@ -192,18 +198,21 @@ namespace Blockchain_Demo
         //___________________________________   Bloks 6 ________________________________________________
         private void MultiTextBloc6BlocNumber_TextChanged(object sender, EventArgs e)
         {
-           // blockchain.block[4].number = Convert.ToInt32(MultiTextBloc6BlocNumber.Text);
-            //blockchain.ResetBlockData(6);
+            if (!symbolCheck(MultiTextBloc6BlocNumber.Text))
+            {
+                MultiTextBloc6BlocNumber.Undo();
+            }
+            blockchain.block[5].number = MultiTextBloc6BlocNumber.Text;
         }
 
-        private void MultiTextBloc6Nonce_TextChanged(object sender, EventArgs e)
+            private void MultiTextBloc6Nonce_TextChanged(object sender, EventArgs e)
         {
-           // blockchain.ResetBlockData(6);
+            blockchain.block[5].Nonce = MultiTextBloc6Nonce.Text;
         }
 
         private void MultiLineBloc6Data_TextChanged(object sender, EventArgs e)
         {
-           // blockchain.ResetBlockData(6);
+            blockchain.block[5].textt = MultiLineBloc6Data.Text;
         }
 
        
@@ -216,12 +225,11 @@ namespace Blockchain_Demo
         {
 
         }
-        public bool PenaltyCharacters(string newSms)
+        //__________________________________________________________________________
+        public bool symbolCheck(string newSms)
         {
             if (newSms != "")
             {
-               // int value;
-                // blockchain.firstBlock.number = int.TryParse(MultiTextBloc1BlocNumber.Text);
                 bool status = int.TryParse(newSms, out int value);
                 if (!status)
                 {
@@ -232,13 +240,21 @@ namespace Blockchain_Demo
                         );
                     return false;
                 }
-
-                return false;
+                return true;
             }
             else
             {
                 return true;
             }
+        }
+        //___________________________________________________________________________
+        public byte[] Maining(byte[] data, int proofOfEmployment, int maximumattempts)
+        {
+            SHA256 sha256 = new SHA256CryptoServiceProvider();
+            byte[] dataByte = data;
+            
+           byte[] answer = sha256(dataByte);
+            return null;
         }
     }
 }

@@ -1208,7 +1208,6 @@
             this.TextBloc3Data.Size = new System.Drawing.Size(35, 19);
             this.TextBloc3Data.TabIndex = 6;
             this.TextBloc3Data.Text = "Data";
-
             // 
             // MultiTextBloc3BlocNumber
             // 
@@ -1247,9 +1246,6 @@
             // 
             // TextBloc3BlocNumber
             // 
-            
-
-
             this.TextBloc3BlocNumber.AutoSize = true;
             this.TextBloc3BlocNumber.Depth = 0;
             this.TextBloc3BlocNumber.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
