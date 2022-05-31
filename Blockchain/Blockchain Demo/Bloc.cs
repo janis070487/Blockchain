@@ -7,18 +7,13 @@ using System.Security.Cryptography;
 
 namespace Blockchain_Demo
 {
-    public class Bloc
+    public class Bloc : Blockdata
     {
 
         SHA256 sha256;// = new SHA256CryptoServiceProvider();
         private byte[] result; // masīvs kurā glabājas atbilde hash summs
         public string answer { get; set; }  // Pārvērst atbilde string formā
-        public string number { get; set; }
-        public string Nonce { get; set; }
-        public string textt { get; set; }
         private byte[] data;
-        public string hashSum { get; set; }
-        public string previousHashSum { get;}
         public Bloc(string number)
         {
             this.number = number;                                 // pie izveidošanas iestata numuru kas atbilst kārtas numuram
@@ -43,6 +38,7 @@ namespace Blockchain_Demo
             Nonce = answer.nonce;
 
         }
+        //_____________________________________________________________________________________
         private void FormatData()   // sagatavo datus prikš hesh summas nemot no winformas bloka
         {
             string dataString = number + Nonce + textt + previousHashSum + hashSum;
@@ -53,6 +49,9 @@ namespace Blockchain_Demo
             }
             this.data = answer;
         }
+        //_____________________________________________________________________________________
+
+        //_____________________________________________________________________________________
         public void Main()
         {
             FormatData();

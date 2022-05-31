@@ -58,11 +58,10 @@ namespace Blockchain_Demo
             blockchain.block[0].textt = MultiLineBloc1Data.Text;
         }
 
-     
+
 
         private void btnBloc1Main_Click(object sender, EventArgs e)
         {
-
         }
 
         private void btnBloc1MainAll_Click(object sender, EventArgs e)
@@ -253,8 +252,11 @@ namespace Blockchain_Demo
             SHA256 sha256 = new SHA256CryptoServiceProvider();
             byte[] dataByte = data;
             
-           byte[] answer = sha256(dataByte);
+           //byte[] answer = sha256(dataByte);
             return null;
         }
+        //___________________________________________________________________________
+       
+        //___________________________________________________________________________
     }
 }
