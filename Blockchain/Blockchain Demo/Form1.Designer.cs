@@ -1557,7 +1557,7 @@
             this.grup1bloc.Size = new System.Drawing.Size(425, 612);
             this.grup1bloc.TabIndex = 0;
             this.grup1bloc.TabStop = false;
-            this.grup1bloc.Text = "Block";
+            this.grup1bloc.Text = "Block 1";
             // 
             // materialLabel2
             // 

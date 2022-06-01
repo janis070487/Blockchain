@@ -50,12 +50,12 @@ namespace Blockchain_Demo
 
         private void MultiTextBloc1Nonce_TextChanged(object sender, EventArgs e)
         {
-            blockchain.block[0].Nonce = MultiTextBloc1Nonce.Text;
+            blockchain.block[0].nonce = MultiTextBloc1Nonce.Text;
         }
 
         private void MultiLineBloc1Data_TextChanged(object sender, EventArgs e)
         {
-            blockchain.block[0].textt = MultiLineBloc1Data.Text;
+            blockchain.block[0].data = MultiLineBloc1Data.Text;
         }
 
 
@@ -81,12 +81,12 @@ namespace Blockchain_Demo
 
         private void MultiTextBloc2Nonce_TextChanged(object sender, EventArgs e)
         {
-            blockchain.block[2].Nonce = MultiTextBloc2Nonce.Text;
+            blockchain.block[2].nonce = MultiTextBloc2Nonce.Text;
         }
 
         private void MultiLineBloc2Data_TextChanged(object sender, EventArgs e)
         {
-            blockchain.block[2].textt = MultiLineBloc2Data.Text;
+           blockchain.block[2].data = MultiLineBloc2Data.Text;
         }
 
       
@@ -114,12 +114,12 @@ namespace Blockchain_Demo
 
         private void MultiTextBloc3Nonce_TextChanged(object sender, EventArgs e)
         {
-            blockchain.block[2].Nonce = MultiTextBloc3Nonce.Text;
+            blockchain.block[2].nonce = MultiTextBloc3Nonce.Text;
         }
 
         private void MultiLineBloc3Data_TextChanged(object sender, EventArgs e)
         {
-            blockchain.block[2].textt = MultiLineBloc3Data.Text;
+            blockchain.block[2].data = MultiLineBloc3Data.Text;
         }
 
       
@@ -147,12 +147,12 @@ namespace Blockchain_Demo
 
         private void MultiTextBloc4Nonce_TextChanged(object sender, EventArgs e)
         {
-            blockchain.block[3].Nonce = MultiTextBloc4Nonce.Text;
+            blockchain.block[3].nonce = MultiTextBloc4Nonce.Text;
         }
 
         private void MultiLineBloc4Data_TextChanged(object sender, EventArgs e)
         {
-            blockchain.block[3].textt = MultiLineBloc4Data.Text;
+            blockchain.block[3].data = MultiLineBloc4Data.Text;
         }
 
         private void btnBloc4Main_Click(object sender, EventArgs e)
@@ -177,12 +177,12 @@ namespace Blockchain_Demo
 
         private void MultiTextBloc5Nonce_TextChanged(object sender, EventArgs e)
         {
-            blockchain.block[4].Nonce = MultiTextBloc5Nonce.Text;
+            blockchain.block[4].nonce = MultiTextBloc5Nonce.Text;
         }
 
         private void MultiLineBloc5Data_TextChanged(object sender, EventArgs e)
         {
-            blockchain.block[4].textt = MultiLineBloc5Data.Text;
+            blockchain.block[4].data = MultiLineBloc5Data.Text;
         }
 
         private void btnBloc5Main_Click(object sender, EventArgs e)
@@ -206,12 +206,12 @@ namespace Blockchain_Demo
 
             private void MultiTextBloc6Nonce_TextChanged(object sender, EventArgs e)
         {
-            blockchain.block[5].Nonce = MultiTextBloc6Nonce.Text;
+            blockchain.block[5].nonce = MultiTextBloc6Nonce.Text;
         }
 
         private void MultiLineBloc6Data_TextChanged(object sender, EventArgs e)
         {
-            blockchain.block[5].textt = MultiLineBloc6Data.Text;
+            blockchain.block[5].data = MultiLineBloc6Data.Text;
         }
 
        
@@ -247,14 +247,14 @@ namespace Blockchain_Demo
             }
         }
         //___________________________________________________________________________
-        public byte[] Maining(byte[] data, int proofOfEmployment, int maximumattempts)
-        {
-            SHA256 sha256 = new SHA256CryptoServiceProvider();
-            byte[] dataByte = data;
+       // public byte[] Maining(byte[] data, int proofOfEmployment, int maximumattempts)
+      //  {
+        //    SHA256 sha256 = new SHA256CryptoServiceProvider();
+         ///   byte[] dataByte = data;
             
            //byte[] answer = sha256(dataByte);
-            return null;
-        }
+         //   return null;
+      //  }
         //___________________________________________________________________________
        
         //___________________________________________________________________________

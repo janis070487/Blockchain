@@ -7,9 +7,25 @@ using System.Security.Cryptography;
 
 namespace Blockchain_Demo
 {
-    public class Bloc : Blockdata
+    public class Bloc
     {
+        //______________________________________ Jaunais Mēģinājums _________________________________
 
+        public string number { get; set; }
+        public string nonce { get; set; }
+        public string data { get; set; }
+        public string prewHashSumm { get; set; }
+        public string hashSumm { get; set; }
+        public Bloc(string number)
+        {
+            this.number = number;
+        }
+
+
+
+        //______________________________________ vecais Mēģinājums _________________________________
+        
+        /*
         SHA256 sha256;// = new SHA256CryptoServiceProvider();
         private byte[] result; // masīvs kurā glabājas atbilde hash summs
         public string answer { get; set; }  // Pārvērst atbilde string formā
@@ -67,5 +83,6 @@ namespace Blockchain_Demo
         //___ pievienot kas parāda cik laiku aizņēma šim blokam
         //___ pievieno kas parāda cik laiku aizņēma šim un iepriekšējiem blokiem
         //--- pievienot labāko rezultātu ja nesanāca atrast rezultātu dēļ maksimāliem meiģinājumiem
+        */
     }
 }
