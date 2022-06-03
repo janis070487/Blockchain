@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace Blockchain_Demo
 {
-    public class Blockdata
+    public class BlockData
     {
-        public string textt { get; set; }
-        public string number { get; set; }
-        public string Nonce { get; set; }
-        public string hashSum { get; set; }
-        public string previousHashSum { get; set; }
+        public byte[] data { get; set; }
+        public byte[] hashSum { get; set; }
+        public BlockData()
+        {
+            hashSum = new byte[64];
+        }
     }
 }

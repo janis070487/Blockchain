@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Blockchain_Demo
+{
+    public class BlockTxt
+    {
+        public string number { get; set; }
+        public string nonce { get; set; }
+        public string data { get; set; }
+        public string prewHashSum { get; set; }
+        public string hashSum { get; set; }
+    }
+}

@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Blockchain_Demo.ServissObject
+namespace Blockchain_Demo
 {
-    public class Cryptography
+    public class Maining
     {
+
     }
 }
