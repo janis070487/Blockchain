@@ -14,23 +14,37 @@ namespace Blockchain_Demo
         {
             blockdata = new BlockData();
             blockTxt = new BlockTxt();
+            blockTxt.number = "";
+            blockTxt.nonce = "";
+            blockTxt.data = "";
+            blockTxt.prewHashSum = "";
+            blockTxt.hashSum = "";
         }
-        public void SetData()
+        
+        public void SetData() // Iestata jaunos datus pec teksta izmainas lai varētu pārrēiķināt hesh summu
         {
             string sumString = blockTxt.number + blockTxt.nonce + blockTxt.data + blockTxt.prewHashSum;
             byte[] sumData = new byte[sumString.Length];
             for (int i = 0; i < sumString.Length; i++)
             {
-                sumData[i] = (byte)sumString[i];
+                //sumData[i] = (byte)sumString[i];
+                sumData[i] = Convert.ToByte(sumString[i]);
             }
             blockdata.data = sumData;
         }
-        public void SetAnswerBlockTxt()
+        public void SetAnswerBlockTxt()  // iestata teksta laukā kas atēlo bloka hesh summu no hesh funkcījas iegūto atbildi
         {
-            
+            blockTxt.hashSum = "";
             for (int i = 0; i < blockdata.hashSum.Length; i++)
             {
                 blockTxt.hashSum += Convert.ToString(blockdata.hashSum[i], toBase: 16);
+            }
+            if(blockTxt.hashSum.Length != 64)
+            {
+                for(int i = blockTxt.hashSum.Length + 1; i <= 64; i++)
+                {
+                    blockTxt.hashSum = "0" + blockTxt.hashSum;
+                }
             }
 
         }

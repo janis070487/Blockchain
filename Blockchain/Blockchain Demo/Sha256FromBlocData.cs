@@ -16,8 +16,15 @@ namespace Blockchain_Demo
         }
         public BlockData GetSha256( BlockData block)
         {
-            // block.hashSum = sha256.ComputeHash(block.data);
+            
+             //pirmais variants
+             block.hashSum = sha256.ComputeHash(block.data);
             return block;
+             // otrais variants
+            // BlockData bd = new BlockData();
+           // bd.data = block.data;
+           // bd.hashSum = sha256.ComputeHash(block.data);
+           // return bd;  
         }
     }
 }

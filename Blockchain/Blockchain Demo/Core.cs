@@ -18,7 +18,12 @@ namespace Blockchain_Demo
 
         public void ResetData() // pec katras teksta izmainas visu izmaina
         {
-            for(int i  = 0; i < blockchain.block.Length; i++)
+            for (int i = 0; i < blockchain.block.Length; i++)
+            {
+                blockchain.block[i].SetData();
+            }
+
+            for (int i  = 0; i < blockchain.block.Length; i++)
             {
                  blockchain.block[i].blockdata = sha256FromBlock.GetSha256( blockchain.block[i].blockdata);
                 //sha256FromBlock.GetSha256(blockchain.block[i].blockdata);

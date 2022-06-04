@@ -17,7 +17,7 @@ namespace Blockchain_Demo
             for (int i = 0; i < block.Length; i++)
             {
                 block[i] = new Block();
-                block[i].blockTxt.number = Convert.ToString(i + 1);
+                block[i].blockTxt.number = Convert.ToString(i + 1); // katra bloka number laukā ieraksta attiecīgo numuru
             }
         }
 
