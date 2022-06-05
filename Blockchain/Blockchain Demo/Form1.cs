@@ -50,19 +50,11 @@ namespace Blockchain_Demo
             core.blockchain.block[0].blockTxt.prewHashSum =
             "0000000000000000000000000000000000000000000000000000000000000000";
             MultiTextBloc1HashPrev.Text = core.blockchain.block[0].blockTxt.prewHashSum;
-            for(int i = 0; i < core.blockchain.block.Length; i++)
-            {
-                core.blockchain.block[i].SetData();
-            }
             core.ResetData();
+            Test();
             flage = true;
-           // MultiLineBloc1Data.Text = Convert.ToString(core.blockchain.block[0].blockdata.data);
         }
-
-
-
-
-        //___________________________________   Bloks 1 ________________________________________________
+           //___________________________________   Bloks 1 ________________________________________________
 
 
         private void MultiTextBloc1BlocNumber_TextChanged(object sender, EventArgs e)
