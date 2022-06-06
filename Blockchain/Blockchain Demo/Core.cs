@@ -21,19 +21,15 @@ namespace Blockchain_Demo
             for (int i = 0; i < blockchain.block.Length; i++)
             {
                 blockchain.block[i].SetData();
-            }
-
-            for (int i  = 0; i < blockchain.block.Length; i++)
-            {
-                 blockchain.block[i].blockdata = sha256FromBlock.GetSha256( blockchain.block[i].blockdata);
-                //sha256FromBlock.GetSha256(blockchain.block[i].blockdata);
-
+                blockchain.block[i].blockdata = sha256FromBlock.GetSha256(blockchain.block[i].blockdata);
                 blockchain.block[i].SetAnswerBlockTxt();
-                if(i < blockchain.block.Length - 1)
+                if (i < blockchain.block.Length - 1)
                 {
                     blockchain.block[i + 1].blockTxt.prewHashSum = blockchain.block[i].blockTxt.hashSum;
+                    blockchain.block[i].SetData();
                 }
             }
+           
         }
        
     }

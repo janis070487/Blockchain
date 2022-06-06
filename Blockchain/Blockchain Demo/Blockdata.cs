@@ -12,7 +12,7 @@ namespace Blockchain_Demo
         public byte[] hashSum { get; set; }
         public BlockData()
         {
-            hashSum = new byte[64];
+            hashSum = new byte[32];
         }
     }
 }

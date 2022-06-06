@@ -106,7 +106,6 @@ namespace Blockchain_Demo
                 core.blockchain.block[1].blockTxt.number = MultiTextBloc2BlocNumber.Text;
                 core.ResetData();
                 Test();
-                Test();
             }
         }
 

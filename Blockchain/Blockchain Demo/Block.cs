@@ -27,17 +27,14 @@ namespace Blockchain_Demo
             byte[] sumData = new byte[sumString.Length];
             for (int i = 0; i < sumString.Length; i++)
             {
-                //sumData[i] = (byte)sumString[i];
                 sumData[i] = Convert.ToByte(sumString[i]);
             }
             blockdata.data = sumData;
         }
         public void SetAnswerBlockTxt()  // iestata teksta laukā kas atēlo bloka hesh summu no hesh funkcījas iegūto atbildi
         {
-            //blockTxt.hashSum = "";
-           // blockTxt.hashSum = GetHexToByte.GetHex(blockdata.hashSum);
-          //  /*
-            blockTxt.hashSum = "";
+            blockTxt.hashSum = GetHexToByte.GetHex(blockdata.hashSum);
+            /*
             for (int i = 0; i < blockdata.hashSum.Length; i++)
             {
                 string value = Convert.ToString(blockdata.hashSum[i], toBase: 16);
@@ -50,15 +47,16 @@ namespace Blockchain_Demo
                     blockTxt.hashSum += "0";
                 }
             }
-              /*
-            if (blockTxt.hashSum.Length != 64)
-            {
-                for(int i = blockTxt.hashSum.Length + 1; i <= 64; i++)
-                {
-                    blockTxt.hashSum = "0" + blockTxt.hashSum;
-                }
-            }
             */
+            /*
+          if (blockTxt.hashSum.Length != 64)
+          {
+              for(int i = blockTxt.hashSum.Length + 1; i <= 64; i++)
+              {
+                  blockTxt.hashSum = "0" + blockTxt.hashSum;
+              }
+          }
+          */
         }
     }
 }

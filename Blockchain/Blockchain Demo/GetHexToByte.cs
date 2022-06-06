@@ -8,7 +8,6 @@ namespace Blockchain_Demo
 {
     static class GetHexToByte
     {
-        //static byte value;
       public static string answer;
        public static string GetHex(byte[] data)
         {
@@ -16,7 +15,7 @@ namespace Blockchain_Demo
         for(int i = 0; i < data.Length; i++)
             {
                 GetHexSymbol(data[i] >> 4 );
-                GetHexSymbol(data[i] & 240 );
+                GetHexSymbol(data[i] & 15 );
             }
         return answer;
         }
