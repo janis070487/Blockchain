@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Blockchain_Demo
 {
-    static class GetHexToByte
+   public static class GetHexToByte
     {
       public static string answer;
        public static string GetHex(byte[] data)
@@ -17,7 +17,8 @@ namespace Blockchain_Demo
                 GetHexSymbol(data[i] >> 4 );
                 GetHexSymbol(data[i] & 15 );
             }
-        return answer;
+            return answer;
+            //return "0a1000ff";
         }
         public static void GetHexSymbol(int value)
         {
