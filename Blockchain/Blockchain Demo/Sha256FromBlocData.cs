@@ -14,10 +14,10 @@ namespace Blockchain_Demo
         {
             sha256 = new SHA256CryptoServiceProvider();
         }
-        public BlockData GetSha256( BlockData block)
+        public byte[] GetSha256( BlockData block)
         {
-             block.hashSum = sha256.ComputeHash(block.data);
-            return block;  
+             return  sha256.ComputeHash(block.data);
+           
         }
     }
 }

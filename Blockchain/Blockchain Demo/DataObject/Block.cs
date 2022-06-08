@@ -10,6 +10,7 @@ namespace Blockchain_Demo
     {
         public BlockData blockdata;
         public BlockTxt blockTxt;
+        //public bool status = true;
         public Block()
         {
             blockdata = new BlockData();

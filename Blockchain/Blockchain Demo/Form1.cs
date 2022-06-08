@@ -21,6 +21,10 @@ using System.Security.Cryptography;
        vai to pašam jaizdomā kā to darīt.   Ja nav tad es zinu kā!!
 
 3.    Kā var piemēram no objekta block izmainīt forms1 control tekstus lai var tikt no metodes Test
+
+4.    Nesanāk sadalīt pa mapēm
+
+5.    
  * */
 namespace Blockchain_Demo
 {
@@ -28,7 +32,9 @@ namespace Blockchain_Demo
     {
         public Core core = new Core(6);
         public bool flage = false;
-        //private Blockchain blockchain = new Blockchain(6);   // objekts blokcahain
+        //public Color colorError = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+        public Color colorError = Color.Red;
+        public Color colorOk = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
         public Form1()
         {
             InitializeComponent();
@@ -47,10 +53,12 @@ namespace Blockchain_Demo
             MultiTextBloc4BlocNumber.Text = "4";
             MultiTextBloc5BlocNumber.Text = "5";
             MultiTextBloc6BlocNumber.Text = "6";
-            core.blockchain.block[0].blockTxt.prewHashSum =
+             core.blockchain.block[0].blockTxt.prewHashSum =
             "0000000000000000000000000000000000000000000000000000000000000000";
             MultiTextBloc1HashPrev.Text = core.blockchain.block[0].blockTxt.prewHashSum;
+            core.LoadFirstDataInBloc();
             core.ResetData();
+            PrintNonce();
             Test();
             flage = true;
         }
@@ -91,11 +99,19 @@ namespace Blockchain_Demo
 
         private void btnBloc1Main_Click(object sender, EventArgs e)
         {
+            // Refresh();
+            //grup1bloc.BackColor = colorError;
+            // grup1bloc.ForeColor = colorError;
+            // MultiTextBloc1BlocNumber.SelectionColor = colorError;
+            //  Refresh();
+           // MultiTextBloc1BlocNumber.Refresh();
         }
 
         private void btnBloc1MainAll_Click(object sender, EventArgs e)
         {
-
+            // grup1bloc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            //grup1bloc.BackColor = colorOk;
+            //MultiTextBloc1BlocNumber.ForeColor = colorOk;
         }
         //___________________________________   Bloks 2 ________________________________________________
 
@@ -201,7 +217,7 @@ namespace Blockchain_Demo
         {
             if (flage)
             {
-                core.blockchain.block[3].blockTxt.nonce = MultiTextBloc3Nonce.Text;
+                core.blockchain.block[3].blockTxt.nonce = MultiTextBloc4Nonce.Text;
                 core.ResetData();
                 Test();
             }
@@ -311,26 +327,92 @@ namespace Blockchain_Demo
 
 
         //___________________________Pagaidu variants____________________________________________
-
+        public void PrintNonce()
+        {
+            MultiTextBloc1Nonce.Text = core.blockchain.block[0].blockTxt.nonce;
+            MultiTextBloc2Nonce.Text = core.blockchain.block[1].blockTxt.nonce;
+            MultiTextBloc3Nonce.Text = core.blockchain.block[2].blockTxt.nonce;
+            MultiTextBloc4Nonce.Text = core.blockchain.block[3].blockTxt.nonce;
+            MultiTextBloc5Nonce.Text = core.blockchain.block[4].blockTxt.nonce;
+            MultiTextBloc6Nonce.Text = core.blockchain.block[5].blockTxt.nonce;
+        }
         public void Test()
         {
             MultiTextBloc1HashPrev.Text = core.blockchain.block[0].blockTxt.prewHashSum;
             MultiLineBloc1Hash.Text = core.blockchain.block[0].blockTxt.hashSum;
 
+            
             MultiTextBloc2HashPrev.Text = core.blockchain.block[1].blockTxt.prewHashSum;
             MultiLineBloc2Hash.Text = core.blockchain.block[1].blockTxt.hashSum;
 
+           
             MultiTextBloc3HashPrev.Text = core.blockchain.block[2].blockTxt.prewHashSum;
             MultiLineBloc3Hash.Text = core.blockchain.block[2].blockTxt.hashSum;
 
+            
             MultiTextBloc4HashPrev.Text = core.blockchain.block[3].blockTxt.prewHashSum;
             MultiLineBloc4Hash.Text = core.blockchain.block[3].blockTxt.hashSum;
 
+           
             MultiTextBloc5HashPrev.Text = core.blockchain.block[4].blockTxt.prewHashSum;
             MultiLineBloc5Hash.Text = core.blockchain.block[4].blockTxt.hashSum;
 
+           
             MultiTextBloc6HashPrev.Text = core.blockchain.block[5].blockTxt.prewHashSum;
             MultiLineBloc6Hash.Text = core.blockchain.block[5].blockTxt.hashSum;
+           
+
+            // __ saliek krāsas
+            /*
+            if (core.blockchain.block[0].status)
+            {
+                grup1bloc.BackColor = colorOk;
+            }
+            else
+            {
+                grup1bloc.BackColor = colorError;
+            }
+            if (core.blockchain.block[1].status)
+            {
+                groupBox2.BackColor = colorOk;
+            }
+            else
+            {
+                groupBox2.BackColor = colorError;
+            }
+            if (core.blockchain.block[2].status)
+            {
+                groupBox3.BackColor = colorOk;
+            }
+            else
+            {
+                groupBox3.BackColor = colorError;
+            }
+            if (core.blockchain.block[3].status)
+            {
+                groupBox4.BackColor = colorOk;
+            }
+            else
+            {
+                groupBox4.BackColor = colorError;
+            }
+            if (core.blockchain.block[4].status)
+            {
+                grup5bloc.BackColor = colorOk;
+            }
+            else
+            {
+                grup5bloc.BackColor = colorError;
+            }
+            if (core.blockchain.block[5].status)
+            {
+                groupBox6.BackColor = colorOk;
+            }
+            else
+            {
+                groupBox6.BackColor = colorError;
+            }
+            */
         }
        
            

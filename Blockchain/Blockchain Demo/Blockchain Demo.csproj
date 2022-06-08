@@ -49,12 +49,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Block.cs" />
+    <Compile Include="DataObject\Block.cs" />
     <Compile Include="Blockchain.cs" />
     <Compile Include="BlockData.cs" />
     <Compile Include="BlockTxt.cs" />
     <Compile Include="Core.cs" />
     <Compile Include="Cryptography.cs" />
+    <Compile Include="FirstData.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,7 +95,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DataObject\" />
     <Folder Include="ServissObject\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

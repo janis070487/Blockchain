@@ -9,7 +9,7 @@ namespace Blockchain_Demo
     public class Core
     {
         public Blockchain blockchain;
-        public Sha256FromBlocData sha256FromBlock; 
+        public Sha256FromBlocData sha256FromBlock;
         public Core(int howBlock)
         {
             blockchain = new Blockchain(howBlock);
@@ -21,7 +21,7 @@ namespace Blockchain_Demo
             for (int i = 0; i < blockchain.block.Length; i++)
             {
                 blockchain.block[i].SetData();
-                blockchain.block[i].blockdata = sha256FromBlock.GetSha256(blockchain.block[i].blockdata);
+                blockchain.block[i].blockdata.hashSum = sha256FromBlock.GetSha256(blockchain.block[i].blockdata);
                 blockchain.block[i].SetAnswerBlockTxt();
                 if (i < blockchain.block.Length - 1)
                 {
@@ -29,8 +29,25 @@ namespace Blockchain_Demo
                     blockchain.block[i].SetData();
                 }
             }
-           
+
         }
+        public void Check() // pārbauda vai bloki ir pareizi
+        {
+
+        }
+        public void LoadFirstDataInBloc()
+        {
+           for(int i = 0; i < blockchain.block.Length; i++)
+            {
+                blockchain.block[i].blockTxt.nonce = FirstData.Data[i];
+               // blockchain.block[i].blockTxt.prewHashSum = FirstData.Data[i + 1];
+                //blockchain.block[i].blockTxt.hashSum = FirstData.Data[i + 2];
+            }
+        }
+    
        
+        
+
+
     }
 }
