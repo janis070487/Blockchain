@@ -34,7 +34,8 @@ namespace Blockchain_Demo
         public bool flage = false;
         //public Color colorError = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
         public Color colorError = Color.Red;
-        public Color colorOk = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+        // public Color colorOk = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+        public Color colorOk = Color.White;
         public Form1()
         {
             InitializeComponent();
@@ -99,19 +100,12 @@ namespace Blockchain_Demo
 
         private void btnBloc1Main_Click(object sender, EventArgs e)
         {
-            // Refresh();
-            //grup1bloc.BackColor = colorError;
-            // grup1bloc.ForeColor = colorError;
-            // MultiTextBloc1BlocNumber.SelectionColor = colorError;
-            //  Refresh();
-           // MultiTextBloc1BlocNumber.Refresh();
+            
         }
 
         private void btnBloc1MainAll_Click(object sender, EventArgs e)
         {
-            // grup1bloc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            //grup1bloc.BackColor = colorOk;
-            //MultiTextBloc1BlocNumber.ForeColor = colorOk;
+         
         }
         //___________________________________   Bloks 2 ________________________________________________
 
@@ -183,7 +177,7 @@ namespace Blockchain_Demo
         {
             if (flage)
             {
-                core.blockchain.block[3].blockTxt.data = MultiLineBloc4Data.Text;
+                core.blockchain.block[2].blockTxt.data = MultiLineBloc3Data.Text;
                 core.ResetData();
                 Test();
             }
@@ -363,56 +357,68 @@ namespace Blockchain_Demo
            
 
             // __ saliek krāsas
-            /*
+           // /*
             if (core.blockchain.block[0].status)
             {
-                grup1bloc.BackColor = colorOk;
+                grup1bloc.ForeColor = colorOk;
+                grup1bloc.Text = "Block 1";
             }
             else
             {
-                grup1bloc.BackColor = colorError;
+                grup1bloc.ForeColor = colorError;
+                grup1bloc.Text = "Block 1   __ ERROR __";
             }
             if (core.blockchain.block[1].status)
             {
-                groupBox2.BackColor = colorOk;
+                groupBox2.ForeColor = colorOk;
+                groupBox2.Text = "Block 2";
             }
             else
             {
-                groupBox2.BackColor = colorError;
+                groupBox2.ForeColor = colorError;
+                groupBox2.Text = "Block 2   __ ERROR __";   
             }
             if (core.blockchain.block[2].status)
             {
-                groupBox3.BackColor = colorOk;
+                groupBox3.ForeColor = colorOk;
+                groupBox3.Text = "Block 3";
             }
             else
             {
-                groupBox3.BackColor = colorError;
+                groupBox3.ForeColor = colorError;
+                groupBox3.Text = "Block 3   __ ERROR __";
             }
             if (core.blockchain.block[3].status)
             {
-                groupBox4.BackColor = colorOk;
+                groupBox4.ForeColor = colorOk;
+                groupBox4.Text = "Block 4";
             }
             else
             {
-                groupBox4.BackColor = colorError;
+                groupBox4.ForeColor = colorError;
+                groupBox4.Text = "Block 4   __ ERROR __";
             }
             if (core.blockchain.block[4].status)
             {
-                grup5bloc.BackColor = colorOk;
+                grup5bloc.ForeColor = colorOk;
+                grup5bloc.Text = "Block 5";
             }
             else
             {
-                grup5bloc.BackColor = colorError;
+                grup5bloc.ForeColor = colorError;
+                grup5bloc.Text = "Block 5   __ ERROR __";
             }
             if (core.blockchain.block[5].status)
             {
-                groupBox6.BackColor = colorOk;
+                groupBox6.ForeColor = colorOk;
+                groupBox6.Text = "Block 6";
             }
             else
             {
-                groupBox6.BackColor = colorError;
+                groupBox6.ForeColor = colorError;
+                groupBox6.Text = "Block 6   __ ERROR __";
             }
-            */
+            //*/
         }
        
            
