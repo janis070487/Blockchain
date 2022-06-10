@@ -58,7 +58,7 @@ namespace Blockchain_Demo
             "0000000000000000000000000000000000000000000000000000000000000000";
             MultiTextBloc1HashPrev.Text = core.blockchain.block[0].blockTxt.prewHashSum;
             core.howManyZeros = 4;                                  // iestata uzdevuma prasibas
-            core.maximumNumberOfAttempts = int.MaxValue;                 //iestata maksimālo meiģinājumu skaitu
+            core.maximumNumberOfAttempts = 10000000;                 //iestata maksimālo meiģinājumu skaitu
             core.LoadFirstDataInBloc();
             core.ResetData();
             PrintNonce();
@@ -323,8 +323,20 @@ namespace Blockchain_Demo
         {
             btnMainAllBlock();
         }
+        //________________________________ setings ___________________________________________
+        private void BoxhowManyZeros_TextChanged(object sender, EventArgs e)
+        {
+           core.howManyZeros = core.CheckValue(BoxhowManyZeros.Text);
+            core.ResetData();
+            Test();
+        }
 
-//_________________________________ Pogu apstrades funkcījas ___________________________
+        private void BoxMaximumTray_TextChanged(object sender, EventArgs e)
+        {
+           core.maximumNumberOfAttempts = core.CheckValue(BoxMaximumTray.Text);
+        }
+
+        //_________________________________ Pogu apstrades funkcījas ___________________________
         public void BtnMainBlock(int blockNumber)
         {
             core.MainingStartOneBlock(blockNumber);
@@ -441,10 +453,14 @@ namespace Blockchain_Demo
             }
             //*/
         }
+
        
-           
-        
-        
+
+
+
+
+
+
         //___________________________________________________________________________
         // public byte[] Maining(byte[] data, int proofOfEmployment, int maximumattempts)
         //  {

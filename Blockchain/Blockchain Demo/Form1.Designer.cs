@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
+            this.LabelMaximum = new MaterialSkin.Controls.MaterialTabControl();
             this.tabFile = new System.Windows.Forms.TabPage();
             this.tabInfo = new System.Windows.Forms.TabPage();
             this.tabBloc = new System.Windows.Forms.TabPage();
@@ -128,8 +128,12 @@
             this.TextBloc1Nonce = new MaterialSkin.Controls.MaterialLabel();
             this.TextBloc1BlocNumber = new MaterialSkin.Controls.MaterialLabel();
             this.tabSeting = new System.Windows.Forms.TabPage();
+            this.LabelhowManyZeros = new MaterialSkin.Controls.MaterialLabel();
+            this.BoxhowManyZeros = new MaterialSkin.Controls.MaterialMultiLineTextBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.materialTabControl1.SuspendLayout();
+            this.BoxMaximumTray = new MaterialSkin.Controls.MaterialMultiLineTextBox();
+            this.LabelMax = new MaterialSkin.Controls.MaterialLabel();
+            this.LabelMaximum.SuspendLayout();
             this.tabBloc.SuspendLayout();
             this.panelBlockchain.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -138,24 +142,25 @@
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.grup1bloc.SuspendLayout();
+            this.tabSeting.SuspendLayout();
             this.SuspendLayout();
             // 
-            // materialTabControl1
+            // LabelMaximum
             // 
-            this.materialTabControl1.Controls.Add(this.tabFile);
-            this.materialTabControl1.Controls.Add(this.tabInfo);
-            this.materialTabControl1.Controls.Add(this.tabBloc);
-            this.materialTabControl1.Controls.Add(this.tabSeting);
-            this.materialTabControl1.Depth = 0;
-            this.materialTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialTabControl1.ImageList = this.imageList1;
-            this.materialTabControl1.Location = new System.Drawing.Point(0, 0);
-            this.materialTabControl1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialTabControl1.Multiline = true;
-            this.materialTabControl1.Name = "materialTabControl1";
-            this.materialTabControl1.SelectedIndex = 0;
-            this.materialTabControl1.Size = new System.Drawing.Size(1360, 720);
-            this.materialTabControl1.TabIndex = 0;
+            this.LabelMaximum.Controls.Add(this.tabFile);
+            this.LabelMaximum.Controls.Add(this.tabInfo);
+            this.LabelMaximum.Controls.Add(this.tabBloc);
+            this.LabelMaximum.Controls.Add(this.tabSeting);
+            this.LabelMaximum.Depth = 0;
+            this.LabelMaximum.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LabelMaximum.ImageList = this.imageList1;
+            this.LabelMaximum.Location = new System.Drawing.Point(0, 0);
+            this.LabelMaximum.MouseState = MaterialSkin.MouseState.HOVER;
+            this.LabelMaximum.Multiline = true;
+            this.LabelMaximum.Name = "LabelMaximum";
+            this.LabelMaximum.SelectedIndex = 0;
+            this.LabelMaximum.Size = new System.Drawing.Size(1360, 720);
+            this.LabelMaximum.TabIndex = 0;
             // 
             // tabFile
             // 
@@ -1812,6 +1817,10 @@
             // 
             // tabSeting
             // 
+            this.tabSeting.Controls.Add(this.LabelMax);
+            this.tabSeting.Controls.Add(this.BoxMaximumTray);
+            this.tabSeting.Controls.Add(this.LabelhowManyZeros);
+            this.tabSeting.Controls.Add(this.BoxhowManyZeros);
             this.tabSeting.ImageKey = "setting.png";
             this.tabSeting.Location = new System.Drawing.Point(4, 39);
             this.tabSeting.Name = "tabSeting";
@@ -1819,6 +1828,41 @@
             this.tabSeting.TabIndex = 3;
             this.tabSeting.Text = "  Setings";
             this.tabSeting.UseVisualStyleBackColor = true;
+            // 
+            // LabelhowManyZeros
+            // 
+            this.LabelhowManyZeros.AutoSize = true;
+            this.LabelhowManyZeros.Depth = 0;
+            this.LabelhowManyZeros.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.LabelhowManyZeros.Location = new System.Drawing.Point(181, 75);
+            this.LabelhowManyZeros.MaximumSize = new System.Drawing.Size(100, 30);
+            this.LabelhowManyZeros.MinimumSize = new System.Drawing.Size(100, 30);
+            this.LabelhowManyZeros.MouseState = MaterialSkin.MouseState.HOVER;
+            this.LabelhowManyZeros.Name = "LabelhowManyZeros";
+            this.LabelhowManyZeros.Size = new System.Drawing.Size(100, 30);
+            this.LabelhowManyZeros.TabIndex = 7;
+            this.LabelhowManyZeros.Text = "Proof of work complexity";
+            // 
+            // BoxhowManyZeros
+            // 
+            this.BoxhowManyZeros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BoxhowManyZeros.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.BoxhowManyZeros.Depth = 0;
+            this.BoxhowManyZeros.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.BoxhowManyZeros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BoxhowManyZeros.Hint = "";
+            this.BoxhowManyZeros.Location = new System.Drawing.Point(418, 75);
+            this.BoxhowManyZeros.MaximumSize = new System.Drawing.Size(300, 30);
+            this.BoxhowManyZeros.MaxLength = 1;
+            this.BoxhowManyZeros.MinimumSize = new System.Drawing.Size(300, 30);
+            this.BoxhowManyZeros.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BoxhowManyZeros.Multiline = false;
+            this.BoxhowManyZeros.Name = "BoxhowManyZeros";
+            this.BoxhowManyZeros.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.BoxhowManyZeros.Size = new System.Drawing.Size(300, 30);
+            this.BoxhowManyZeros.TabIndex = 6;
+            this.BoxhowManyZeros.Text = "4";
+            this.BoxhowManyZeros.TextChanged += new System.EventHandler(this.BoxhowManyZeros_TextChanged);
             // 
             // imageList1
             // 
@@ -1830,18 +1874,53 @@
             this.imageList1.Images.SetKeyName(3, "info.png");
             this.imageList1.Images.SetKeyName(4, "setting.png");
             // 
+            // BoxMaximumTray
+            // 
+            this.BoxMaximumTray.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BoxMaximumTray.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.BoxMaximumTray.Depth = 0;
+            this.BoxMaximumTray.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.BoxMaximumTray.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BoxMaximumTray.Hint = "";
+            this.BoxMaximumTray.Location = new System.Drawing.Point(418, 145);
+            this.BoxMaximumTray.MaximumSize = new System.Drawing.Size(300, 30);
+            this.BoxMaximumTray.MaxLength = 15;
+            this.BoxMaximumTray.MinimumSize = new System.Drawing.Size(300, 30);
+            this.BoxMaximumTray.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BoxMaximumTray.Multiline = false;
+            this.BoxMaximumTray.Name = "BoxMaximumTray";
+            this.BoxMaximumTray.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.BoxMaximumTray.Size = new System.Drawing.Size(300, 30);
+            this.BoxMaximumTray.TabIndex = 8;
+            this.BoxMaximumTray.Text = "10000000";
+            this.BoxMaximumTray.TextChanged += new System.EventHandler(this.BoxMaximumTray_TextChanged);
+            // 
+            // LabelMax
+            // 
+            this.LabelMax.AutoSize = true;
+            this.LabelMax.Depth = 0;
+            this.LabelMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.LabelMax.Location = new System.Drawing.Point(181, 145);
+            this.LabelMax.MaximumSize = new System.Drawing.Size(100, 30);
+            this.LabelMax.MinimumSize = new System.Drawing.Size(100, 30);
+            this.LabelMax.MouseState = MaterialSkin.MouseState.HOVER;
+            this.LabelMax.Name = "LabelMax";
+            this.LabelMax.Size = new System.Drawing.Size(100, 30);
+            this.LabelMax.TabIndex = 9;
+            this.LabelMax.Text = "Maximum number of attempts";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1360, 720);
-            this.Controls.Add(this.materialTabControl1);
+            this.Controls.Add(this.LabelMaximum);
             this.DrawerShowIconsWhenHidden = true;
-            this.DrawerTabControl = this.materialTabControl1;
+            this.DrawerTabControl = this.LabelMaximum;
             this.Name = "Form1";
             this.Sizable = false;
             this.Text = "Blockhchain";
-            this.materialTabControl1.ResumeLayout(false);
+            this.LabelMaximum.ResumeLayout(false);
             this.tabBloc.ResumeLayout(false);
             this.tabBloc.PerformLayout();
             this.panelBlockchain.ResumeLayout(false);
@@ -1857,13 +1936,15 @@
             this.groupBox2.PerformLayout();
             this.grup1bloc.ResumeLayout(false);
             this.grup1bloc.PerformLayout();
+            this.tabSeting.ResumeLayout(false);
+            this.tabSeting.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private MaterialSkin.Controls.MaterialTabControl materialTabControl1;
+        private MaterialSkin.Controls.MaterialTabControl LabelMaximum;
         private System.Windows.Forms.TabPage tabFile;
         private System.Windows.Forms.TabPage tabInfo;
         private System.Windows.Forms.ImageList imageList1;
@@ -1964,6 +2045,10 @@
         private MaterialSkin.Controls.MaterialMultiLineTextBox MultiTextBloc6BlocNumber;
         private MaterialSkin.Controls.MaterialLabel TextBloc6Nonce;
         private MaterialSkin.Controls.MaterialLabel TextBloc6BlocNumber;
+        private MaterialSkin.Controls.MaterialMultiLineTextBox BoxhowManyZeros;
+        private MaterialSkin.Controls.MaterialLabel LabelhowManyZeros;
+        private MaterialSkin.Controls.MaterialLabel LabelMax;
+        private MaterialSkin.Controls.MaterialMultiLineTextBox BoxMaximumTray;
     }
 }
 

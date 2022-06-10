@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Forms;
 namespace Blockchain_Demo
 {
     public class Core
@@ -33,13 +33,15 @@ namespace Blockchain_Demo
         {
             for (int i = 0; i < blockchain.block.Length; i++)
             {
-                if (!blockchain.block[i].status)  // Ja bloks jau satur vajadzīgo hes summu tad no nesūta uz mainingu
+                if (!blockchain.block[i].status)  // Ja bloks jau satur vajadzīgo hes summu tad to nesūta uz mainingu
                 {
                     string nonce = maining.MainingRun(blockchain.block[i].blockTxt, howManyZeros, maximumNumberOfAttempts);
                     blockchain.block[i].blockTxt.nonce = nonce;
                     ResetData();
                 }
+                ResetData();
             }
+          
         }
 
         public void ResetData() // pec katras teksta izmainas visu izmaina
@@ -73,7 +75,20 @@ namespace Blockchain_Demo
         }
     
        
-        
+        public int CheckValue(string sms)
+        {
+            int answer;
+            bool a = int.TryParse(sms, out answer);
+            if (sms.Length == 0)
+            {
+                return 0;
+            } else if(!a)
+            {
+                MessageBox.Show("Tika ievadīts nepareizs simbols", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            return answer;
+        }
 
 
     }
