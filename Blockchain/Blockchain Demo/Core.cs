@@ -15,7 +15,7 @@ namespace Blockchain_Demo
         public int howManyZeros { get; set; }
         public int maximumNumberOfAttempts { get; set; }
         
-        public Core(int howBlock)
+        public Core(int howBlock) 
         {
             blockchain = new Blockchain(howBlock);
             sha256FromBlock = new Sha256FromBlocData();
