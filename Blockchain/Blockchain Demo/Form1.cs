@@ -57,6 +57,8 @@ namespace Blockchain_Demo
              core.blockchain.block[0].blockTxt.prewHashSum =
             "0000000000000000000000000000000000000000000000000000000000000000";
             MultiTextBloc1HashPrev.Text = core.blockchain.block[0].blockTxt.prewHashSum;
+            core.howManyZeros = 4;                                  // iestata uzdevuma prasibas
+            core.maximumNumberOfAttempts = int.MaxValue;                 //iestata maksimālo meiģinājumu skaitu
             core.LoadFirstDataInBloc();
             core.ResetData();
             PrintNonce();
@@ -74,6 +76,7 @@ namespace Blockchain_Demo
                 core.ResetData();
                 Test();
             }
+         
         }
 
         private void MultiTextBloc1Nonce_TextChanged(object sender, EventArgs e)
@@ -100,12 +103,12 @@ namespace Blockchain_Demo
 
         private void btnBloc1Main_Click(object sender, EventArgs e)
         {
-            
+            BtnMainBlock(1);
         }
 
         private void btnBloc1MainAll_Click(object sender, EventArgs e)
         {
-         
+            btnMainAllBlock();
         }
         //___________________________________   Bloks 2 ________________________________________________
 
@@ -143,12 +146,12 @@ namespace Blockchain_Demo
 
         private void btnBloc2Main_Click(object sender, EventArgs e)
         {
-
+            BtnMainBlock(2);
         }
 
         private void btnBloc2MainAll_Click(object sender, EventArgs e)
         {
-
+            btnMainAllBlock();
         }
         //___________________________________   Bloks 3 ________________________________________________
 
@@ -187,11 +190,11 @@ namespace Blockchain_Demo
 
             private void btnBloc3Main_Click(object sender, EventArgs e)
         {
-
+            BtnMainBlock(3);
         }
         private void btnBloc3MainAll_Click(object sender, EventArgs e)
         {
-
+            btnMainAllBlock();
         }
 
         //___________________________________   Bloks 4 ________________________________________________
@@ -229,13 +232,15 @@ namespace Blockchain_Demo
 
         private void btnBloc4Main_Click(object sender, EventArgs e)
         {
-
+            BtnMainBlock(4);
         }
 
         private void btnBloc4MainAll_Click(object sender, EventArgs e)
         {
-
+            btnMainAllBlock();
         }
+
+
         //___________________________________   Bloks 5 ________________________________________________
 
         private void MultiTextBloc5BlocNumber_TextChanged(object sender, EventArgs e)
@@ -270,12 +275,12 @@ namespace Blockchain_Demo
 
         private void btnBloc5Main_Click(object sender, EventArgs e)
         {
-
+            BtnMainBlock(5);
         }
 
         private void btnBloc5MainAll_Click(object sender, EventArgs e)
         {
-
+            btnMainAllBlock();
         }
         //___________________________________   Bloks 6 ________________________________________________
         private void MultiTextBloc6BlocNumber_TextChanged(object sender, EventArgs e)
@@ -311,14 +316,27 @@ namespace Blockchain_Demo
 
         private void btnBloc6Main_Click(object sender, EventArgs e)
         {
-
+            BtnMainBlock(6);
         }
 
         private void btnBloc6MainAll_Click(object sender, EventArgs e)
         {
-
+            btnMainAllBlock();
         }
 
+//_________________________________ Pogu apstrades funkcījas ___________________________
+        public void BtnMainBlock(int blockNumber)
+        {
+            core.MainingStartOneBlock(blockNumber);
+            core.ResetData();
+            Test();
+        }
+        public void btnMainAllBlock()
+        {
+            core.MainingStartAllBlocks();
+            core.ResetData();
+            Test();
+        }
 
         //___________________________Pagaidu variants____________________________________________
         public void PrintNonce()
@@ -332,32 +350,35 @@ namespace Blockchain_Demo
         }
         public void Test()
         {
+            flage = false;
             MultiTextBloc1HashPrev.Text = core.blockchain.block[0].blockTxt.prewHashSum;
             MultiLineBloc1Hash.Text = core.blockchain.block[0].blockTxt.hashSum;
+            MultiTextBloc1Nonce.Text = core.blockchain.block[0].blockTxt.nonce;
 
-            
+
             MultiTextBloc2HashPrev.Text = core.blockchain.block[1].blockTxt.prewHashSum;
             MultiLineBloc2Hash.Text = core.blockchain.block[1].blockTxt.hashSum;
+            MultiTextBloc2Nonce.Text = core.blockchain.block[1].blockTxt.nonce;
 
-           
             MultiTextBloc3HashPrev.Text = core.blockchain.block[2].blockTxt.prewHashSum;
             MultiLineBloc3Hash.Text = core.blockchain.block[2].blockTxt.hashSum;
+            MultiTextBloc3Nonce.Text = core.blockchain.block[2].blockTxt.nonce;
 
-            
             MultiTextBloc4HashPrev.Text = core.blockchain.block[3].blockTxt.prewHashSum;
             MultiLineBloc4Hash.Text = core.blockchain.block[3].blockTxt.hashSum;
+            MultiTextBloc4Nonce.Text = core.blockchain.block[3].blockTxt.nonce;
 
-           
             MultiTextBloc5HashPrev.Text = core.blockchain.block[4].blockTxt.prewHashSum;
             MultiLineBloc5Hash.Text = core.blockchain.block[4].blockTxt.hashSum;
+            MultiTextBloc5Nonce.Text = core.blockchain.block[4].blockTxt.nonce;
 
-           
+
             MultiTextBloc6HashPrev.Text = core.blockchain.block[5].blockTxt.prewHashSum;
             MultiLineBloc6Hash.Text = core.blockchain.block[5].blockTxt.hashSum;
-           
-
+            MultiTextBloc6Nonce.Text = core.blockchain.block[5].blockTxt.nonce;
+            flage = true;
             // __ saliek krāsas
-           // /*
+            // /*
             if (core.blockchain.block[0].status)
             {
                 grup1bloc.ForeColor = colorOk;

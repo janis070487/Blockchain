@@ -8,12 +8,38 @@ namespace Blockchain_Demo
 {
     public class Core
     {
+
         public Blockchain blockchain;
         public Sha256FromBlocData sha256FromBlock;
+        public Maining maining;
+        public int howManyZeros { get; set; }
+        public int maximumNumberOfAttempts { get; set; }
+        
         public Core(int howBlock)
         {
             blockchain = new Blockchain(howBlock);
             sha256FromBlock = new Sha256FromBlocData();
+            maining = new Maining();
+        }
+
+        public void MainingStartOneBlock(int blockNumber)
+        {
+             //Mianingo norādito bloku
+           string nonce = maining.MainingRun(blockchain.block[blockNumber - 1].blockTxt, howManyZeros, maximumNumberOfAttempts);
+            blockchain.block[blockNumber -1].blockTxt.nonce = nonce;
+            ResetData();
+        }
+        public void MainingStartAllBlocks()                 //mainingo visus blokus
+        {
+            for (int i = 0; i < blockchain.block.Length; i++)
+            {
+                if (!blockchain.block[i].status)  // Ja bloks jau satur vajadzīgo hes summu tad no nesūta uz mainingu
+                {
+                    string nonce = maining.MainingRun(blockchain.block[i].blockTxt, howManyZeros, maximumNumberOfAttempts);
+                    blockchain.block[i].blockTxt.nonce = nonce;
+                    ResetData();
+                }
+            }
         }
 
         public void ResetData() // pec katras teksta izmainas visu izmaina
@@ -29,7 +55,7 @@ namespace Blockchain_Demo
                     blockchain.block[i].SetData();
                 }
             }
-            Check(4);   // pārbauda vai ir vajadzīgais rezultāts
+            Check(howManyZeros);   // pārbauda vai ir vajadzīgais rezultāts
         }
         public void Check(int how)
         {
