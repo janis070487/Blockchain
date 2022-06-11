@@ -64,6 +64,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="GetHexToByte.cs" />
+    <Compile Include="Info.cs" />
     <Compile Include="Maining.cs" />
     <Compile Include="MainingAnswer.cs" />
     <Compile Include="Program.cs" />

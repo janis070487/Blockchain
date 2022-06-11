@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
+using System.Threading;
 //_________________________________________ Jautājumi _______________________________
 /*
  1.   vai class Sha256FromBlocData metode GetSha25 ir pareizi pieņemt metodē izmainīt to
@@ -36,6 +37,7 @@ namespace Blockchain_Demo
         public Color colorError = Color.Red;
         // public Color colorOk = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
         public Color colorOk = Color.White;
+       
         public Form1()
         {
             InitializeComponent();
@@ -64,10 +66,12 @@ namespace Blockchain_Demo
             PrintNonce();
             Test();
             flage = true;
+            core.resetInfo += Test;
+            
         }
-           //___________________________________   Bloks 1 ________________________________________________
+        //___________________________________   Bloks 1 ________________________________________________
 
-
+        
         private void MultiTextBloc1BlocNumber_TextChanged(object sender, EventArgs e)
         {
             if (flage)
@@ -345,6 +349,7 @@ namespace Blockchain_Demo
         }
         public void btnMainAllBlock()
         {
+            
             core.MainingStartAllBlocks();
             core.ResetData();
             Test();
@@ -451,6 +456,7 @@ namespace Blockchain_Demo
                 groupBox6.ForeColor = colorError;
                 groupBox6.Text = "Block 6   __ ERROR __";
             }
+            Refresh();
             //*/
         }
 

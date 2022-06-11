@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 namespace Blockchain_Demo
+
 {
     public class Core
     {
@@ -14,7 +16,11 @@ namespace Blockchain_Demo
         public Maining maining;
         public int howManyZeros { get; set; }
         public int maximumNumberOfAttempts { get; set; }
+        public delegate void ResetInfo();
+       
         
+        //public ResetInfo resetInfo { get; set; }
+        public event ResetInfo resetInfo;
         public Core(int howBlock) 
         {
             blockchain = new Blockchain(howBlock);
@@ -35,11 +41,13 @@ namespace Blockchain_Demo
             {
                 if (!blockchain.block[i].status)  // Ja bloks jau satur vajadzīgo hes summu tad to nesūta uz mainingu
                 {
+
                     string nonce = maining.MainingRun(blockchain.block[i].blockTxt, howManyZeros, maximumNumberOfAttempts);
                     blockchain.block[i].blockTxt.nonce = nonce;
                     ResetData();
                 }
-                ResetData();
+               // ResetData();
+                resetInfo.Invoke();
             }
           
         }
