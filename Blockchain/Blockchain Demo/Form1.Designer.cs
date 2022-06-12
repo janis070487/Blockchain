@@ -128,11 +128,11 @@
             this.TextBloc1Nonce = new MaterialSkin.Controls.MaterialLabel();
             this.TextBloc1BlocNumber = new MaterialSkin.Controls.MaterialLabel();
             this.tabSeting = new System.Windows.Forms.TabPage();
+            this.LabelMax = new MaterialSkin.Controls.MaterialLabel();
+            this.BoxMaximumTray = new MaterialSkin.Controls.MaterialMultiLineTextBox();
             this.LabelhowManyZeros = new MaterialSkin.Controls.MaterialLabel();
             this.BoxhowManyZeros = new MaterialSkin.Controls.MaterialMultiLineTextBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.BoxMaximumTray = new MaterialSkin.Controls.MaterialMultiLineTextBox();
-            this.LabelMax = new MaterialSkin.Controls.MaterialLabel();
             this.LabelMaximum.SuspendLayout();
             this.tabBloc.SuspendLayout();
             this.panelBlockchain.SuspendLayout();
@@ -245,13 +245,12 @@
             this.LableBloc6Timeprev.Depth = 0;
             this.LableBloc6Timeprev.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.LableBloc6Timeprev.Location = new System.Drawing.Point(164, 556);
-            this.LableBloc6Timeprev.MaximumSize = new System.Drawing.Size(100, 30);
-            this.LableBloc6Timeprev.MinimumSize = new System.Drawing.Size(100, 30);
+            this.LableBloc6Timeprev.MaximumSize = new System.Drawing.Size(150, 30);
+            this.LableBloc6Timeprev.MinimumSize = new System.Drawing.Size(150, 30);
             this.LableBloc6Timeprev.MouseState = MaterialSkin.MouseState.HOVER;
             this.LableBloc6Timeprev.Name = "LableBloc6Timeprev";
-            this.LableBloc6Timeprev.Size = new System.Drawing.Size(25, 19);
+            this.LableBloc6Timeprev.Size = new System.Drawing.Size(1, 0);
             this.LableBloc6Timeprev.TabIndex = 16;
-            this.LableBloc6Timeprev.Text = "xxx";
             // 
             // labelBloc6Time
             // 
@@ -259,13 +258,12 @@
             this.labelBloc6Time.Depth = 0;
             this.labelBloc6Time.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.labelBloc6Time.Location = new System.Drawing.Point(6, 556);
-            this.labelBloc6Time.MaximumSize = new System.Drawing.Size(100, 30);
-            this.labelBloc6Time.MinimumSize = new System.Drawing.Size(100, 30);
+            this.labelBloc6Time.MaximumSize = new System.Drawing.Size(150, 30);
+            this.labelBloc6Time.MinimumSize = new System.Drawing.Size(150, 30);
             this.labelBloc6Time.MouseState = MaterialSkin.MouseState.HOVER;
             this.labelBloc6Time.Name = "labelBloc6Time";
-            this.labelBloc6Time.Size = new System.Drawing.Size(25, 19);
+            this.labelBloc6Time.Size = new System.Drawing.Size(1, 0);
             this.labelBloc6Time.TabIndex = 15;
-            this.labelBloc6Time.Text = "xxx";
             // 
             // btnBloc6MainAll
             // 
@@ -507,13 +505,12 @@
             this.LableBloc5Timeprev.Depth = 0;
             this.LableBloc5Timeprev.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.LableBloc5Timeprev.Location = new System.Drawing.Point(164, 556);
-            this.LableBloc5Timeprev.MaximumSize = new System.Drawing.Size(100, 30);
-            this.LableBloc5Timeprev.MinimumSize = new System.Drawing.Size(100, 30);
+            this.LableBloc5Timeprev.MaximumSize = new System.Drawing.Size(150, 30);
+            this.LableBloc5Timeprev.MinimumSize = new System.Drawing.Size(150, 30);
             this.LableBloc5Timeprev.MouseState = MaterialSkin.MouseState.HOVER;
             this.LableBloc5Timeprev.Name = "LableBloc5Timeprev";
-            this.LableBloc5Timeprev.Size = new System.Drawing.Size(25, 19);
+            this.LableBloc5Timeprev.Size = new System.Drawing.Size(1, 0);
             this.LableBloc5Timeprev.TabIndex = 16;
-            this.LableBloc5Timeprev.Text = "xxx";
             // 
             // labelBloc5Time
             // 
@@ -521,13 +518,12 @@
             this.labelBloc5Time.Depth = 0;
             this.labelBloc5Time.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.labelBloc5Time.Location = new System.Drawing.Point(6, 556);
-            this.labelBloc5Time.MaximumSize = new System.Drawing.Size(100, 30);
-            this.labelBloc5Time.MinimumSize = new System.Drawing.Size(100, 30);
+            this.labelBloc5Time.MaximumSize = new System.Drawing.Size(150, 30);
+            this.labelBloc5Time.MinimumSize = new System.Drawing.Size(150, 30);
             this.labelBloc5Time.MouseState = MaterialSkin.MouseState.HOVER;
             this.labelBloc5Time.Name = "labelBloc5Time";
-            this.labelBloc5Time.Size = new System.Drawing.Size(25, 19);
+            this.labelBloc5Time.Size = new System.Drawing.Size(1, 0);
             this.labelBloc5Time.TabIndex = 15;
-            this.labelBloc5Time.Text = "xxx";
             // 
             // btnBloc5MainAll
             // 
@@ -769,13 +765,12 @@
             this.LableBloc4Timeprev.Depth = 0;
             this.LableBloc4Timeprev.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.LableBloc4Timeprev.Location = new System.Drawing.Point(164, 556);
-            this.LableBloc4Timeprev.MaximumSize = new System.Drawing.Size(100, 30);
-            this.LableBloc4Timeprev.MinimumSize = new System.Drawing.Size(100, 30);
+            this.LableBloc4Timeprev.MaximumSize = new System.Drawing.Size(150, 30);
+            this.LableBloc4Timeprev.MinimumSize = new System.Drawing.Size(150, 30);
             this.LableBloc4Timeprev.MouseState = MaterialSkin.MouseState.HOVER;
             this.LableBloc4Timeprev.Name = "LableBloc4Timeprev";
-            this.LableBloc4Timeprev.Size = new System.Drawing.Size(25, 19);
+            this.LableBloc4Timeprev.Size = new System.Drawing.Size(1, 0);
             this.LableBloc4Timeprev.TabIndex = 16;
-            this.LableBloc4Timeprev.Text = "xxx";
             // 
             // labelBloc4Time
             // 
@@ -783,13 +778,12 @@
             this.labelBloc4Time.Depth = 0;
             this.labelBloc4Time.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.labelBloc4Time.Location = new System.Drawing.Point(6, 556);
-            this.labelBloc4Time.MaximumSize = new System.Drawing.Size(100, 30);
-            this.labelBloc4Time.MinimumSize = new System.Drawing.Size(100, 30);
+            this.labelBloc4Time.MaximumSize = new System.Drawing.Size(150, 30);
+            this.labelBloc4Time.MinimumSize = new System.Drawing.Size(150, 30);
             this.labelBloc4Time.MouseState = MaterialSkin.MouseState.HOVER;
             this.labelBloc4Time.Name = "labelBloc4Time";
-            this.labelBloc4Time.Size = new System.Drawing.Size(25, 19);
+            this.labelBloc4Time.Size = new System.Drawing.Size(1, 0);
             this.labelBloc4Time.TabIndex = 15;
-            this.labelBloc4Time.Text = "xxx";
             // 
             // btnBloc4MainAll
             // 
@@ -1031,13 +1025,12 @@
             this.LableBloc3Timeprev.Depth = 0;
             this.LableBloc3Timeprev.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.LableBloc3Timeprev.Location = new System.Drawing.Point(164, 556);
-            this.LableBloc3Timeprev.MaximumSize = new System.Drawing.Size(100, 30);
-            this.LableBloc3Timeprev.MinimumSize = new System.Drawing.Size(100, 30);
+            this.LableBloc3Timeprev.MaximumSize = new System.Drawing.Size(150, 30);
+            this.LableBloc3Timeprev.MinimumSize = new System.Drawing.Size(150, 30);
             this.LableBloc3Timeprev.MouseState = MaterialSkin.MouseState.HOVER;
             this.LableBloc3Timeprev.Name = "LableBloc3Timeprev";
-            this.LableBloc3Timeprev.Size = new System.Drawing.Size(25, 19);
+            this.LableBloc3Timeprev.Size = new System.Drawing.Size(150, 30);
             this.LableBloc3Timeprev.TabIndex = 16;
-            this.LableBloc3Timeprev.Text = "xxx";
             // 
             // labelBloc3Time
             // 
@@ -1045,13 +1038,12 @@
             this.labelBloc3Time.Depth = 0;
             this.labelBloc3Time.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.labelBloc3Time.Location = new System.Drawing.Point(6, 556);
-            this.labelBloc3Time.MaximumSize = new System.Drawing.Size(100, 30);
-            this.labelBloc3Time.MinimumSize = new System.Drawing.Size(100, 30);
+            this.labelBloc3Time.MaximumSize = new System.Drawing.Size(150, 30);
+            this.labelBloc3Time.MinimumSize = new System.Drawing.Size(150, 30);
             this.labelBloc3Time.MouseState = MaterialSkin.MouseState.HOVER;
             this.labelBloc3Time.Name = "labelBloc3Time";
-            this.labelBloc3Time.Size = new System.Drawing.Size(25, 19);
+            this.labelBloc3Time.Size = new System.Drawing.Size(150, 30);
             this.labelBloc3Time.TabIndex = 15;
-            this.labelBloc3Time.Text = "xxx";
             // 
             // btnBloc3MainAll
             // 
@@ -1307,13 +1299,12 @@
             this.LableBloc2Timeprev.Depth = 0;
             this.LableBloc2Timeprev.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.LableBloc2Timeprev.Location = new System.Drawing.Point(164, 556);
-            this.LableBloc2Timeprev.MaximumSize = new System.Drawing.Size(100, 30);
-            this.LableBloc2Timeprev.MinimumSize = new System.Drawing.Size(100, 30);
+            this.LableBloc2Timeprev.MaximumSize = new System.Drawing.Size(150, 30);
+            this.LableBloc2Timeprev.MinimumSize = new System.Drawing.Size(150, 30);
             this.LableBloc2Timeprev.MouseState = MaterialSkin.MouseState.HOVER;
             this.LableBloc2Timeprev.Name = "LableBloc2Timeprev";
-            this.LableBloc2Timeprev.Size = new System.Drawing.Size(25, 19);
+            this.LableBloc2Timeprev.Size = new System.Drawing.Size(150, 30);
             this.LableBloc2Timeprev.TabIndex = 16;
-            this.LableBloc2Timeprev.Text = "xxx";
             // 
             // labelBloc2Time
             // 
@@ -1321,13 +1312,12 @@
             this.labelBloc2Time.Depth = 0;
             this.labelBloc2Time.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.labelBloc2Time.Location = new System.Drawing.Point(6, 556);
-            this.labelBloc2Time.MaximumSize = new System.Drawing.Size(100, 30);
-            this.labelBloc2Time.MinimumSize = new System.Drawing.Size(100, 30);
+            this.labelBloc2Time.MaximumSize = new System.Drawing.Size(150, 30);
+            this.labelBloc2Time.MinimumSize = new System.Drawing.Size(150, 30);
             this.labelBloc2Time.MouseState = MaterialSkin.MouseState.HOVER;
             this.labelBloc2Time.Name = "labelBloc2Time";
-            this.labelBloc2Time.Size = new System.Drawing.Size(25, 19);
+            this.labelBloc2Time.Size = new System.Drawing.Size(150, 30);
             this.labelBloc2Time.TabIndex = 15;
-            this.labelBloc2Time.Text = "xxx";
             // 
             // btnBloc2MainAll
             // 
@@ -1582,14 +1572,13 @@
             this.LableBloc1Timeprev.AutoSize = true;
             this.LableBloc1Timeprev.Depth = 0;
             this.LableBloc1Timeprev.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.LableBloc1Timeprev.Location = new System.Drawing.Point(164, 556);
-            this.LableBloc1Timeprev.MaximumSize = new System.Drawing.Size(100, 30);
-            this.LableBloc1Timeprev.MinimumSize = new System.Drawing.Size(100, 30);
+            this.LableBloc1Timeprev.Location = new System.Drawing.Point(162, 556);
+            this.LableBloc1Timeprev.MaximumSize = new System.Drawing.Size(150, 30);
+            this.LableBloc1Timeprev.MinimumSize = new System.Drawing.Size(150, 30);
             this.LableBloc1Timeprev.MouseState = MaterialSkin.MouseState.HOVER;
             this.LableBloc1Timeprev.Name = "LableBloc1Timeprev";
-            this.LableBloc1Timeprev.Size = new System.Drawing.Size(25, 19);
+            this.LableBloc1Timeprev.Size = new System.Drawing.Size(150, 30);
             this.LableBloc1Timeprev.TabIndex = 16;
-            this.LableBloc1Timeprev.Text = "xxx";
             // 
             // labelBloc1Time
             // 
@@ -1597,13 +1586,12 @@
             this.labelBloc1Time.Depth = 0;
             this.labelBloc1Time.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.labelBloc1Time.Location = new System.Drawing.Point(6, 556);
-            this.labelBloc1Time.MaximumSize = new System.Drawing.Size(100, 30);
-            this.labelBloc1Time.MinimumSize = new System.Drawing.Size(100, 30);
+            this.labelBloc1Time.MaximumSize = new System.Drawing.Size(150, 30);
+            this.labelBloc1Time.MinimumSize = new System.Drawing.Size(150, 30);
             this.labelBloc1Time.MouseState = MaterialSkin.MouseState.HOVER;
             this.labelBloc1Time.Name = "labelBloc1Time";
-            this.labelBloc1Time.Size = new System.Drawing.Size(25, 19);
+            this.labelBloc1Time.Size = new System.Drawing.Size(150, 30);
             this.labelBloc1Time.TabIndex = 15;
-            this.labelBloc1Time.Text = "xxx";
             // 
             // btnBloc1MainAll
             // 
@@ -1829,6 +1817,41 @@
             this.tabSeting.Text = "  Setings";
             this.tabSeting.UseVisualStyleBackColor = true;
             // 
+            // LabelMax
+            // 
+            this.LabelMax.AutoSize = true;
+            this.LabelMax.Depth = 0;
+            this.LabelMax.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.LabelMax.Location = new System.Drawing.Point(181, 145);
+            this.LabelMax.MaximumSize = new System.Drawing.Size(100, 30);
+            this.LabelMax.MinimumSize = new System.Drawing.Size(100, 30);
+            this.LabelMax.MouseState = MaterialSkin.MouseState.HOVER;
+            this.LabelMax.Name = "LabelMax";
+            this.LabelMax.Size = new System.Drawing.Size(217, 19);
+            this.LabelMax.TabIndex = 9;
+            this.LabelMax.Text = "Maximum number of attempts";
+            // 
+            // BoxMaximumTray
+            // 
+            this.BoxMaximumTray.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BoxMaximumTray.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.BoxMaximumTray.Depth = 0;
+            this.BoxMaximumTray.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.BoxMaximumTray.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BoxMaximumTray.Hint = "";
+            this.BoxMaximumTray.Location = new System.Drawing.Point(418, 145);
+            this.BoxMaximumTray.MaximumSize = new System.Drawing.Size(300, 30);
+            this.BoxMaximumTray.MaxLength = 15;
+            this.BoxMaximumTray.MinimumSize = new System.Drawing.Size(300, 30);
+            this.BoxMaximumTray.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BoxMaximumTray.Multiline = false;
+            this.BoxMaximumTray.Name = "BoxMaximumTray";
+            this.BoxMaximumTray.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.BoxMaximumTray.Size = new System.Drawing.Size(300, 30);
+            this.BoxMaximumTray.TabIndex = 8;
+            this.BoxMaximumTray.Text = "10000000";
+            this.BoxMaximumTray.TextChanged += new System.EventHandler(this.BoxMaximumTray_TextChanged);
+            // 
             // LabelhowManyZeros
             // 
             this.LabelhowManyZeros.AutoSize = true;
@@ -1839,7 +1862,7 @@
             this.LabelhowManyZeros.MinimumSize = new System.Drawing.Size(100, 30);
             this.LabelhowManyZeros.MouseState = MaterialSkin.MouseState.HOVER;
             this.LabelhowManyZeros.Name = "LabelhowManyZeros";
-            this.LabelhowManyZeros.Size = new System.Drawing.Size(100, 30);
+            this.LabelhowManyZeros.Size = new System.Drawing.Size(178, 19);
             this.LabelhowManyZeros.TabIndex = 7;
             this.LabelhowManyZeros.Text = "Proof of work complexity";
             // 
@@ -1873,41 +1896,6 @@
             this.imageList1.Images.SetKeyName(2, "file.png");
             this.imageList1.Images.SetKeyName(3, "info.png");
             this.imageList1.Images.SetKeyName(4, "setting.png");
-            // 
-            // BoxMaximumTray
-            // 
-            this.BoxMaximumTray.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.BoxMaximumTray.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.BoxMaximumTray.Depth = 0;
-            this.BoxMaximumTray.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.BoxMaximumTray.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.BoxMaximumTray.Hint = "";
-            this.BoxMaximumTray.Location = new System.Drawing.Point(418, 145);
-            this.BoxMaximumTray.MaximumSize = new System.Drawing.Size(300, 30);
-            this.BoxMaximumTray.MaxLength = 15;
-            this.BoxMaximumTray.MinimumSize = new System.Drawing.Size(300, 30);
-            this.BoxMaximumTray.MouseState = MaterialSkin.MouseState.HOVER;
-            this.BoxMaximumTray.Multiline = false;
-            this.BoxMaximumTray.Name = "BoxMaximumTray";
-            this.BoxMaximumTray.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.BoxMaximumTray.Size = new System.Drawing.Size(300, 30);
-            this.BoxMaximumTray.TabIndex = 8;
-            this.BoxMaximumTray.Text = "10000000";
-            this.BoxMaximumTray.TextChanged += new System.EventHandler(this.BoxMaximumTray_TextChanged);
-            // 
-            // LabelMax
-            // 
-            this.LabelMax.AutoSize = true;
-            this.LabelMax.Depth = 0;
-            this.LabelMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.LabelMax.Location = new System.Drawing.Point(181, 145);
-            this.LabelMax.MaximumSize = new System.Drawing.Size(100, 30);
-            this.LabelMax.MinimumSize = new System.Drawing.Size(100, 30);
-            this.LabelMax.MouseState = MaterialSkin.MouseState.HOVER;
-            this.LabelMax.Name = "LabelMax";
-            this.LabelMax.Size = new System.Drawing.Size(100, 30);
-            this.LabelMax.TabIndex = 9;
-            this.LabelMax.Text = "Maximum number of attempts";
             // 
             // Form1
             // 

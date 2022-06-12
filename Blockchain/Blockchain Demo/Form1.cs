@@ -66,8 +66,11 @@ namespace Blockchain_Demo
             PrintNonce();
             Test();
             flage = true;
+            core.resetInfo += PrintStatistic;
             core.resetInfo += Test;
             
+
+
         }
         //___________________________________   Bloks 1 ________________________________________________
 
@@ -354,6 +357,27 @@ namespace Blockchain_Demo
             core.ResetData();
             Test();
         }
+        //__________________________ Statistika _________________________________________________
+        public void PrintStatistic()
+        {
+            labelBloc1Time.Text     = $"Total time: {core.info[0].totalTime}";
+            LableBloc1Timeprev.Text = $"Maining F: {core.info[0].averageUnitsPerSecond} Hz";
+
+            labelBloc2Time.Text = $"Total time: {core.info[1].totalTime}";
+            LableBloc2Timeprev.Text = $"Maining F: {core.info[1].averageUnitsPerSecond} Hz";
+
+            labelBloc3Time.Text = $"Total time: {core.info[2].totalTime}";
+            LableBloc3Timeprev.Text = $"Maining F: {core.info[2].averageUnitsPerSecond} Hz";
+
+            labelBloc4Time.Text = $"Total time: {core.info[3].totalTime}";
+            LableBloc4Timeprev.Text = $"Maining F: {core.info[3].averageUnitsPerSecond} Hz";
+
+            labelBloc5Time.Text = $"Total time: {core.info[4].totalTime}";
+            LableBloc5Timeprev.Text = $"Maining F: {core.info[4].averageUnitsPerSecond} Hz";
+
+            labelBloc6Time.Text = $"Total time: {core.info[5].totalTime}";
+            LableBloc6Timeprev.Text = $"Maining F: {core.info[5].averageUnitsPerSecond} Hz";
+        }
 
         //___________________________Pagaidu variants____________________________________________
         public void PrintNonce()
@@ -460,7 +484,7 @@ namespace Blockchain_Demo
             //*/
         }
 
-       
+        
 
 
 

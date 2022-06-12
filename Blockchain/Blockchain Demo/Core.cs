@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Diagnostics;
 namespace Blockchain_Demo
 
 {
@@ -14,6 +15,8 @@ namespace Blockchain_Demo
         public Blockchain blockchain;
         public Sha256FromBlocData sha256FromBlock;
         public Maining maining;
+        public Stopwatch stopWatch;
+        public Info[] info { get; set; }
         public int howManyZeros { get; set; }
         public int maximumNumberOfAttempts { get; set; }
         public delegate void ResetInfo();
@@ -26,14 +29,27 @@ namespace Blockchain_Demo
             blockchain = new Blockchain(howBlock);
             sha256FromBlock = new Sha256FromBlocData();
             maining = new Maining();
+            stopWatch = new Stopwatch();    
+            info = new Info[howBlock];
+            for(int i = 0; i < info.Length; i++)
+            {
+                info[i] = new Info();
+            }
         }
 
         public void MainingStartOneBlock(int blockNumber)
         {
-             //Mianingo norādito bloku
-           string nonce = maining.MainingRun(blockchain.block[blockNumber - 1].blockTxt, howManyZeros, maximumNumberOfAttempts);
+            //Mianingo norādito bloku
+            stopWatch.Start();
+            string nonce = maining.MainingRun(blockchain.block[blockNumber - 1].blockTxt, howManyZeros, maximumNumberOfAttempts);
+            stopWatch.Stop();
             blockchain.block[blockNumber -1].blockTxt.nonce = nonce;
+            info[blockNumber - 1].nonce = Convert.ToInt32(nonce);
+            info[blockNumber - 1].Milliseconds = Convert.ToInt32(stopWatch.ElapsedMilliseconds);
+            stopWatch.Reset();
+            info[blockNumber - 1].SetInfo();
             ResetData();
+            resetInfo.Invoke();
         }
         public void MainingStartAllBlocks()                 //mainingo visus blokus
         {
@@ -41,9 +57,15 @@ namespace Blockchain_Demo
             {
                 if (!blockchain.block[i].status)  // Ja bloks jau satur vajadzīgo hes summu tad to nesūta uz mainingu
                 {
-
+                    stopWatch.Start();
                     string nonce = maining.MainingRun(blockchain.block[i].blockTxt, howManyZeros, maximumNumberOfAttempts);
+                    stopWatch.Stop();
+                   
                     blockchain.block[i].blockTxt.nonce = nonce;
+                    info[i].nonce = Convert.ToInt32(nonce);
+                    info[i].Milliseconds = Convert.ToInt32(stopWatch.ElapsedMilliseconds);
+                    stopWatch.Reset();
+                    info[i].SetInfo();
                     ResetData();
                 }
                // ResetData();
