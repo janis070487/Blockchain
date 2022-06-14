@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Blockchain_Demo
 {
-   public static class GetHexToByte
+    public static class GetHexToByte
     {
-      public static string answer;
-       public static string GetHex(byte[] data)
+        public static string answer;
+        public static string GetHex(byte[] data)
         {
             answer = "";
-        for(int i = 0; i < data.Length; i++)
+            for (int i = 0; i < data.Length; i++)
             {
-                GetHexSymbol(data[i] >> 4 );
-                GetHexSymbol(data[i] & 15 );
+                GetHexSymbol(data[i] >> 4);
+                GetHexSymbol(data[i] & 15);
             }
             return answer;
             //return "0a1000ff";
@@ -74,6 +74,6 @@ namespace Blockchain_Demo
                     break;
             }
         }
-        
+
     }
 }

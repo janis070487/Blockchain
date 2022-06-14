@@ -68,10 +68,13 @@ namespace Blockchain_Demo
             flage = true;
             core.resetInfo += PrintStatistic;
             core.resetInfo += Test;
+           
             
 
 
         }
+        
+
         //___________________________________   Bloks 1 ________________________________________________
 
         

@@ -17,7 +17,7 @@ namespace Blockchain_Demo
                     return false;
                 }
             }
-                return true; // bet ja iziet parbaudi tad atgriež true
+            return true; // bet ja iziet parbaudi tad atgriež true
         }
     }
 }

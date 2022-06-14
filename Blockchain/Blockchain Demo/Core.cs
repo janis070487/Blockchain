@@ -11,7 +11,7 @@ namespace Blockchain_Demo
 {
     public class Core
     {
-
+        public bool flage = false;// ------------------------------
         public Blockchain blockchain;
         public Sha256FromBlocData sha256FromBlock;
         public Maining maining;
@@ -20,18 +20,20 @@ namespace Blockchain_Demo
         public int howManyZeros { get; set; }
         public int maximumNumberOfAttempts { get; set; }
         public delegate void ResetInfo();
-       
-        
-        //public ResetInfo resetInfo { get; set; }
-        public event ResetInfo resetInfo;
-        public Core(int howBlock) 
+        public delegate void GetNext();
+
+        //Del del = new(maining.MainingRun);
+        public ResetInfo resetInfo { get; set; }
+        // public event ResetInfo resetInfo;
+        //public event GetNext getNext;
+        public Core(int howBlock)
         {
             blockchain = new Blockchain(howBlock);
             sha256FromBlock = new Sha256FromBlocData();
             maining = new Maining();
-            stopWatch = new Stopwatch();    
+            stopWatch = new Stopwatch();
             info = new Info[howBlock];
-            for(int i = 0; i < info.Length; i++)
+            for (int i = 0; i < info.Length; i++)
             {
                 info[i] = new Info();
             }
@@ -39,17 +41,24 @@ namespace Blockchain_Demo
 
         public void MainingStartOneBlock(int blockNumber)
         {
+            // public delegate string Del(string sms, int howManyZeros, int maximumNumberOfAttempts);
+
+
+
+
             //Mianingo norādito bloku
+            ///*
             stopWatch.Start();
             string nonce = maining.MainingRun(blockchain.block[blockNumber - 1].blockTxt, howManyZeros, maximumNumberOfAttempts);
             stopWatch.Stop();
-            blockchain.block[blockNumber -1].blockTxt.nonce = nonce;
+            blockchain.block[blockNumber - 1].blockTxt.nonce = nonce;
             info[blockNumber - 1].nonce = Convert.ToInt32(nonce);
             info[blockNumber - 1].Milliseconds = Convert.ToInt32(stopWatch.ElapsedMilliseconds);
             stopWatch.Reset();
             info[blockNumber - 1].SetInfo();
             ResetData();
             resetInfo.Invoke();
+            // */
         }
         public void MainingStartAllBlocks()                 //mainingo visus blokus
         {
@@ -60,7 +69,7 @@ namespace Blockchain_Demo
                     stopWatch.Start();
                     string nonce = maining.MainingRun(blockchain.block[i].blockTxt, howManyZeros, maximumNumberOfAttempts);
                     stopWatch.Stop();
-                   
+
                     blockchain.block[i].blockTxt.nonce = nonce;
                     info[i].nonce = Convert.ToInt32(nonce);
                     info[i].Milliseconds = Convert.ToInt32(stopWatch.ElapsedMilliseconds);
@@ -68,10 +77,10 @@ namespace Blockchain_Demo
                     info[i].SetInfo();
                     ResetData();
                 }
-               // ResetData();
+                // ResetData();
                 resetInfo.Invoke();
             }
-          
+
         }
 
         public void ResetData() // pec katras teksta izmainas visu izmaina
@@ -95,16 +104,16 @@ namespace Blockchain_Demo
             {
                 blockchain.block[i].status = CheckBlock.Check(how, blockchain.block[i].blockTxt.hashSum);
             }
-         }
+        }
         public void LoadFirstDataInBloc()
         {
-           for(int i = 0; i < blockchain.block.Length; i++)
+            for (int i = 0; i < blockchain.block.Length; i++)
             {
                 blockchain.block[i].blockTxt.nonce = FirstData.Data[i];
             }
         }
-    
-       
+
+
         public int CheckValue(string sms)
         {
             int answer;
@@ -112,7 +121,8 @@ namespace Blockchain_Demo
             if (sms.Length == 0)
             {
                 return 0;
-            } else if(!a)
+            }
+            else if (!a)
             {
                 MessageBox.Show("Tika ievadīts nepareizs simbols", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 

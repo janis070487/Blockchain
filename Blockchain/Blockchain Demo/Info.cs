@@ -18,25 +18,19 @@ namespace Blockchain_Demo
         //public long totalTime { get; set; }
         public void SetInfo()
         {
-            seconds = Milliseconds  / 1000;
+            seconds = Milliseconds / 1000;
             milliseconds = Milliseconds - seconds * 1000;
             totalTime = $"{seconds}.{milliseconds}";
             try
             {
-                averageUnitsPerSecond = Convert.ToString((((nonce / Milliseconds) * 1000)  ));
+                averageUnitsPerSecond = (Convert.ToString(Convert.ToInt32(Convert.ToDouble(nonce) / Convert.ToDouble(Milliseconds) * 1000)));
             }
             catch
             {
-                //averageUnitsPerSecond = "Time not";
+     
             }
-           
-            /*
-            minutes = Milliseconds / 60000;
-            seconds = (Milliseconds - (minutes * 60000)) / 1000; 
-           milliseconds = Milliseconds - ((minutes * 60 + seconds) * 1000);
-            totalTime = $"{minutes}:{seconds}.{milliseconds}";
-            averageUnitsPerSecond = Convert.ToString((nonce / Milliseconds) * 1000);
-            */
+
+      
 
         }
 
