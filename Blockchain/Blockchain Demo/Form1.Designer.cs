@@ -154,12 +154,12 @@
             this.LabelMaximum.Depth = 0;
             this.LabelMaximum.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LabelMaximum.ImageList = this.imageList1;
-            this.LabelMaximum.Location = new System.Drawing.Point(0, 0);
+            this.LabelMaximum.Location = new System.Drawing.Point(3, 64);
             this.LabelMaximum.MouseState = MaterialSkin.MouseState.HOVER;
             this.LabelMaximum.Multiline = true;
             this.LabelMaximum.Name = "LabelMaximum";
             this.LabelMaximum.SelectedIndex = 0;
-            this.LabelMaximum.Size = new System.Drawing.Size(1360, 720);
+            this.LabelMaximum.Size = new System.Drawing.Size(1354, 653);
             this.LabelMaximum.TabIndex = 0;
             // 
             // tabFile
@@ -168,7 +168,7 @@
             this.tabFile.Location = new System.Drawing.Point(4, 39);
             this.tabFile.Name = "tabFile";
             this.tabFile.Padding = new System.Windows.Forms.Padding(3);
-            this.tabFile.Size = new System.Drawing.Size(1352, 677);
+            this.tabFile.Size = new System.Drawing.Size(1346, 610);
             this.tabFile.TabIndex = 0;
             this.tabFile.Text = "  File";
             this.tabFile.UseVisualStyleBackColor = true;
@@ -190,7 +190,7 @@
             this.tabBloc.ImageKey = "blockchain-2.png";
             this.tabBloc.Location = new System.Drawing.Point(4, 39);
             this.tabBloc.Name = "tabBloc";
-            this.tabBloc.Size = new System.Drawing.Size(1352, 677);
+            this.tabBloc.Size = new System.Drawing.Size(1346, 610);
             this.tabBloc.TabIndex = 2;
             this.tabBloc.Text = "  Blockchain";
             this.tabBloc.UseVisualStyleBackColor = true;
@@ -268,8 +268,8 @@
             // btnBloc6MainAll
             // 
             this.btnBloc6MainAll.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnBloc6MainAll.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnBloc6MainAll.Depth = 0;
-            this.btnBloc6MainAll.DrawShadows = true;
             this.btnBloc6MainAll.HighEmphasis = true;
             this.btnBloc6MainAll.Icon = null;
             this.btnBloc6MainAll.Location = new System.Drawing.Point(254, 502);
@@ -278,6 +278,7 @@
             this.btnBloc6MainAll.MinimumSize = new System.Drawing.Size(150, 35);
             this.btnBloc6MainAll.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnBloc6MainAll.Name = "btnBloc6MainAll";
+            this.btnBloc6MainAll.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnBloc6MainAll.Size = new System.Drawing.Size(150, 35);
             this.btnBloc6MainAll.TabIndex = 14;
             this.btnBloc6MainAll.Text = "Main All";
@@ -289,8 +290,8 @@
             // btnBloc6Main
             // 
             this.btnBloc6Main.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnBloc6Main.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnBloc6Main.Depth = 0;
-            this.btnBloc6Main.DrawShadows = true;
             this.btnBloc6Main.HighEmphasis = true;
             this.btnBloc6Main.Icon = null;
             this.btnBloc6Main.Location = new System.Drawing.Point(9, 502);
@@ -299,6 +300,7 @@
             this.btnBloc6Main.MinimumSize = new System.Drawing.Size(150, 35);
             this.btnBloc6Main.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnBloc6Main.Name = "btnBloc6Main";
+            this.btnBloc6Main.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnBloc6Main.Size = new System.Drawing.Size(150, 35);
             this.btnBloc6Main.TabIndex = 13;
             this.btnBloc6Main.Text = "Main";
@@ -314,7 +316,6 @@
             this.MultiLineBloc6Hash.Depth = 0;
             this.MultiLineBloc6Hash.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.MultiLineBloc6Hash.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MultiLineBloc6Hash.Hint = "";
             this.MultiLineBloc6Hash.Location = new System.Drawing.Point(112, 433);
             this.MultiLineBloc6Hash.MaximumSize = new System.Drawing.Size(300, 35);
             this.MultiLineBloc6Hash.MinimumSize = new System.Drawing.Size(300, 35);
@@ -333,7 +334,6 @@
             this.MultiTextBloc6HashPrev.Depth = 0;
             this.MultiTextBloc6HashPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.MultiTextBloc6HashPrev.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MultiTextBloc6HashPrev.Hint = "";
             this.MultiTextBloc6HashPrev.Location = new System.Drawing.Point(112, 387);
             this.MultiTextBloc6HashPrev.MaximumSize = new System.Drawing.Size(300, 35);
             this.MultiTextBloc6HashPrev.MinimumSize = new System.Drawing.Size(300, 35);
@@ -352,7 +352,6 @@
             this.MultiLineBloc6Data.Depth = 0;
             this.MultiLineBloc6Data.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.MultiLineBloc6Data.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MultiLineBloc6Data.Hint = "";
             this.MultiLineBloc6Data.Location = new System.Drawing.Point(112, 123);
             this.MultiLineBloc6Data.MaximumSize = new System.Drawing.Size(300, 250);
             this.MultiLineBloc6Data.MinimumSize = new System.Drawing.Size(300, 250);
@@ -370,7 +369,6 @@
             this.MultiTextBloc6Nonce.Depth = 0;
             this.MultiTextBloc6Nonce.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.MultiTextBloc6Nonce.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MultiTextBloc6Nonce.Hint = "";
             this.MultiTextBloc6Nonce.Location = new System.Drawing.Point(112, 78);
             this.MultiTextBloc6Nonce.MaximumSize = new System.Drawing.Size(300, 30);
             this.MultiTextBloc6Nonce.MaxLength = 20;
@@ -433,7 +431,6 @@
             this.MultiTextBloc6BlocNumber.Depth = 0;
             this.MultiTextBloc6BlocNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.MultiTextBloc6BlocNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MultiTextBloc6BlocNumber.Hint = "";
             this.MultiTextBloc6BlocNumber.Location = new System.Drawing.Point(112, 33);
             this.MultiTextBloc6BlocNumber.MaximumSize = new System.Drawing.Size(300, 30);
             this.MultiTextBloc6BlocNumber.MaxLength = 10;
@@ -528,8 +525,8 @@
             // btnBloc5MainAll
             // 
             this.btnBloc5MainAll.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnBloc5MainAll.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnBloc5MainAll.Depth = 0;
-            this.btnBloc5MainAll.DrawShadows = true;
             this.btnBloc5MainAll.HighEmphasis = true;
             this.btnBloc5MainAll.Icon = null;
             this.btnBloc5MainAll.Location = new System.Drawing.Point(254, 502);
@@ -538,6 +535,7 @@
             this.btnBloc5MainAll.MinimumSize = new System.Drawing.Size(150, 35);
             this.btnBloc5MainAll.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnBloc5MainAll.Name = "btnBloc5MainAll";
+            this.btnBloc5MainAll.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnBloc5MainAll.Size = new System.Drawing.Size(150, 35);
             this.btnBloc5MainAll.TabIndex = 14;
             this.btnBloc5MainAll.Text = "Main All";
@@ -549,8 +547,8 @@
             // btnBloc5Main
             // 
             this.btnBloc5Main.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnBloc5Main.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnBloc5Main.Depth = 0;
-            this.btnBloc5Main.DrawShadows = true;
             this.btnBloc5Main.HighEmphasis = true;
             this.btnBloc5Main.Icon = null;
             this.btnBloc5Main.Location = new System.Drawing.Point(9, 502);
@@ -559,6 +557,7 @@
             this.btnBloc5Main.MinimumSize = new System.Drawing.Size(150, 35);
             this.btnBloc5Main.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnBloc5Main.Name = "btnBloc5Main";
+            this.btnBloc5Main.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnBloc5Main.Size = new System.Drawing.Size(150, 35);
             this.btnBloc5Main.TabIndex = 13;
             this.btnBloc5Main.Text = "Main";
@@ -574,7 +573,6 @@
             this.MultiLineBloc5Hash.Depth = 0;
             this.MultiLineBloc5Hash.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.MultiLineBloc5Hash.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MultiLineBloc5Hash.Hint = "";
             this.MultiLineBloc5Hash.Location = new System.Drawing.Point(112, 433);
             this.MultiLineBloc5Hash.MaximumSize = new System.Drawing.Size(300, 35);
             this.MultiLineBloc5Hash.MinimumSize = new System.Drawing.Size(300, 35);
@@ -593,7 +591,6 @@
             this.MultiTextBloc5HashPrev.Depth = 0;
             this.MultiTextBloc5HashPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.MultiTextBloc5HashPrev.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MultiTextBloc5HashPrev.Hint = "";
             this.MultiTextBloc5HashPrev.Location = new System.Drawing.Point(112, 387);
             this.MultiTextBloc5HashPrev.MaximumSize = new System.Drawing.Size(300, 35);
             this.MultiTextBloc5HashPrev.MinimumSize = new System.Drawing.Size(300, 35);
@@ -612,7 +609,6 @@
             this.MultiLineBloc5Data.Depth = 0;
             this.MultiLineBloc5Data.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.MultiLineBloc5Data.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MultiLineBloc5Data.Hint = "";
             this.MultiLineBloc5Data.Location = new System.Drawing.Point(112, 123);
             this.MultiLineBloc5Data.MaximumSize = new System.Drawing.Size(300, 250);
             this.MultiLineBloc5Data.MinimumSize = new System.Drawing.Size(300, 250);
@@ -630,7 +626,6 @@
             this.MultiTextBloc5Nonce.Depth = 0;
             this.MultiTextBloc5Nonce.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.MultiTextBloc5Nonce.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MultiTextBloc5Nonce.Hint = "";
             this.MultiTextBloc5Nonce.Location = new System.Drawing.Point(112, 78);
             this.MultiTextBloc5Nonce.MaximumSize = new System.Drawing.Size(300, 30);
             this.MultiTextBloc5Nonce.MaxLength = 20;
@@ -693,7 +688,6 @@
             this.MultiTextBloc5BlocNumber.Depth = 0;
             this.MultiTextBloc5BlocNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.MultiTextBloc5BlocNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MultiTextBloc5BlocNumber.Hint = "";
             this.MultiTextBloc5BlocNumber.Location = new System.Drawing.Point(112, 33);
             this.MultiTextBloc5BlocNumber.MaximumSize = new System.Drawing.Size(300, 30);
             this.MultiTextBloc5BlocNumber.MaxLength = 10;
@@ -788,8 +782,8 @@
             // btnBloc4MainAll
             // 
             this.btnBloc4MainAll.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnBloc4MainAll.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnBloc4MainAll.Depth = 0;
-            this.btnBloc4MainAll.DrawShadows = true;
             this.btnBloc4MainAll.HighEmphasis = true;
             this.btnBloc4MainAll.Icon = null;
             this.btnBloc4MainAll.Location = new System.Drawing.Point(254, 502);
@@ -798,6 +792,7 @@
             this.btnBloc4MainAll.MinimumSize = new System.Drawing.Size(150, 35);
             this.btnBloc4MainAll.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnBloc4MainAll.Name = "btnBloc4MainAll";
+            this.btnBloc4MainAll.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnBloc4MainAll.Size = new System.Drawing.Size(150, 35);
             this.btnBloc4MainAll.TabIndex = 14;
             this.btnBloc4MainAll.Text = "Main All";
@@ -809,8 +804,8 @@
             // btnBloc4Main
             // 
             this.btnBloc4Main.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnBloc4Main.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnBloc4Main.Depth = 0;
-            this.btnBloc4Main.DrawShadows = true;
             this.btnBloc4Main.HighEmphasis = true;
             this.btnBloc4Main.Icon = null;
             this.btnBloc4Main.Location = new System.Drawing.Point(9, 502);
@@ -819,6 +814,7 @@
             this.btnBloc4Main.MinimumSize = new System.Drawing.Size(150, 35);
             this.btnBloc4Main.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnBloc4Main.Name = "btnBloc4Main";
+            this.btnBloc4Main.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnBloc4Main.Size = new System.Drawing.Size(150, 35);
             this.btnBloc4Main.TabIndex = 13;
             this.btnBloc4Main.Text = "Main";
@@ -834,7 +830,6 @@
             this.MultiLineBloc4Hash.Depth = 0;
             this.MultiLineBloc4Hash.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.MultiLineBloc4Hash.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MultiLineBloc4Hash.Hint = "";
             this.MultiLineBloc4Hash.Location = new System.Drawing.Point(112, 433);
             this.MultiLineBloc4Hash.MaximumSize = new System.Drawing.Size(300, 35);
             this.MultiLineBloc4Hash.MinimumSize = new System.Drawing.Size(300, 35);
@@ -853,7 +848,6 @@
             this.MultiTextBloc4HashPrev.Depth = 0;
             this.MultiTextBloc4HashPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.MultiTextBloc4HashPrev.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MultiTextBloc4HashPrev.Hint = "";
             this.MultiTextBloc4HashPrev.Location = new System.Drawing.Point(112, 387);
             this.MultiTextBloc4HashPrev.MaximumSize = new System.Drawing.Size(300, 35);
             this.MultiTextBloc4HashPrev.MinimumSize = new System.Drawing.Size(300, 35);
@@ -872,7 +866,6 @@
             this.MultiLineBloc4Data.Depth = 0;
             this.MultiLineBloc4Data.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.MultiLineBloc4Data.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MultiLineBloc4Data.Hint = "";
             this.MultiLineBloc4Data.Location = new System.Drawing.Point(112, 123);
             this.MultiLineBloc4Data.MaximumSize = new System.Drawing.Size(300, 250);
             this.MultiLineBloc4Data.MinimumSize = new System.Drawing.Size(300, 250);
@@ -890,7 +883,6 @@
             this.MultiTextBloc4Nonce.Depth = 0;
             this.MultiTextBloc4Nonce.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.MultiTextBloc4Nonce.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MultiTextBloc4Nonce.Hint = "";
             this.MultiTextBloc4Nonce.Location = new System.Drawing.Point(112, 78);
             this.MultiTextBloc4Nonce.MaximumSize = new System.Drawing.Size(300, 30);
             this.MultiTextBloc4Nonce.MaxLength = 20;
@@ -953,7 +945,6 @@
             this.MultiTextBloc4BlocNumber.Depth = 0;
             this.MultiTextBloc4BlocNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.MultiTextBloc4BlocNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MultiTextBloc4BlocNumber.Hint = "";
             this.MultiTextBloc4BlocNumber.Location = new System.Drawing.Point(112, 33);
             this.MultiTextBloc4BlocNumber.MaximumSize = new System.Drawing.Size(300, 30);
             this.MultiTextBloc4BlocNumber.MaxLength = 10;
@@ -1029,7 +1020,7 @@
             this.LableBloc3Timeprev.MinimumSize = new System.Drawing.Size(150, 30);
             this.LableBloc3Timeprev.MouseState = MaterialSkin.MouseState.HOVER;
             this.LableBloc3Timeprev.Name = "LableBloc3Timeprev";
-            this.LableBloc3Timeprev.Size = new System.Drawing.Size(150, 30);
+            this.LableBloc3Timeprev.Size = new System.Drawing.Size(1, 0);
             this.LableBloc3Timeprev.TabIndex = 16;
             // 
             // labelBloc3Time
@@ -1042,14 +1033,14 @@
             this.labelBloc3Time.MinimumSize = new System.Drawing.Size(150, 30);
             this.labelBloc3Time.MouseState = MaterialSkin.MouseState.HOVER;
             this.labelBloc3Time.Name = "labelBloc3Time";
-            this.labelBloc3Time.Size = new System.Drawing.Size(150, 30);
+            this.labelBloc3Time.Size = new System.Drawing.Size(1, 0);
             this.labelBloc3Time.TabIndex = 15;
             // 
             // btnBloc3MainAll
             // 
             this.btnBloc3MainAll.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnBloc3MainAll.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnBloc3MainAll.Depth = 0;
-            this.btnBloc3MainAll.DrawShadows = true;
             this.btnBloc3MainAll.HighEmphasis = true;
             this.btnBloc3MainAll.Icon = null;
             this.btnBloc3MainAll.Location = new System.Drawing.Point(254, 502);
@@ -1058,6 +1049,7 @@
             this.btnBloc3MainAll.MinimumSize = new System.Drawing.Size(150, 35);
             this.btnBloc3MainAll.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnBloc3MainAll.Name = "btnBloc3MainAll";
+            this.btnBloc3MainAll.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnBloc3MainAll.Size = new System.Drawing.Size(150, 35);
             this.btnBloc3MainAll.TabIndex = 14;
             this.btnBloc3MainAll.Text = "Main All";
@@ -1069,8 +1061,8 @@
             // btnBloc3Main
             // 
             this.btnBloc3Main.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnBloc3Main.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnBloc3Main.Depth = 0;
-            this.btnBloc3Main.DrawShadows = true;
             this.btnBloc3Main.HighEmphasis = true;
             this.btnBloc3Main.Icon = null;
             this.btnBloc3Main.Location = new System.Drawing.Point(9, 502);
@@ -1079,6 +1071,7 @@
             this.btnBloc3Main.MinimumSize = new System.Drawing.Size(150, 35);
             this.btnBloc3Main.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnBloc3Main.Name = "btnBloc3Main";
+            this.btnBloc3Main.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnBloc3Main.Size = new System.Drawing.Size(150, 35);
             this.btnBloc3Main.TabIndex = 13;
             this.btnBloc3Main.Text = "Main";
@@ -1094,7 +1087,6 @@
             this.MultiLineBloc3Hash.Depth = 0;
             this.MultiLineBloc3Hash.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.MultiLineBloc3Hash.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MultiLineBloc3Hash.Hint = "";
             this.MultiLineBloc3Hash.Location = new System.Drawing.Point(112, 433);
             this.MultiLineBloc3Hash.MaximumSize = new System.Drawing.Size(300, 35);
             this.MultiLineBloc3Hash.MinimumSize = new System.Drawing.Size(300, 35);
@@ -1113,7 +1105,6 @@
             this.MultiTextBloc3HashPrev.Depth = 0;
             this.MultiTextBloc3HashPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.MultiTextBloc3HashPrev.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MultiTextBloc3HashPrev.Hint = "";
             this.MultiTextBloc3HashPrev.Location = new System.Drawing.Point(112, 387);
             this.MultiTextBloc3HashPrev.MaximumSize = new System.Drawing.Size(300, 35);
             this.MultiTextBloc3HashPrev.MinimumSize = new System.Drawing.Size(300, 35);
@@ -1132,7 +1123,6 @@
             this.MultiLineBloc3Data.Depth = 0;
             this.MultiLineBloc3Data.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.MultiLineBloc3Data.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MultiLineBloc3Data.Hint = "";
             this.MultiLineBloc3Data.Location = new System.Drawing.Point(112, 123);
             this.MultiLineBloc3Data.MaximumSize = new System.Drawing.Size(300, 250);
             this.MultiLineBloc3Data.MinimumSize = new System.Drawing.Size(300, 250);
@@ -1150,7 +1140,6 @@
             this.MultiTextBloc3Nonce.Depth = 0;
             this.MultiTextBloc3Nonce.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.MultiTextBloc3Nonce.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MultiTextBloc3Nonce.Hint = "";
             this.MultiTextBloc3Nonce.Location = new System.Drawing.Point(112, 78);
             this.MultiTextBloc3Nonce.MaximumSize = new System.Drawing.Size(300, 30);
             this.MultiTextBloc3Nonce.MaxLength = 10;
@@ -1213,7 +1202,6 @@
             this.MultiTextBloc3BlocNumber.Depth = 0;
             this.MultiTextBloc3BlocNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.MultiTextBloc3BlocNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MultiTextBloc3BlocNumber.Hint = "";
             this.MultiTextBloc3BlocNumber.Location = new System.Drawing.Point(112, 33);
             this.MultiTextBloc3BlocNumber.MaximumSize = new System.Drawing.Size(300, 30);
             this.MultiTextBloc3BlocNumber.MaxLength = 10;
@@ -1303,7 +1291,7 @@
             this.LableBloc2Timeprev.MinimumSize = new System.Drawing.Size(150, 30);
             this.LableBloc2Timeprev.MouseState = MaterialSkin.MouseState.HOVER;
             this.LableBloc2Timeprev.Name = "LableBloc2Timeprev";
-            this.LableBloc2Timeprev.Size = new System.Drawing.Size(150, 30);
+            this.LableBloc2Timeprev.Size = new System.Drawing.Size(1, 0);
             this.LableBloc2Timeprev.TabIndex = 16;
             // 
             // labelBloc2Time
@@ -1316,14 +1304,14 @@
             this.labelBloc2Time.MinimumSize = new System.Drawing.Size(150, 30);
             this.labelBloc2Time.MouseState = MaterialSkin.MouseState.HOVER;
             this.labelBloc2Time.Name = "labelBloc2Time";
-            this.labelBloc2Time.Size = new System.Drawing.Size(150, 30);
+            this.labelBloc2Time.Size = new System.Drawing.Size(1, 0);
             this.labelBloc2Time.TabIndex = 15;
             // 
             // btnBloc2MainAll
             // 
             this.btnBloc2MainAll.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnBloc2MainAll.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnBloc2MainAll.Depth = 0;
-            this.btnBloc2MainAll.DrawShadows = true;
             this.btnBloc2MainAll.HighEmphasis = true;
             this.btnBloc2MainAll.Icon = null;
             this.btnBloc2MainAll.Location = new System.Drawing.Point(254, 502);
@@ -1332,6 +1320,7 @@
             this.btnBloc2MainAll.MinimumSize = new System.Drawing.Size(150, 35);
             this.btnBloc2MainAll.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnBloc2MainAll.Name = "btnBloc2MainAll";
+            this.btnBloc2MainAll.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnBloc2MainAll.Size = new System.Drawing.Size(150, 35);
             this.btnBloc2MainAll.TabIndex = 14;
             this.btnBloc2MainAll.Text = "Main All";
@@ -1343,8 +1332,8 @@
             // btnBloc2Main
             // 
             this.btnBloc2Main.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnBloc2Main.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnBloc2Main.Depth = 0;
-            this.btnBloc2Main.DrawShadows = true;
             this.btnBloc2Main.HighEmphasis = true;
             this.btnBloc2Main.Icon = null;
             this.btnBloc2Main.Location = new System.Drawing.Point(9, 502);
@@ -1353,6 +1342,7 @@
             this.btnBloc2Main.MinimumSize = new System.Drawing.Size(150, 35);
             this.btnBloc2Main.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnBloc2Main.Name = "btnBloc2Main";
+            this.btnBloc2Main.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnBloc2Main.Size = new System.Drawing.Size(150, 35);
             this.btnBloc2Main.TabIndex = 13;
             this.btnBloc2Main.Text = "Main";
@@ -1368,7 +1358,6 @@
             this.MultiLineBloc2Hash.Depth = 0;
             this.MultiLineBloc2Hash.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.MultiLineBloc2Hash.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MultiLineBloc2Hash.Hint = "";
             this.MultiLineBloc2Hash.Location = new System.Drawing.Point(112, 433);
             this.MultiLineBloc2Hash.MaximumSize = new System.Drawing.Size(300, 35);
             this.MultiLineBloc2Hash.MinimumSize = new System.Drawing.Size(300, 35);
@@ -1387,7 +1376,6 @@
             this.MultiTextBloc2HashPrev.Depth = 0;
             this.MultiTextBloc2HashPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.MultiTextBloc2HashPrev.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MultiTextBloc2HashPrev.Hint = "";
             this.MultiTextBloc2HashPrev.Location = new System.Drawing.Point(112, 387);
             this.MultiTextBloc2HashPrev.MaximumSize = new System.Drawing.Size(300, 35);
             this.MultiTextBloc2HashPrev.MinimumSize = new System.Drawing.Size(300, 35);
@@ -1406,7 +1394,6 @@
             this.MultiLineBloc2Data.Depth = 0;
             this.MultiLineBloc2Data.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.MultiLineBloc2Data.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MultiLineBloc2Data.Hint = "";
             this.MultiLineBloc2Data.Location = new System.Drawing.Point(112, 123);
             this.MultiLineBloc2Data.MaximumSize = new System.Drawing.Size(300, 250);
             this.MultiLineBloc2Data.MinimumSize = new System.Drawing.Size(300, 250);
@@ -1424,7 +1411,6 @@
             this.MultiTextBloc2Nonce.Depth = 0;
             this.MultiTextBloc2Nonce.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.MultiTextBloc2Nonce.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MultiTextBloc2Nonce.Hint = "";
             this.MultiTextBloc2Nonce.Location = new System.Drawing.Point(112, 78);
             this.MultiTextBloc2Nonce.MaximumSize = new System.Drawing.Size(300, 30);
             this.MultiTextBloc2Nonce.MaxLength = 20;
@@ -1487,7 +1473,6 @@
             this.MultiTextBloc2BlocNumber.Depth = 0;
             this.MultiTextBloc2BlocNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.MultiTextBloc2BlocNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MultiTextBloc2BlocNumber.Hint = "";
             this.MultiTextBloc2BlocNumber.Location = new System.Drawing.Point(112, 33);
             this.MultiTextBloc2BlocNumber.MaximumSize = new System.Drawing.Size(300, 30);
             this.MultiTextBloc2BlocNumber.MaxLength = 10;
@@ -1577,7 +1562,7 @@
             this.LableBloc1Timeprev.MinimumSize = new System.Drawing.Size(150, 30);
             this.LableBloc1Timeprev.MouseState = MaterialSkin.MouseState.HOVER;
             this.LableBloc1Timeprev.Name = "LableBloc1Timeprev";
-            this.LableBloc1Timeprev.Size = new System.Drawing.Size(150, 30);
+            this.LableBloc1Timeprev.Size = new System.Drawing.Size(1, 0);
             this.LableBloc1Timeprev.TabIndex = 16;
             // 
             // labelBloc1Time
@@ -1590,14 +1575,14 @@
             this.labelBloc1Time.MinimumSize = new System.Drawing.Size(150, 30);
             this.labelBloc1Time.MouseState = MaterialSkin.MouseState.HOVER;
             this.labelBloc1Time.Name = "labelBloc1Time";
-            this.labelBloc1Time.Size = new System.Drawing.Size(150, 30);
+            this.labelBloc1Time.Size = new System.Drawing.Size(1, 0);
             this.labelBloc1Time.TabIndex = 15;
             // 
             // btnBloc1MainAll
             // 
             this.btnBloc1MainAll.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnBloc1MainAll.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnBloc1MainAll.Depth = 0;
-            this.btnBloc1MainAll.DrawShadows = true;
             this.btnBloc1MainAll.HighEmphasis = true;
             this.btnBloc1MainAll.Icon = null;
             this.btnBloc1MainAll.Location = new System.Drawing.Point(254, 502);
@@ -1606,6 +1591,7 @@
             this.btnBloc1MainAll.MinimumSize = new System.Drawing.Size(150, 35);
             this.btnBloc1MainAll.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnBloc1MainAll.Name = "btnBloc1MainAll";
+            this.btnBloc1MainAll.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnBloc1MainAll.Size = new System.Drawing.Size(150, 35);
             this.btnBloc1MainAll.TabIndex = 14;
             this.btnBloc1MainAll.Text = "Main All";
@@ -1617,8 +1603,8 @@
             // btnBloc1Main
             // 
             this.btnBloc1Main.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnBloc1Main.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnBloc1Main.Depth = 0;
-            this.btnBloc1Main.DrawShadows = true;
             this.btnBloc1Main.HighEmphasis = true;
             this.btnBloc1Main.Icon = null;
             this.btnBloc1Main.Location = new System.Drawing.Point(9, 502);
@@ -1627,6 +1613,7 @@
             this.btnBloc1Main.MinimumSize = new System.Drawing.Size(150, 35);
             this.btnBloc1Main.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnBloc1Main.Name = "btnBloc1Main";
+            this.btnBloc1Main.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnBloc1Main.Size = new System.Drawing.Size(150, 35);
             this.btnBloc1Main.TabIndex = 13;
             this.btnBloc1Main.Text = "Main";
@@ -1642,7 +1629,6 @@
             this.MultiLineBloc1Hash.Depth = 0;
             this.MultiLineBloc1Hash.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.MultiLineBloc1Hash.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MultiLineBloc1Hash.Hint = "";
             this.MultiLineBloc1Hash.Location = new System.Drawing.Point(112, 433);
             this.MultiLineBloc1Hash.MaximumSize = new System.Drawing.Size(300, 35);
             this.MultiLineBloc1Hash.MinimumSize = new System.Drawing.Size(300, 35);
@@ -1661,7 +1647,6 @@
             this.MultiTextBloc1HashPrev.Depth = 0;
             this.MultiTextBloc1HashPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.MultiTextBloc1HashPrev.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MultiTextBloc1HashPrev.Hint = "";
             this.MultiTextBloc1HashPrev.Location = new System.Drawing.Point(112, 387);
             this.MultiTextBloc1HashPrev.MaximumSize = new System.Drawing.Size(300, 35);
             this.MultiTextBloc1HashPrev.MinimumSize = new System.Drawing.Size(300, 35);
@@ -1680,7 +1665,6 @@
             this.MultiLineBloc1Data.Depth = 0;
             this.MultiLineBloc1Data.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.MultiLineBloc1Data.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MultiLineBloc1Data.Hint = "";
             this.MultiLineBloc1Data.Location = new System.Drawing.Point(112, 123);
             this.MultiLineBloc1Data.MaximumSize = new System.Drawing.Size(300, 250);
             this.MultiLineBloc1Data.MinimumSize = new System.Drawing.Size(300, 250);
@@ -1698,7 +1682,6 @@
             this.MultiTextBloc1Nonce.Depth = 0;
             this.MultiTextBloc1Nonce.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.MultiTextBloc1Nonce.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MultiTextBloc1Nonce.Hint = "";
             this.MultiTextBloc1Nonce.Location = new System.Drawing.Point(112, 78);
             this.MultiTextBloc1Nonce.MaximumSize = new System.Drawing.Size(300, 30);
             this.MultiTextBloc1Nonce.MaxLength = 20;
@@ -1761,7 +1744,6 @@
             this.MultiTextBloc1BlocNumber.Depth = 0;
             this.MultiTextBloc1BlocNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.MultiTextBloc1BlocNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MultiTextBloc1BlocNumber.Hint = "";
             this.MultiTextBloc1BlocNumber.Location = new System.Drawing.Point(112, 33);
             this.MultiTextBloc1BlocNumber.MaximumSize = new System.Drawing.Size(300, 30);
             this.MultiTextBloc1BlocNumber.MaxLength = 10;
@@ -1812,7 +1794,7 @@
             this.tabSeting.ImageKey = "setting.png";
             this.tabSeting.Location = new System.Drawing.Point(4, 39);
             this.tabSeting.Name = "tabSeting";
-            this.tabSeting.Size = new System.Drawing.Size(1352, 677);
+            this.tabSeting.Size = new System.Drawing.Size(1346, 610);
             this.tabSeting.TabIndex = 3;
             this.tabSeting.Text = "  Setings";
             this.tabSeting.UseVisualStyleBackColor = true;
@@ -1838,7 +1820,6 @@
             this.BoxMaximumTray.Depth = 0;
             this.BoxMaximumTray.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.BoxMaximumTray.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.BoxMaximumTray.Hint = "";
             this.BoxMaximumTray.Location = new System.Drawing.Point(418, 145);
             this.BoxMaximumTray.MaximumSize = new System.Drawing.Size(300, 30);
             this.BoxMaximumTray.MaxLength = 15;
@@ -1873,7 +1854,6 @@
             this.BoxhowManyZeros.Depth = 0;
             this.BoxhowManyZeros.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.BoxhowManyZeros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.BoxhowManyZeros.Hint = "";
             this.BoxhowManyZeros.Location = new System.Drawing.Point(418, 75);
             this.BoxhowManyZeros.MaximumSize = new System.Drawing.Size(300, 30);
             this.BoxhowManyZeros.MaxLength = 1;

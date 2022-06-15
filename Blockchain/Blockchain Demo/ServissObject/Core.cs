@@ -62,6 +62,33 @@ namespace Blockchain_Demo
         }
         public void MainingStartAllBlocks()                 //mainingo visus blokus
         {
+            /*
+            Task task = Task.Run(() =>
+            {
+                for (int i = 0; i < blockchain.block.Length; i++)
+                {
+                    if (!blockchain.block[i].status)  // Ja bloks jau satur vajadzīgo hes summu tad to nesūta uz mainingu
+                    {
+                        stopWatch.Start();
+                        string nonce = maining.MainingRun(blockchain.block[i].blockTxt, howManyZeros, maximumNumberOfAttempts);
+                        stopWatch.Stop();
+
+                        blockchain.block[i].blockTxt.nonce = nonce;
+                        info[i].nonce = Convert.ToInt32(nonce);
+                        info[i].Milliseconds = Convert.ToInt32(stopWatch.ElapsedMilliseconds);
+                        stopWatch.Reset();
+                        info[i].SetInfo();
+                        ResetData();
+                    }
+                    // ResetData();
+                    resetInfo.Invoke();
+                }
+            }
+
+            );
+            task.Wait();
+            */
+            
             for (int i = 0; i < blockchain.block.Length; i++)
             {
                 if (!blockchain.block[i].status)  // Ja bloks jau satur vajadzīgo hes summu tad to nesūta uz mainingu
@@ -80,6 +107,7 @@ namespace Blockchain_Demo
                 // ResetData();
                 resetInfo.Invoke();
             }
+            
 
         }
 
