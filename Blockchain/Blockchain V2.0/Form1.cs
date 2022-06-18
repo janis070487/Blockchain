@@ -35,7 +35,7 @@ namespace Blockchain_V2._0
 
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent(2);
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;

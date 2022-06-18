@@ -11,22 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
 using System.Threading;
-//_________________________________________ Jautājumi _______________________________
-/*
- 1.   vai class Sha256FromBlocData metode GetSha25 ir pareizi pieņemt metodē izmainīt to
-      un tad atgriest to pašu kā rezultātu. Vai labāk izveidot jaunu un atgriest jaunu;
 
- 2.   vai ir gatava iespēja Block metodē SetAnswerBlockTxt()  convertējot ar sekojošo rindiņu
-        panāk lai kreisās nules neizdzēš
-        blockTxt.hashSum += Convert.ToString(blockdata.hashSum[i], toBase: 16);
-       vai to pašam jaizdomā kā to darīt.   Ja nav tad es zinu kā!!
-
-3.    Kā var piemēram no objekta block izmainīt forms1 control tekstus lai var tikt no metodes Test
-
-4.    Nesanāk sadalīt pa mapēm
-
-5.    
- * */
 namespace Blockchain_Demo
 {
     public partial class Form1 : MaterialForm
