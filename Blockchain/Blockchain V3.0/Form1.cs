@@ -35,7 +35,9 @@ namespace Blockchain_V3._0
 
         private void btnBloc1Main_Click(object sender, EventArgs e)
         {
-            MultiLineBlocData[0].Text = MultiLineBlocData[0].Text + "Ok";
+            Button btn = sender as Button;
+            MultiLineBlocData[0].Text = btn.Name ;
+            
         }
 
     }

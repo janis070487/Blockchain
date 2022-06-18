@@ -405,7 +405,7 @@
                 this.btnBlocMain[i].MaximumSize = new System.Drawing.Size(150, 35);
                 this.btnBlocMain[i].MinimumSize = new System.Drawing.Size(150, 35);
                 this.btnBlocMain[i].MouseState = MaterialSkin.MouseState.HOVER;
-                this.btnBlocMain[i].Name = "btnBloc1Main";
+                this.btnBlocMain[i].Name = $"{i}";
                 this.btnBlocMain[i].NoAccentTextColor = System.Drawing.Color.Empty;
                 this.btnBlocMain[i].Size = new System.Drawing.Size(150, 35);
                 this.btnBlocMain[i].TabIndex = 13;
