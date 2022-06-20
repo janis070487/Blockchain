@@ -26,7 +26,7 @@
         /// Требуемый метод для поддержки конструктора — не изменяйте 
         /// содержимое этого метода с помощью редактора кода.
         /// </summary>
-        private void InitializeComponent(int cik)
+        private void InitializeComponent(int cik = 6)
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
@@ -44,7 +44,7 @@
 
             //_____________________________________________________________________________________________
           
-            this.TextBlocTimeprev = new MaterialSkin.Controls.MaterialLabel[cik];
+            this.TextBlocFrequency = new MaterialSkin.Controls.MaterialLabel[cik];
             this.TextBlocTime = new MaterialSkin.Controls.MaterialLabel[cik];
             this.TextBlocHash = new MaterialSkin.Controls.MaterialLabel[cik];
             this.TextBlocPrev = new MaterialSkin.Controls.MaterialLabel[cik];
@@ -164,9 +164,11 @@
             // 
             // panel1
             // 
+            
             this.panel1.AutoScroll = true;
             this.panel1.AutoScrollMargin = new System.Drawing.Size(10, 10);
             this.panel1.AutoScrollMinSize = new System.Drawing.Size(0, howRow * 629 + 600);
+            this.panel1.AutoSize = true;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.MaximumSize = new System.Drawing.Size(howRow * 629 + 6, 1200);
@@ -181,19 +183,19 @@
               }
             for (int i = 0; i < grupBloc.Length; i++)
             {
-                this.TextBlocTimeprev[i] = new MaterialSkin.Controls.MaterialLabel();
+                this.TextBlocFrequency[i] = new MaterialSkin.Controls.MaterialLabel();
 
-                this.TextBlocTimeprev[i].AutoSize = true;
-                this.TextBlocTimeprev[i].Depth = 0;
-                this.TextBlocTimeprev[i].Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-                this.TextBlocTimeprev[i].Location = new System.Drawing.Point(162, 556);
-                this.TextBlocTimeprev[i].MaximumSize = new System.Drawing.Size(150, 30);
-                this.TextBlocTimeprev[i].MinimumSize = new System.Drawing.Size(150, 30);
-                this.TextBlocTimeprev[i].MouseState = MaterialSkin.MouseState.HOVER;
-                this.TextBlocTimeprev[i].Name = $"TextBloc{i}Timeprev";
-                this.TextBlocTimeprev[i].Size = new System.Drawing.Size(1, 0);
-                this.TextBlocTimeprev[i].TabIndex = 16;
-                this.grupBloc[i].Controls.Add(this.TextBlocTimeprev[i]);
+                this.TextBlocFrequency[i].AutoSize = true;
+                this.TextBlocFrequency[i].Depth = 0;
+                this.TextBlocFrequency[i].Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+                this.TextBlocFrequency[i].Location = new System.Drawing.Point(162, 556);
+                this.TextBlocFrequency[i].MaximumSize = new System.Drawing.Size(150, 30);
+                this.TextBlocFrequency[i].MinimumSize = new System.Drawing.Size(150, 30);
+                this.TextBlocFrequency[i].MouseState = MaterialSkin.MouseState.HOVER;
+                this.TextBlocFrequency[i].Name = $"TextBloc{i}Timeprev";
+                this.TextBlocFrequency[i].Size = new System.Drawing.Size(1, 0);
+                this.TextBlocFrequency[i].TabIndex = 16;
+                this.grupBloc[i].Controls.Add(this.TextBlocFrequency[i]);
 
                 this.TextBlocTime[i] = new MaterialSkin.Controls.MaterialLabel();
                 this.TextBlocTime[i].AutoSize = true;
@@ -290,12 +292,12 @@
                 this.MultiTextBlocBlocNumber[i].MinimumSize = new System.Drawing.Size(300, 30);
                 this.MultiTextBlocBlocNumber[i].MouseState = MaterialSkin.MouseState.HOVER;
                 this.MultiTextBlocBlocNumber[i].Multiline = false;
-                this.MultiTextBlocBlocNumber[i].Name = "MultiTextBloc1BlocNumber";
+                this.MultiTextBlocBlocNumber[i].Name = $"{i}";
                 this.MultiTextBlocBlocNumber[i].ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
                 this.MultiTextBlocBlocNumber[i].Size = new System.Drawing.Size(300, 30);
                 this.MultiTextBlocBlocNumber[i].TabIndex = 5;
-                this.MultiTextBlocBlocNumber[i].Text = "";
-                // this.MultiTextBlocBlocNumber[i].TextChanged += new System.EventHandler(this.MultiTextBloc1BlocNumber_TextChanged);
+                this.MultiTextBlocBlocNumber[i].Text = $"{i + 1}";
+                this.MultiTextBlocBlocNumber[i].TextChanged += new System.EventHandler(this.BlockNumber_TextChangedk);
                 this.grupBloc[i].Controls.Add(this.MultiTextBlocBlocNumber[i]);
 
 
@@ -311,12 +313,12 @@
                 this.MultiTextBlocNonce[i].MinimumSize = new System.Drawing.Size(300, 30);
                 this.MultiTextBlocNonce[i].MouseState = MaterialSkin.MouseState.HOVER;
                 this.MultiTextBlocNonce[i].Multiline = false;
-                this.MultiTextBlocNonce[i].Name = $"MultiTextBloc{i}Nonce";
+                this.MultiTextBlocNonce[i].Name = $"{i}";
                 this.MultiTextBlocNonce[i].ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
                 this.MultiTextBlocNonce[i].Size = new System.Drawing.Size(300, 30);
                 this.MultiTextBlocNonce[i].TabIndex = 9;
                 this.MultiTextBlocNonce[i].Text = "";
-                //this.MultiTextBloc1Nonce.TextChanged += new System.EventHandler(this.MultiTextBloc1Nonce_TextChanged);
+                this.MultiTextBlocNonce[i].TextChanged += new System.EventHandler(this.BlockNonce_TextChangedk);
                 this.grupBloc[i].Controls.Add(this.MultiTextBlocNonce[i]);
 
                 this.MultiLineBlocData[i] = new MaterialSkin.Controls.MaterialMultiLineTextBox();
@@ -329,11 +331,11 @@
                 this.MultiLineBlocData[i].MaximumSize = new System.Drawing.Size(300, 250);
                 this.MultiLineBlocData[i].MinimumSize = new System.Drawing.Size(300, 250);
                 this.MultiLineBlocData[i].MouseState = MaterialSkin.MouseState.HOVER;
-                this.MultiLineBlocData[i].Name = $"MultiLineBloc{i}Data";
+                this.MultiLineBlocData[i].Name = $"{i}";
                 this.MultiLineBlocData[i].Size = new System.Drawing.Size(300, 250);
                 this.MultiLineBlocData[i].TabIndex = 10;
                 this.MultiLineBlocData[i].Text = "";
-                //this.MultiLineBloc1Data.TextChanged += new System.EventHandler(this.MultiLineBloc1Data_TextChanged);
+                this.MultiLineBlocData[i].TextChanged += new System.EventHandler(this.BlockData_TextChangedk);
                 this.grupBloc[i].Controls.Add(this.MultiLineBlocData[i]);
 
                 this.MultiTextBlocHashPrev[i] = new MaterialSkin.Controls.MaterialMultiLineTextBox();
@@ -383,7 +385,7 @@
                 this.btnBlocMainAll[i].MaximumSize = new System.Drawing.Size(150, 35);
                 this.btnBlocMainAll[i].MinimumSize = new System.Drawing.Size(150, 35);
                 this.btnBlocMainAll[i].MouseState = MaterialSkin.MouseState.HOVER;
-                this.btnBlocMainAll[i].Name = $"btnBloc{i}MainAll";
+                this.btnBlocMainAll[i].Name = $"{i}";
                 this.btnBlocMainAll[i].NoAccentTextColor = System.Drawing.Color.Empty;
                 this.btnBlocMainAll[i].Size = new System.Drawing.Size(150, 35);
                 this.btnBlocMainAll[i].TabIndex = 14;
@@ -391,7 +393,7 @@
                 this.btnBlocMainAll[i].Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
                 this.btnBlocMainAll[i].UseAccentColor = false;
                 this.btnBlocMainAll[i].UseVisualStyleBackColor = true;
-                //this.btnBlocMainAll[i].Click += new System.EventHandler(this.btnBloc1MainAll_Click);
+                this.btnBlocMainAll[i].Click += new System.EventHandler(this.btnBlockMainAll_Click);
                 this.grupBloc[i].Controls.Add(this.btnBlocMainAll[i]);
 
                 this.btnBlocMain[i] = new MaterialSkin.Controls.MaterialButton();
@@ -501,12 +503,44 @@
             // 
             // Form1
             // 
+            /*
+             *this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1360, 720);
+            this.Controls.Add(this.LabelMaximum);
+            this.DrawerShowIconsWhenHidden = true;
+            this.DrawerTabControl = this.LabelMaximum;
+            this.Name = "Form1";
+            this.Sizable = false;
+            this.Text = "Blockhchain";
+            this.LabelMaximum.ResumeLayout(false);
+            this.tabBloc.ResumeLayout(false);
+            this.tabBloc.PerformLayout();
+            this.panelBlockchain.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.grup5bloc.ResumeLayout(false);
+            this.grup5bloc.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.grup1bloc.ResumeLayout(false);
+            this.grup1bloc.PerformLayout();
+            this.tabSeting.ResumeLayout(false);
+            this.tabSeting.PerformLayout();
+            this.ResumeLayout(false);
+            */
+
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1360, 1100);
+            this.ClientSize = new System.Drawing.Size(1360, 7200);
             this.Controls.Add(this.materialTabControl1);
             this.DrawerShowIconsWhenHidden = true;
             this.DrawerTabControl = this.materialTabControl1;
+           // this.DrawerTabControl = this.materialTabControl1;
             this.MaximumSize = new System.Drawing.Size(1360, 1200);
             this.MinimumSize = new System.Drawing.Size(1360, 726);
             this.Name = "Form1";
@@ -528,8 +562,8 @@
         private int howRow;
         private int counter;
         private System.Drawing.Point[] point;
-
-        private MaterialSkin.Controls.MaterialLabel[] TextBlocTimeprev;
+        
+        private MaterialSkin.Controls.MaterialLabel[] TextBlocFrequency;
         private MaterialSkin.Controls.MaterialLabel[] TextBlocTime;
         private MaterialSkin.Controls.MaterialLabel[] TextBlocHash;
         private MaterialSkin.Controls.MaterialLabel[] TextBlocPrev;
