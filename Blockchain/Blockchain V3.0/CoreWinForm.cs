@@ -36,7 +36,7 @@ namespace Blockchain_V3._0
             }
         }
        public void Main(int blockNumber)      // Palaiz lai maina konkreto bloku
-        {
+        {/*
             stopWatch.Start();
             string nonce = maining.MainingRun(blockchain.block[blockNumber - 1].blockTxt, howManyZeros, maximumNumberOfAttempts);
             stopWatch.Stop();
@@ -46,11 +46,11 @@ namespace Blockchain_V3._0
             stopWatch.Reset();
             info[blockNumber - 1].SetInfo();
             ResetData();
-            resetInfo.Invoke();
+            resetInfo.Invoke();*/
         }
 
       public  void MainAll(int howBlocv = 0)  // Palaiž lai maina ar noradi ar kuru bloku sākt ja netiek noradīts tad sak ar pirmo
-        {
+        {/*
             for (int i = howBlocv; i < blockchain.block.Length; i++)
             {
                 if (!blockchain.block[i].status)  // Ja bloks jau satur vajadzīgo hes summu tad to nesūta uz mainingu
@@ -68,11 +68,11 @@ namespace Blockchain_V3._0
                 }
                 // ResetData();
                 resetInfo.Invoke();
-            }
+            }*/
         }
 
         public void ResetData() 
-        {
+        {/*
             for (int i = 0; i < blockchain.block.Length; i++)
             {
                 blockchain.block[i].SetData();
@@ -84,17 +84,18 @@ namespace Blockchain_V3._0
                     blockchain.block[i].SetData();
                 }
             }
-            Check(howManyZeros);   // pārbauda vai ir vajadzīgais rezultāts
+            Check(howManyZeros);   // pārbauda vai ir vajadzīgais rezultāts 
+            */
         }
         public void Check(int how) 
-        {
+        {/*
             for (int i = 0; i < blockchain.block.Length; i++) //Pārbauda katru bloku vai atbilst vajadzīgajam paveiktajam darbam
             {
                 blockchain.block[i].status = CheckBlock.Check(how, blockchain.block[i].blockTxt.hashSum);
-            }
+            }*/
         }
         public int CheckValue(string sms)    // PArbaudis vai tika ievadits korekts skaitlis lauka
-        {
+        {/*
             int answer;
             bool a = int.TryParse(sms, out answer);
             if (sms.Length == 0)
@@ -106,46 +107,49 @@ namespace Blockchain_V3._0
                 MessageBox.Show("Tika ievadīts nepareizs simbols", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-            return answer;
+            return answer;*/
+            return 0;
         }
         public void LoadFirstDataInBloc()   // Ielādes pirmos datus
         {
-            blockchain.block[0].blockTxt.prewHashSum = "0000000000000000000000000000000000000000000000000000000000000000";
-            for (int i = 0; i < blockchain.block.Length; i++)
-            {
-               // blockchain.block[i].blockTxt.nonce = FirstData.Data[i];
-            }
-            //  MainAll(0);
+          //  blockchain.block[0].blockTxt.prewHashSum = "0000000000000000000000000000000000000000000000000000000000000000";
+           // for (int i = 0; i < blockchain.block.Length; i++)
+           // {
+           //     blockchain.block[i].SetData();       // Sagatavo visus datus
+           // }
+            MainAll();
+            resetInfo.Invoke();                      // Notikums atjauno monitoru
+            
         }
         public void ChangedNumber(string numberBloc, string sms)
         {
-            ChangedNumber(Int32.Parse(numberBloc), sms);
+           // ChangedNumber(Int32.Parse(numberBloc), sms);
         }
         public void ChangedNumber(int numberBloc, string sms)
         {
-            blockchain.block[numberBloc].blockTxt.number = sms;
-            ResetData();
-            resetInfo.Invoke();
+           // blockchain.block[numberBloc].blockTxt.number = sms;
+         //   ResetData();
+         //   resetInfo.Invoke();
         }
         public void ChangedNonce(string numberBloc, string sms)
         {
-            ChangedNonce(Int32.Parse(numberBloc), sms);
+           // ChangedNonce(Int32.Parse(numberBloc), sms);
         }
         public void ChangedNonce(int numberBloc, string sms)
         {
-            blockchain.block[numberBloc].blockTxt.nonce = sms;
-            ResetData();
-            resetInfo.Invoke();
+           // blockchain.block[numberBloc].blockTxt.nonce = sms;
+          //  ResetData();
+          //  resetInfo.Invoke();
         }
         public void ChangedData(string numberBloc, string sms)
         {
-            Changeddata(Int32.Parse(numberBloc), sms);
+           // Changeddata(Int32.Parse(numberBloc), sms);
         }
         public void Changeddata(int numberBloc, string sms)
         {
-            blockchain.block[numberBloc].blockTxt.data = sms;
-            ResetData();
-            resetInfo.Invoke();
+            //blockchain.block[numberBloc].blockTxt.data = sms;
+           // ResetData();
+          //  resetInfo.Invoke();
         }
     }
 }

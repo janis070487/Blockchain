@@ -500,40 +500,7 @@
             this.BoxhowManyZeros.Size = new System.Drawing.Size(300, 30);
             this.BoxhowManyZeros.TabIndex = 10;
             this.BoxhowManyZeros.Text = "4";
-            // 
-            // Form1
-            // 
-            /*
-             *this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1360, 720);
-            this.Controls.Add(this.LabelMaximum);
-            this.DrawerShowIconsWhenHidden = true;
-            this.DrawerTabControl = this.LabelMaximum;
-            this.Name = "Form1";
-            this.Sizable = false;
-            this.Text = "Blockhchain";
-            this.LabelMaximum.ResumeLayout(false);
-            this.tabBloc.ResumeLayout(false);
-            this.tabBloc.PerformLayout();
-            this.panelBlockchain.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
-            this.grup5bloc.ResumeLayout(false);
-            this.grup5bloc.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.grup1bloc.ResumeLayout(false);
-            this.grup1bloc.PerformLayout();
-            this.tabSeting.ResumeLayout(false);
-            this.tabSeting.PerformLayout();
-            this.ResumeLayout(false);
-            */
-
+       
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1360, 7200);
