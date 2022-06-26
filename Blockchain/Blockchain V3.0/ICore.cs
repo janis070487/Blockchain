@@ -13,13 +13,14 @@ namespace Blockchain_V3._0
 
         void ResetData();
         void Check(int how);          // 
-        int CheckValue(string sms);    // PArbaudis vai tika ievadits korekts skaitlis lauka
+        bool CheckValue(string sms, out string val);    // PArbaudis vai tika ievadits korekts skaitlis lauka
         void LoadFirstDataInBloc();   // Ielādes pirmos datus
-        void ChangedNumber(string numberBloc, string sms); 
-        void ChangedNumber(int numberBloc, string sms);
+        bool ChangedNumber(string numberBloc, string sms); 
+        bool ChangedNumber(int numberBloc, string sms);
         void ChangedNonce(string numberBloc, string sms);
         void ChangedNonce(int numberBloc, string sms);
         void ChangedData(string numberBloc, string sms);
         void Changeddata(int numberBloc, string sms);
+        void ResetAllBlock();
     }
 }

@@ -10,146 +10,181 @@ namespace Blockchain_V3._0
 {
     public class CoreWinForm : ICore
     {
-
-        public bool flage = false;// ------------------------------
-        public Blockchain blockchain;
-        public Sha256FromBlocData sha256FromBlock;
-        public Maining maining;
-        public Stopwatch stopWatch;
+        public Blockchain blockchain { get; set; }
+       
+        private Sha256FromBlocData sha256FromBlock;
+        private Maining maining;
+        private Stopwatch sw;// = Stopwatch.StartNew();
         public Info[] info { get; set; }
         public int howManyZeros { get; set; }
         public int maximumNumberOfAttempts { get; set; }
         public delegate void ResetInfo();
-        public delegate void GetNext();
+        //public delegate void GetNext();
+        public delegate void ResetNonce();
+        //public delegate void ResetNumber();
         public ResetInfo resetInfo { get; set; }
-
+        public ResetNonce resetNonce { get; set; }
+        //public ResetNumber resetNumber { get; set; }
         public CoreWinForm(int howBlock)
         {
             blockchain = new Blockchain(howBlock);
             sha256FromBlock = new Sha256FromBlocData();
+            sw = new Stopwatch();
             maining = new Maining();
-            stopWatch = new Stopwatch();
             info = new Info[howBlock];
-            for (int i = 0; i < info.Length; i++)
+            for (int i = 0; i < howBlock; i++)
             {
                 info[i] = new Info();
             }
         }
        public void Main(int blockNumber)      // Palaiz lai maina konkreto bloku
-        {/*
-            stopWatch.Start();
-            string nonce = maining.MainingRun(blockchain.block[blockNumber - 1].blockTxt, howManyZeros, maximumNumberOfAttempts);
-            stopWatch.Stop();
-            blockchain.block[blockNumber - 1].blockTxt.nonce = nonce;
-            info[blockNumber - 1].nonce = Convert.ToInt32(nonce);
-            info[blockNumber - 1].Milliseconds = Convert.ToInt32(stopWatch.ElapsedMilliseconds);
-            stopWatch.Reset();
-            info[blockNumber - 1].SetInfo();
+        {
+            sw.Start();
+            string nonce = maining.MainingRun(blockchain.block[blockNumber].blockTxt, howManyZeros, maximumNumberOfAttempts);
+            sw.Stop();
+            blockchain.block[blockNumber].blockTxt.nonce = nonce;
+            info[blockNumber].nonce = Convert.ToInt32(nonce);
+            info[blockNumber].Milliseconds = Convert.ToInt32(sw.ElapsedMilliseconds);
+            info[blockNumber].SetInfo();
+            sw.Reset();
             ResetData();
-            resetInfo.Invoke();*/
+            blockchain.block[blockNumber].blockTxt.hashSum = GetHexToByte.GetHex(sha256FromBlock.GetSha256(blockchain.block[blockNumber].blockdata));
+          ResetAllBlock();
+            resetInfo.Invoke();
+            resetNonce.Invoke();
         }
 
       public  void MainAll(int howBlocv = 0)  // Palaiž lai maina ar noradi ar kuru bloku sākt ja netiek noradīts tad sak ar pirmo
-        {/*
+        {
             for (int i = howBlocv; i < blockchain.block.Length; i++)
             {
-                if (!blockchain.block[i].status)  // Ja bloks jau satur vajadzīgo hes summu tad to nesūta uz mainingu
-                {
-                    stopWatch.Start();
+                    sw.Start();
                     string nonce = maining.MainingRun(blockchain.block[i].blockTxt, howManyZeros, maximumNumberOfAttempts);
-                    stopWatch.Stop();
+                    sw.Stop();
 
                     blockchain.block[i].blockTxt.nonce = nonce;
                     info[i].nonce = Convert.ToInt32(nonce);
-                    info[i].Milliseconds = Convert.ToInt32(stopWatch.ElapsedMilliseconds);
-                    stopWatch.Reset();
+                    info[i].Milliseconds = Convert.ToInt32(sw.ElapsedMilliseconds);
+                    sw.Reset();
                     info[i].SetInfo();
-                    ResetData();
-                }
-                // ResetData();
+                    blockchain.block[i].blockTxt.hashSum = GetHexToByte.GetHex(sha256FromBlock.GetSha256(blockchain.block[i].blockdata));
+                    if (i + 1 < blockchain.block.Length)
+                    {
+                        blockchain.block[i + 1].blockTxt.prewHashSum = blockchain.block[i].blockTxt.hashSum;
+                    }
+                ResetAllBlock();
                 resetInfo.Invoke();
-            }*/
+                resetNonce.Invoke();
+            }
+            
         }
 
         public void ResetData() 
-        {/*
-            for (int i = 0; i < blockchain.block.Length; i++)
-            {
-                blockchain.block[i].SetData();
-                blockchain.block[i].blockdata.hashSum = sha256FromBlock.GetSha256(blockchain.block[i].blockdata);
-                blockchain.block[i].SetAnswerBlockTxt();
-                if (i < blockchain.block.Length - 1)
-                {
-                    blockchain.block[i + 1].blockTxt.prewHashSum = blockchain.block[i].blockTxt.hashSum;
-                    blockchain.block[i].SetData();
-                }
-            }
-            Check(howManyZeros);   // pārbauda vai ir vajadzīgais rezultāts 
-            */
+        {
         }
         public void Check(int how) 
-        {/*
+        {
             for (int i = 0; i < blockchain.block.Length; i++) //Pārbauda katru bloku vai atbilst vajadzīgajam paveiktajam darbam
             {
                 blockchain.block[i].status = CheckBlock.Check(how, blockchain.block[i].blockTxt.hashSum);
-            }*/
+            }
         }
-        public int CheckValue(string sms)    // PArbaudis vai tika ievadits korekts skaitlis lauka
-        {/*
-            int answer;
-            bool a = int.TryParse(sms, out answer);
-            if (sms.Length == 0)
+        public bool CheckValue(string sms, out string val)    // PArbaudis vai tika ievadits korekts skaitlis lauka
+        {
+            try
             {
-                return 0;
+               int answer = Convert.ToInt32(sms);
+                val = sms;
+                return true;
             }
-            else if (!a)
+            catch(FormatException)
             {
-                MessageBox.Show("Tika ievadīts nepareizs simbols", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                MessageBox.Show("Ievadītajā skaitlī ir neatļauts simbols", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            return answer;*/
-            return 0;
+            catch (OverflowException)
+            {
+                MessageBox.Show("Ievadītais skaitlis ir par lielu", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+            val = "0";
+            return false;
         }
         public void LoadFirstDataInBloc()   // Ielādes pirmos datus
         {
-          //  blockchain.block[0].blockTxt.prewHashSum = "0000000000000000000000000000000000000000000000000000000000000000";
-           // for (int i = 0; i < blockchain.block.Length; i++)
-           // {
-           //     blockchain.block[i].SetData();       // Sagatavo visus datus
-           // }
-            MainAll();
-            resetInfo.Invoke();                      // Notikums atjauno monitoru
             
+            blockchain.block[0].blockTxt.prewHashSum = "0000000000000000000000000000000000000000000000000000000000000000";
+            for (int i = 0; i < blockchain.block.Length; i++)
+            {
+               
+                blockchain.block[i].SetData();   // visus text(string) apvieno un parstata  visu byte masiva
+                sw.Start();
+                string nonce = maining.MainingRun(blockchain.block[i].blockTxt, howManyZeros, maximumNumberOfAttempts); // atgriez uzdevuma rezultatu
+                sw.Stop();
+                blockchain.block[i].blockTxt.nonce = nonce; // maininga atbildi ieraksta objekta
+                info[i].nonce = Convert.ToInt32(nonce);
+                info[i].Milliseconds = Convert.ToInt32(sw.ElapsedMilliseconds);
+                sw.Reset();
+                info[i].SetInfo();
+                blockchain.block[i].SetData();
+                blockchain.block[i].blockTxt.hashSum = GetHexToByte.GetHex(sha256FromBlock.GetSha256(blockchain.block[i].blockdata));
+                if (i + 1 < blockchain.block.Length)
+                {
+                    blockchain.block[i + 1].blockTxt.prewHashSum = blockchain.block[i].blockTxt.hashSum;
+                }
+                blockchain.block[i].status =  CheckBlock.Check(howManyZeros, blockchain.block[i].blockTxt.hashSum);
+                 
+            }
         }
-        public void ChangedNumber(string numberBloc, string sms)
+        public bool ChangedNumber(string numberBloc, string sms)
         {
-           // ChangedNumber(Int32.Parse(numberBloc), sms);
+            bool met = CheckValue(sms, out sms);
+            ChangedNumber(Int32.Parse(numberBloc), sms);
+            return met;
         }
-        public void ChangedNumber(int numberBloc, string sms)
+        public bool ChangedNumber(int numberBloc, string sms)
         {
-           // blockchain.block[numberBloc].blockTxt.number = sms;
-         //   ResetData();
-         //   resetInfo.Invoke();
+            blockchain.block[numberBloc].blockTxt.number = sms;
+            ResetAllBlock();
+            resetInfo.Invoke();
+            return true;
         }
         public void ChangedNonce(string numberBloc, string sms)
         {
-           // ChangedNonce(Int32.Parse(numberBloc), sms);
+            ChangedNonce(Int32.Parse(numberBloc), sms);
         }
         public void ChangedNonce(int numberBloc, string sms)
         {
-           // blockchain.block[numberBloc].blockTxt.nonce = sms;
-          //  ResetData();
-          //  resetInfo.Invoke();
+             blockchain.block[numberBloc].blockTxt.nonce = sms;
+            ResetAllBlock();
+            resetInfo.Invoke();
         }
         public void ChangedData(string numberBloc, string sms)
         {
-           // Changeddata(Int32.Parse(numberBloc), sms);
+            Changeddata(Int32.Parse(numberBloc), sms);
         }
         public void Changeddata(int numberBloc, string sms)
         {
-            //blockchain.block[numberBloc].blockTxt.data = sms;
-           // ResetData();
-          //  resetInfo.Invoke();
+            blockchain.block[numberBloc].blockTxt.data = sms;
+            ResetAllBlock();
+            resetInfo.Invoke();
+        }
+
+        public void ResetAllBlock()
+        {
+            for (int i = 0; i < blockchain.block.Length; i++)
+            {
+                blockchain.block[i].SetData();   // visus text(string) apvieno un parstata  visu byte masiva
+                info[i].nonce = 0;
+                info[i].Milliseconds = 0;
+                info[i].SetInfo();
+                blockchain.block[i].SetData();
+                blockchain.block[i].blockTxt.hashSum = GetHexToByte.GetHex(sha256FromBlock.GetSha256(blockchain.block[i].blockdata));
+                if (i + 1 < blockchain.block.Length)
+                {
+                    blockchain.block[i + 1].blockTxt.prewHashSum = blockchain.block[i].blockTxt.hashSum;
+                }
+                blockchain.block[i].status = CheckBlock.Check(howManyZeros, blockchain.block[i].blockTxt.hashSum);
+            }
         }
     }
 }

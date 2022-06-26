@@ -288,7 +288,7 @@
                 this.MultiTextBlocBlocNumber[i].ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
                 this.MultiTextBlocBlocNumber[i].Location = new System.Drawing.Point(112, 33);
                 this.MultiTextBlocBlocNumber[i].MaximumSize = new System.Drawing.Size(300, 30);
-                this.MultiTextBlocBlocNumber[i].MaxLength = 10;
+                this.MultiTextBlocBlocNumber[i].MaxLength = 15;
                 this.MultiTextBlocBlocNumber[i].MinimumSize = new System.Drawing.Size(300, 30);
                 this.MultiTextBlocBlocNumber[i].MouseState = MaterialSkin.MouseState.HOVER;
                 this.MultiTextBlocBlocNumber[i].Multiline = false;
@@ -467,6 +467,7 @@
             this.BoxMaximumTray.Size = new System.Drawing.Size(300, 30);
             this.BoxMaximumTray.TabIndex = 12;
             this.BoxMaximumTray.Text = "10000000";
+            this.BoxMaximumTray.TextChanged += new System.EventHandler(this.MaximumTray_TextChangedk);
             // 
             // LabelhowManyZeros
             // 
@@ -500,7 +501,8 @@
             this.BoxhowManyZeros.Size = new System.Drawing.Size(300, 30);
             this.BoxhowManyZeros.TabIndex = 10;
             this.BoxhowManyZeros.Text = "4";
-       
+            this.BoxhowManyZeros.TextChanged += new System.EventHandler(this.howManyZeros_TextChangedk);
+
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1360, 7200);

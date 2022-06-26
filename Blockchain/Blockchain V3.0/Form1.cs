@@ -23,8 +23,9 @@ namespace Blockchain_V3._0
         public Color colorOk = Color.White;
         public Form1()
         {
-            core = new CoreWinForm(howBloc);
+            
             InitializeComponent(howBloc);
+            CoreWinForm core = new CoreWinForm(howBloc);
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
@@ -34,82 +35,123 @@ namespace Blockchain_V3._0
 
         private void Init()
         {
+            core = new CoreWinForm(howBloc);
             
-            //flage = true;
-            //core.resetInfo += Print;
-         
+            flage = false;
             core.howManyZeros = 4;                                  // iestata uzdevuma prasibas
             core.maximumNumberOfAttempts = 10000000;                 //iestata maksimālo meiģinājumu skaitu
             core.LoadFirstDataInBloc();
-          //  core.ResetData();
-          //  Print();
-           // flage = true;
-          
+            core.resetInfo += Print;
+            core.resetNonce += ResetNonce;
+            core.resetNonce += ResetNonce;
+            // core.LoadFirstDataInBloc();
+            for (int i = 0; i < howBloc; i++)
+            {
+                MultiTextBlocNonce[i].Text = core.blockchain.block[i].blockTxt.nonce;
+            }
+            Print();
         }
 
         private void btnBloc1Main_Click(object sender, EventArgs e)
         {
-              //  Button btnMain = sender as Button;
+            MaterialButton btn = sender as MaterialButton;
+            core.Main(Convert.ToInt32(btn.Name));
 
         }
 
         private void btnBlockMainAll_Click(object sender, EventArgs e)
         {
-           
-               // Button btnMainAll = sender as Button;
-           
+
+            MaterialButton btn = sender as MaterialButton;
+            core.MainAll();
+
         }
 
 
         private void BlockNumber_TextChangedk(object sender, EventArgs e)
-        {
-            /*
+        { 
             if (flage)
             {
-                flage = false;
+                
                 MaterialMultiLineTextBox textBoxNumber = sender as MaterialMultiLineTextBox;
-                core.ChangedNumber(textBoxNumber.Name, textBoxNumber.Text);
-                flage = true;
-            }*/
+                string answer;
+                bool met = core.CheckValue(textBoxNumber.Text, out answer);
+                if (met)
+                {
+                    core.ChangedNumber(textBoxNumber.Name, answer);
+                }
+                else
+                {
+                    ResetNumber(Convert.ToInt32(textBoxNumber.Name));
+                }
+
+            }
         }
 
         private void BlockNonce_TextChangedk(object sender, EventArgs e)
-        {/*
-            if (flage)
-            {
-                flage = false;
-                MaterialMultiLineTextBox textBoxNonce = sender as MaterialMultiLineTextBox;
+        {
+             if (flage)
+             {
+                 MaterialMultiLineTextBox textBoxNonce = sender as MaterialMultiLineTextBox;
                 core.ChangedNonce(textBoxNonce.Name, textBoxNonce.Text);
-                flage = true;
-            }*/
+               // MultiTextBlocNonce[Convert.ToInt32(textBoxNonce.Name)].Text = core.blockchain.block[Convert.ToInt32(textBoxNonce.Name)].blockTxt.nonce;
+                //flage = false;
+            }
+            
+        }
+
+        private void howManyZeros_TextChangedk(object sender, EventArgs e)
+        {
+            
+            string zero =BoxhowManyZeros.Text;
+            if (zero == "") {
+                core.howManyZeros = 0;
+            }
+            else
+            {
+                core.howManyZeros = Convert.ToInt32(BoxhowManyZeros.Text) ;
+            }
+            core.ResetAllBlock();
+            Print();
+        }
+
+        private void MaximumTray_TextChangedk(object sender, EventArgs e)
+        {
+            core.maximumNumberOfAttempts = Convert.ToInt32(BoxMaximumTray.Text);
         }
 
         private void BlockData_TextChangedk(object sender, EventArgs e)
-        {/*
-            if (flage)
-            {
-                flage = false;
-                MaterialMultiLineTextBox textBoxData = sender as MaterialMultiLineTextBox;
-                core.ChangedData(textBoxData.Name, textBoxData.Text);
-                flage = true;
-            }*/
+        {
+             if (flage)
+             {
+                 MaterialMultiLineTextBox textBoxData = sender as MaterialMultiLineTextBox;
+                 core.ChangedData(textBoxData.Name, textBoxData.Text);
+             }
         }
-
-        public void Print()
-        {/*
-
+        public void ResetNonce()
+        {
             flage = false;
-
-            for(int i = 0; i < core.blockchain.block.Length; i++)
+            for(int i = 0; i < howBloc; i++)
             {
-                MultiTextBlocBlocNumber[i].Text = core.blockchain.block[i].blockTxt.number;
                 MultiTextBlocNonce[i].Text = core.blockchain.block[i].blockTxt.nonce;
-                MultiLineBlocData[i].Text = core.blockchain.block[i].blockTxt.data;
+            }
+            flage = true;
+        }
+        public void ResetNumber(int blockNumber)
+        {
+            flage = false;
+            MultiTextBlocBlocNumber[blockNumber].Text = "0";
+        }
+        public void Print()
+        {
+            flage = false;
+            for (int i = 0; i < core.blockchain.block.Length; i++)
+            {
                 MultiTextBlocHashPrev[i].Text = core.blockchain.block[i].blockTxt.prewHashSum;
                 MultiLineBlocHash[i].Text = core.blockchain.block[i].blockTxt.hashSum;
-                TextBlocTime[i].Text = $"Total time: {core.info[0].totalTime}";
-                TextBlocFrequency[i].Text = $"Maining F: {core.info[0].averageUnitsPerSecond} Hz";
-                if (core.blockchain.block[0].status)
+                TextBlocTime[i].Text = $"Total time: {core.info[i].totalTime}";
+                TextBlocFrequency[i].Text = $"Maining F: {core.info[i].averageUnitsPerSecond} Hz";
+                if (core.blockchain.block[i].status)
                 {
                     grupBloc[i].ForeColor = colorOk;
                     grupBloc[i].Text = $"Block {i + 1}";
@@ -120,12 +162,10 @@ namespace Blockchain_V3._0
                     grupBloc[i].Text = $"Block {i + 1}   __ ERROR __";
                 }
             }
-            
+           Refresh();
             flage = true;
-          
-            Refresh();
-            */
 
+            
         }
 
     }
