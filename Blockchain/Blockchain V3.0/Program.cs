@@ -14,9 +14,16 @@ namespace Blockchain_V3._0
         [STAThread]
         static void Main()
         {
+            
+            
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new Form1());
+                
+            
+           
+           
+            
         }
     }
 }

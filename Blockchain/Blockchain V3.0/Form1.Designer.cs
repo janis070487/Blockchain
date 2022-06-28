@@ -43,7 +43,7 @@
             this.BoxhowManyZeros = new MaterialSkin.Controls.MaterialMultiLineTextBox();
 
             //_____________________________________________________________________________________________
-          
+
             this.TextBlocFrequency = new MaterialSkin.Controls.MaterialLabel[cik];
             this.TextBlocTime = new MaterialSkin.Controls.MaterialLabel[cik];
             this.TextBlocHash = new MaterialSkin.Controls.MaterialLabel[cik];
@@ -164,7 +164,7 @@
             // 
             // panel1
             // 
-            
+
             this.panel1.AutoScroll = true;
             this.panel1.AutoScrollMargin = new System.Drawing.Size(10, 10);
             this.panel1.AutoScrollMinSize = new System.Drawing.Size(0, howRow * 629 + 600);
@@ -177,10 +177,10 @@
             this.panel1.Size = new System.Drawing.Size(howRow * 629 + 6, 1200);
             this.panel1.TabIndex = 0;
             //---------------------------------------------------------------------------------------
-             for(int i = 0; i < grupBloc.Length; i++)
-               {
-                  this.panel1.Controls.Add(this.grupBloc[i]);
-              }
+            for (int i = 0; i < grupBloc.Length; i++)
+            {
+                this.panel1.Controls.Add(this.grupBloc[i]);
+            }
             for (int i = 0; i < grupBloc.Length; i++)
             {
                 this.TextBlocFrequency[i] = new MaterialSkin.Controls.MaterialLabel();
@@ -418,7 +418,7 @@
                 this.btnBlocMain[i].Click += new System.EventHandler(this.btnBloc1Main_Click);
                 this.grupBloc[i].Controls.Add(this.btnBlocMain[i]);
             }
-            
+
             //---------------------------------------------------------------------------------------
             // 
             // tabPageSetings
@@ -509,7 +509,7 @@
             this.Controls.Add(this.materialTabControl1);
             this.DrawerShowIconsWhenHidden = true;
             this.DrawerTabControl = this.materialTabControl1;
-           // this.DrawerTabControl = this.materialTabControl1;
+            // this.DrawerTabControl = this.materialTabControl1;
             this.MaximumSize = new System.Drawing.Size(1360, 1200);
             this.MinimumSize = new System.Drawing.Size(1360, 726);
             this.Name = "Form1";
@@ -531,7 +531,7 @@
         private int howRow;
         private int counter;
         private System.Drawing.Point[] point;
-        
+
         private MaterialSkin.Controls.MaterialLabel[] TextBlocFrequency;
         private MaterialSkin.Controls.MaterialLabel[] TextBlocTime;
         private MaterialSkin.Controls.MaterialLabel[] TextBlocHash;

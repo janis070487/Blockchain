@@ -1,17 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Security.Cryptography;
 namespace Blockchain_Demo
 {
     public class Maining
     {
-
         SHA256 sha256;
-        // public delegate string mainingStart(BlockTxt data, int howManyZeros, int maximumNumberOfAttempts);
-        //  mainingStart MainingStart = new();
         public Maining()
         {
             sha256 = new SHA256CryptoServiceProvider();

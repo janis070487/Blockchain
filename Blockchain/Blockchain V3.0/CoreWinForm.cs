@@ -1,30 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Blockchain_Demo;
 using System.Diagnostics;
+
 namespace Blockchain_V3._0
 {
     public class CoreWinForm : ICore
     {
         public Blockchain blockchain { get; set; }
-       
         private Sha256FromBlocData sha256FromBlock;
         private Maining maining;
-        private Stopwatch sw;// = Stopwatch.StartNew();
+        private Stopwatch sw;
         public Info[] info { get; set; }
         public int howManyZeros { get; set; }
         public int maximumNumberOfAttempts { get; set; }
         public delegate void ResetInfo();
-        //public delegate void GetNext();
         public delegate void ResetNonce();
-        //public delegate void ResetNumber();
         public ResetInfo resetInfo { get; set; }
         public ResetNonce resetNonce { get; set; }
-        //public ResetNumber resetNumber { get; set; }
         public CoreWinForm(int howBlock)
         {
             blockchain = new Blockchain(howBlock);
@@ -37,7 +30,7 @@ namespace Blockchain_V3._0
                 info[i] = new Info();
             }
         }
-       public void Main(int blockNumber)      // Palaiz lai maina konkreto bloku
+        public void Maining(int blockNumber)      // Palaiz lai maina konkreto bloku
         {
             sw.Start();
             string nonce = maining.MainingRun(blockchain.block[blockNumber].blockTxt, howManyZeros, maximumNumberOfAttempts);
@@ -47,42 +40,35 @@ namespace Blockchain_V3._0
             info[blockNumber].Milliseconds = Convert.ToInt32(sw.ElapsedMilliseconds);
             info[blockNumber].SetInfo();
             sw.Reset();
-            ResetData();
             blockchain.block[blockNumber].blockTxt.hashSum = GetHexToByte.GetHex(sha256FromBlock.GetSha256(blockchain.block[blockNumber].blockdata));
-          ResetAllBlock();
+            ResetAllBlock();
             resetInfo.Invoke();
             resetNonce.Invoke();
         }
 
-      public  void MainAll(int howBlocv = 0)  // Palaiž lai maina ar noradi ar kuru bloku sākt ja netiek noradīts tad sak ar pirmo
+        public void MainAll(int howBlocv = 0)  // Palaiž lai maina ar noradi ar kuru bloku sākt ja netiek noradīts tad sak ar pirmo
         {
             for (int i = howBlocv; i < blockchain.block.Length; i++)
             {
-                    sw.Start();
-                    string nonce = maining.MainingRun(blockchain.block[i].blockTxt, howManyZeros, maximumNumberOfAttempts);
-                    sw.Stop();
-
-                    blockchain.block[i].blockTxt.nonce = nonce;
-                    info[i].nonce = Convert.ToInt32(nonce);
-                    info[i].Milliseconds = Convert.ToInt32(sw.ElapsedMilliseconds);
-                    sw.Reset();
-                    info[i].SetInfo();
-                    blockchain.block[i].blockTxt.hashSum = GetHexToByte.GetHex(sha256FromBlock.GetSha256(blockchain.block[i].blockdata));
-                    if (i + 1 < blockchain.block.Length)
-                    {
-                        blockchain.block[i + 1].blockTxt.prewHashSum = blockchain.block[i].blockTxt.hashSum;
-                    }
+                sw.Start();
+                string nonce = maining.MainingRun(blockchain.block[i].blockTxt, howManyZeros, maximumNumberOfAttempts);
+                sw.Stop();
+                blockchain.block[i].blockTxt.nonce = nonce;
+                info[i].nonce = Convert.ToInt32(nonce);
+                info[i].Milliseconds = Convert.ToInt32(sw.ElapsedMilliseconds);
+                sw.Reset();
+                info[i].SetInfo();
+                blockchain.block[i].blockTxt.hashSum = GetHexToByte.GetHex(sha256FromBlock.GetSha256(blockchain.block[i].blockdata));
+                if (i + 1 < blockchain.block.Length)
+                {
+                    blockchain.block[i + 1].blockTxt.prewHashSum = blockchain.block[i].blockTxt.hashSum;
+                }
                 ResetAllBlock();
                 resetInfo.Invoke();
                 resetNonce.Invoke();
             }
-            
         }
-
-        public void ResetData() 
-        {
-        }
-        public void Check(int how) 
+        public void Check(int how)
         {
             for (int i = 0; i < blockchain.block.Length; i++) //Pārbauda katru bloku vai atbilst vajadzīgajam paveiktajam darbam
             {
@@ -93,11 +79,11 @@ namespace Blockchain_V3._0
         {
             try
             {
-               int answer = Convert.ToInt32(sms);
+                int answer = Convert.ToInt32(sms);
                 val = sms;
                 return true;
             }
-            catch(FormatException)
+            catch (FormatException)
             {
                 MessageBox.Show("Ievadītajā skaitlī ir neatļauts simbols", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -105,17 +91,14 @@ namespace Blockchain_V3._0
             {
                 MessageBox.Show("Ievadītais skaitlis ir par lielu", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
             val = "0";
             return false;
         }
         public void LoadFirstDataInBloc()   // Ielādes pirmos datus
         {
-            
             blockchain.block[0].blockTxt.prewHashSum = "0000000000000000000000000000000000000000000000000000000000000000";
             for (int i = 0; i < blockchain.block.Length; i++)
             {
-               
                 blockchain.block[i].SetData();   // visus text(string) apvieno un parstata  visu byte masiva
                 sw.Start();
                 string nonce = maining.MainingRun(blockchain.block[i].blockTxt, howManyZeros, maximumNumberOfAttempts); // atgriez uzdevuma rezultatu
@@ -131,8 +114,7 @@ namespace Blockchain_V3._0
                 {
                     blockchain.block[i + 1].blockTxt.prewHashSum = blockchain.block[i].blockTxt.hashSum;
                 }
-                blockchain.block[i].status =  CheckBlock.Check(howManyZeros, blockchain.block[i].blockTxt.hashSum);
-                 
+                blockchain.block[i].status = CheckBlock.Check(howManyZeros, blockchain.block[i].blockTxt.hashSum);
             }
         }
         public bool ChangedNumber(string numberBloc, string sms)
@@ -154,7 +136,7 @@ namespace Blockchain_V3._0
         }
         public void ChangedNonce(int numberBloc, string sms)
         {
-             blockchain.block[numberBloc].blockTxt.nonce = sms;
+            blockchain.block[numberBloc].blockTxt.nonce = sms;
             ResetAllBlock();
             resetInfo.Invoke();
         }
@@ -174,9 +156,6 @@ namespace Blockchain_V3._0
             for (int i = 0; i < blockchain.block.Length; i++)
             {
                 blockchain.block[i].SetData();   // visus text(string) apvieno un parstata  visu byte masiva
-                info[i].nonce = 0;
-                info[i].Milliseconds = 0;
-                info[i].SetInfo();
                 blockchain.block[i].SetData();
                 blockchain.block[i].blockTxt.hashSum = GetHexToByte.GetHex(sha256FromBlock.GetSha256(blockchain.block[i].blockdata));
                 if (i + 1 < blockchain.block.Length)

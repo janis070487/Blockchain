@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Blockchain_Demo
 {
     public static class GetHexToByte
@@ -18,7 +13,6 @@ namespace Blockchain_Demo
                 GetHexSymbol(data[i] & 15);
             }
             return answer;
-            //return "0a1000ff";
         }
         public static void GetHexSymbol(int value)
         {

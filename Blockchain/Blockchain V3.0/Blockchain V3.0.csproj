@@ -58,6 +58,8 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="ICore.cs" />
+    <Compile Include="AsyncLevel.cs" />
+    <Compile Include="MainingAsync.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

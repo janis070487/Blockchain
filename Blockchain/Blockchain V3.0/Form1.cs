@@ -1,16 +1,9 @@
 ﻿using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
-//  Blok statusu izmainiju uz false, bet uz demo vajag true
+using System.Drawing;
+
 
 namespace Blockchain_V3._0
 {
@@ -21,9 +14,10 @@ namespace Blockchain_V3._0
         public CoreWinForm core;
         public Color colorError = Color.Red;
         public Color colorOk = Color.White;
-        public Form1()
+
+        public Form1(int howBlock = 6)
         {
-            
+            this.howBloc = howBlock;
             InitializeComponent(howBloc);
             CoreWinForm core = new CoreWinForm(howBloc);
             var materialSkinManager = MaterialSkinManager.Instance;
@@ -36,7 +30,7 @@ namespace Blockchain_V3._0
         private void Init()
         {
             core = new CoreWinForm(howBloc);
-            
+
             flage = false;
             core.howManyZeros = 4;                                  // iestata uzdevuma prasibas
             core.maximumNumberOfAttempts = 10000000;                 //iestata maksimālo meiģinājumu skaitu
@@ -44,7 +38,6 @@ namespace Blockchain_V3._0
             core.resetInfo += Print;
             core.resetNonce += ResetNonce;
             core.resetNonce += ResetNonce;
-            // core.LoadFirstDataInBloc();
             for (int i = 0; i < howBloc; i++)
             {
                 MultiTextBlocNonce[i].Text = core.blockchain.block[i].blockTxt.nonce;
@@ -55,24 +48,19 @@ namespace Blockchain_V3._0
         private void btnBloc1Main_Click(object sender, EventArgs e)
         {
             MaterialButton btn = sender as MaterialButton;
-            core.Main(Convert.ToInt32(btn.Name));
-
+            core.Maining(Convert.ToInt32(btn.Name));
         }
 
         private void btnBlockMainAll_Click(object sender, EventArgs e)
         {
-
             MaterialButton btn = sender as MaterialButton;
             core.MainAll();
-
         }
 
-
         private void BlockNumber_TextChangedk(object sender, EventArgs e)
-        { 
+        {
             if (flage)
             {
-                
                 MaterialMultiLineTextBox textBoxNumber = sender as MaterialMultiLineTextBox;
                 string answer;
                 bool met = core.CheckValue(textBoxNumber.Text, out answer);
@@ -84,32 +72,28 @@ namespace Blockchain_V3._0
                 {
                     ResetNumber(Convert.ToInt32(textBoxNumber.Name));
                 }
-
             }
         }
 
         private void BlockNonce_TextChangedk(object sender, EventArgs e)
         {
-             if (flage)
-             {
-                 MaterialMultiLineTextBox textBoxNonce = sender as MaterialMultiLineTextBox;
+            if (flage)
+            {
+                MaterialMultiLineTextBox textBoxNonce = sender as MaterialMultiLineTextBox;
                 core.ChangedNonce(textBoxNonce.Name, textBoxNonce.Text);
-               // MultiTextBlocNonce[Convert.ToInt32(textBoxNonce.Name)].Text = core.blockchain.block[Convert.ToInt32(textBoxNonce.Name)].blockTxt.nonce;
-                //flage = false;
             }
-            
         }
 
         private void howManyZeros_TextChangedk(object sender, EventArgs e)
         {
-            
-            string zero =BoxhowManyZeros.Text;
-            if (zero == "") {
+            string zero = BoxhowManyZeros.Text;
+            if (zero == "")
+            {
                 core.howManyZeros = 0;
             }
             else
             {
-                core.howManyZeros = Convert.ToInt32(BoxhowManyZeros.Text) ;
+                core.howManyZeros = Convert.ToInt32(BoxhowManyZeros.Text);
             }
             core.ResetAllBlock();
             Print();
@@ -122,16 +106,16 @@ namespace Blockchain_V3._0
 
         private void BlockData_TextChangedk(object sender, EventArgs e)
         {
-             if (flage)
-             {
-                 MaterialMultiLineTextBox textBoxData = sender as MaterialMultiLineTextBox;
-                 core.ChangedData(textBoxData.Name, textBoxData.Text);
-             }
+            if (flage)
+            {
+                MaterialMultiLineTextBox textBoxData = sender as MaterialMultiLineTextBox;
+                core.ChangedData(textBoxData.Name, textBoxData.Text);
+            }
         }
         public void ResetNonce()
         {
             flage = false;
-            for(int i = 0; i < howBloc; i++)
+            for (int i = 0; i < howBloc; i++)
             {
                 MultiTextBlocNonce[i].Text = core.blockchain.block[i].blockTxt.nonce;
             }
@@ -162,11 +146,8 @@ namespace Blockchain_V3._0
                     grupBloc[i].Text = $"Block {i + 1}   __ ERROR __";
                 }
             }
-           Refresh();
+            Refresh();
             flage = true;
-
-            
         }
-
     }
 }

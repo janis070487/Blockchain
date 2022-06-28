@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace Blockchain_Demo
 {
     public class Info
@@ -13,9 +8,7 @@ namespace Blockchain_Demo
         public int milliseconds { get; set; }
         public int nonce { get; set; }
         public int seconds { get; set; }
-        //public int minutes { get; set; }
         public string averageUnitsPerSecond { get; set; }
-        //public long totalTime { get; set; }
         public void SetInfo()
         {
             seconds = Milliseconds / 1000;
@@ -29,12 +22,6 @@ namespace Blockchain_Demo
             {
 
             }
-            
-
-      
-
         }
-
-
     }
 }
